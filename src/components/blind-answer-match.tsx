@@ -25,11 +25,15 @@ export function BlindAnswerMatch({
   topicSlug,
   stage,
   questionId,
+  questionNumber,
+  questionText,
   cards,
 }: {
   topicSlug: string;
   stage: string;
   questionId: string;
+  questionNumber?: number;
+  questionText?: string;
   cards: BlindMatchCard[];
 }) {
   const pathname = usePathname();
@@ -190,6 +194,8 @@ export function BlindAnswerMatch({
                 topicSlug,
                 stage,
                 questionId,
+                questionNumber: questionNumber ?? null,
+                questionText: questionText ?? null,
                 alignedSlot: selectedCard?.slot ?? null,
                 alignedAgent: selectedCard?.agent ?? null,
                 alignedDecision: selectedCard?.decision ?? null,

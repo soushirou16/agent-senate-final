@@ -62,12 +62,14 @@ export function TopicFeedbackCheckpoint({
   stage,
   prompt,
   questionId,
+  questionNumber,
   showEvidenceSlider = false,
 }: {
   topicSlug: string;
   stage: string;
   prompt: string;
   questionId?: string;
+  questionNumber?: number;
   showEvidenceSlider?: boolean;
 }) {
   const pathname = usePathname();
@@ -202,6 +204,8 @@ export function TopicFeedbackCheckpoint({
                   topicSlug,
                   stage,
                   questionId: questionId ?? null,
+                  questionNumber: questionNumber ?? null,
+                  questionText: prompt,
                   userAnswer: answer,
                   confidence,
                   evidenceUsefulness: showEvidenceSlider ? evidenceUsefulness : undefined,

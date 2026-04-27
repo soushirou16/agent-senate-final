@@ -28,6 +28,7 @@ import {
   type QuestionItem,
   type TopicMetric,
 } from "@/lib/types";
+import { useFeedback } from "@/components/providers/feedback-provider";
 import { BlindAnswerMatch } from "@/components/blind-answer-match";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -327,6 +328,8 @@ function SampleStep({
         topicSlug={topicSlug}
         stage={`${label} blind pick`}
         questionId={question.id}
+        questionNumber={question.questionNumber}
+        questionText={question.prompt}
         cards={blindCards}
       />
 
@@ -413,6 +416,7 @@ function SampleStep({
             stage={`${label} revealed`}
             prompt="Now that the case is visible, where do you land?"
             questionId={question.id}
+            questionNumber={question.questionNumber}
             showEvidenceSlider
           />
         </>
@@ -549,6 +553,7 @@ export default function TopicDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = use(params);
+  const { initSession } = useFeedback();
   const [deckState, setDeckState] = useState({ slug, activeStep: 0 });
   const activeStep = deckState.slug === slug ? deckState.activeStep : 0;
   const { data: manifest, isLoading: isManifestLoading, error: manifestError } = useManifest();
@@ -561,6 +566,13 @@ export default function TopicDetailPage({
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [activeStep]);
+
+  useEffect(() => {
+    if (!manifest) return;
+    const found = manifest.topics.find((item) => item.slug === slug);
+    if (!found) return;
+    void initSession(found.slug, found.title);
+  }, [slug, manifest, initSession]);
 
   if (isManifestLoading || isQuestionsLoading || isConversationsLoading || isMetricsLoading) {
     return (
