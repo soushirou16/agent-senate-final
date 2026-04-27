@@ -7,7 +7,17 @@ Next.js App Router proof-of-concept focused on:
 - static packaged JSON designed for large local data payloads
 - non-invasive in-app feedback collection (local only, exportable JSON)
 
+
 ## Run
+
+1. Add your Supabase credentials to `.env.local`:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
+
+2. Install and start:
 
 ```bash
 npm install
