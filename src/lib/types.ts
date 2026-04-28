@@ -191,6 +191,8 @@ export interface FeedbackEntry {
   topicSlug: string | null;
   stage?: string | null;
   questionId?: string | null;
+  questionNumber?: number | null;
+  questionText?: string | null;
   userAnswer?: AnswerValue | null;
   alignedSlot?: string | null;
   alignedAgent?: AgentName | null;
