@@ -239,6 +239,40 @@ export interface VisualizationDataset {
   persuadability: PersuadabilityAgentEntry[];
 }
 
+export interface DemoSampleAgent {
+  name: AgentName;
+  provider: string;
+  model: string;
+}
+
+export interface DemoSampleResponse {
+  provider: string;
+  model: string;
+  decision: string;
+  confidence: number | null;
+  response: string | null;
+  time_s: number | null;
+}
+
+export interface DemoSampleResult {
+  question_number: number;
+  question: string;
+  timestamp: string;
+  responses: Partial<Record<AgentName, DemoSampleResponse>>;
+  summary?: {
+    yes_count?: number;
+    no_count?: number;
+    majority?: string;
+  };
+}
+
+export interface DemoSampleFile {
+  timestamp: string;
+  agents: DemoSampleAgent[];
+  questions_count: number;
+  results: DemoSampleResult[];
+}
+
 export interface DataManifest {
   version: string;
   generatedAt: string;

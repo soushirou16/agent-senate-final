@@ -14,6 +14,7 @@ import {
 import {
   type ConversationItem,
   type DataManifest,
+  type DemoSampleFile,
   type QuestionItem,
   type TopicMetric,
   type VisualizationDataset,
@@ -122,5 +123,8 @@ export function useVisualizationDataset() {
 }
 
 export function useDemoSamples(topicSlug: string) {
-  return useQueryState<any[]>(() => getTopicDemoSamples(topicSlug), [topicSlug]);
+  return useQueryState<Array<DemoSampleFile | null>>(
+    () => getTopicDemoSamples(topicSlug),
+    [topicSlug]
+  );
 }
