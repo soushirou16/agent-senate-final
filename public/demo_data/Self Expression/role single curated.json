@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-04-27T22:13:40.690408",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "roles": {
+    "Contrarian": "Challenge assumptions and default positions. Default to opposing the most commonly assumed answer.",
+    "Optimist": "Favor constructive, positive pathways when justified. Lean toward Yes when a concrete pathway exists.",
+    "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
+    "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
+  },
+  "questions_count": 1,
+  "total_permutations": 24,
+  "results": [
+    {
+      "question_number": 73,
+      "question": "Should an employee be allowed to refuse a customer with a smile if they want to be more direct and honest instead?",
+      "rotation_index": 1,
+      "role_assignment": {
+        "ChatGPT": "Contrarian",
+        "Claude": "Optimist",
+        "Gemini": "Absolutist",
+        "Grok": "Utilitarian"
+      },
+      "timestamp": "2026-04-27T22:13:40.690421",
+      "responses": {
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No  \nCONFIDENCE: 8  \n\nBeing direct and honest is often valued, but refusing a customer without a smile can damage the company's image and customer relationships, so employees should maintain politeness even when being direct.",
+          "time_s": 0.92
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nAn employee can build trust and respect through genuine directness, and many customers appreciate honest communication over forced pleasantness. Companies can channel this authenticity productively by training employees in direct-but-professional communication styles, creating pathways where honesty and service excellence reinforce rather than contradict each other.",
+          "time_s": 1.56
+        },
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No\nCONFIDENCE: 10\nThe established precedent for customer service dictates a polite and welcoming demeanor. Deviating from this standard, even with the intention of honesty, is not permissible.",
+          "time_s": 5.48
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nAllowing employees to refuse smiles for direct honesty harms aggregate utility by reducing customer satisfaction, repeat business, and revenue, negatively impacting many customers and the employer's viability more than it benefits the one employee's authenticity and reduced emotional labor. Polite norms maximize overall well-being through smoother interactions and sustained economic activity supporting jobs and services for society.",
+          "time_s": 17.43
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 3,
+        "majority": "No"
+      }
+    }
+  ]
+}

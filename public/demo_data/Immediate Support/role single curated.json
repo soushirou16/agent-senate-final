@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-04-27T22:12:44.377717",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "roles": {
+    "Contrarian": "Challenge assumptions and default positions. Default to opposing the most commonly assumed answer.",
+    "Optimist": "Favor constructive, positive pathways when justified. Lean toward Yes when a concrete pathway exists.",
+    "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
+    "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
+  },
+  "questions_count": 1,
+  "total_permutations": 24,
+  "results": [
+    {
+      "question_number": 93,
+      "question": "Should a community forgive unpaid local taxes during hard times even if it weakens future services?",
+      "rotation_index": 21,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Optimist",
+        "Gemini": "Utilitarian",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-27T22:12:44.377728",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\nForgiving unpaid taxes would reduce immediate revenue, directly harming the aggregate well-being by weakening future essential services for the entire community. While some individuals might benefit in the short term, the long-term, widespread negative impact on public services outweighs this.",
+          "time_s": 0.81
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nA temporary tax forgiveness program during genuine hardship can preserve community bonds and prevent permanent economic damage to households, while the community retains capacity to rebuild services through gradual recovery—the relational and human capital preserved often enables stronger long-term resilience than strict enforcement that deepens poverty cycles.",
+          "time_s": 1.47
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\n\nFrom an Absolutist perspective, rules and obligations must be upheld strictly to maintain order and fairness; forgiving unpaid taxes undermines the system and jeopardizes essential services for all.",
+          "time_s": 2.57
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nThe default assumption prioritizes rigid fiscal collection over human hardship, ignoring how forgiveness fosters community loyalty, voluntary future compliance, and faster economic recovery that ultimately bolsters services more than punitive enforcement. Weakening services short-term is a false dichotomy when empathy rebuilds a stronger tax base long-term.",
+          "time_s": 2.87
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 2,
+        "majority": "Stalemate"
+      }
+    }
+  ]
+}

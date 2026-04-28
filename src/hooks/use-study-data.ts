@@ -7,6 +7,7 @@ import {
   getOverviewMetrics,
   getTopicConversations,
   getTopicQuestions,
+  getTopicDemoSamples,
 } from "@/lib/data-client";
 import {
   type ConversationItem,
@@ -93,3 +94,8 @@ export function useAllQuestions() {
 export function useOverviewMetrics() {
   return useQueryState<TopicMetric[]>(getOverviewMetrics, []);
 }
+
+export function useDemoSamples(topicSlug: string) {
+  return useQueryState<any[]>(() => getTopicDemoSamples(topicSlug), [topicSlug]);
+}
+

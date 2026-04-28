@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-04-27T22:12:03.109768",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "questions_count": 1,
+  "results": [
+    {
+      "question_number": 63,
+      "question": "Should a government be allowed to track people's location without consent if it would likely prevent a large-scale disaster?",
+      "timestamp": "2026-04-27T22:12:03.109784",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\nWhile preventing a large-scale disaster is a compelling goal, the right to privacy and protection against unwarranted government surveillance are fundamental. Allowing such tracking without consent sets a dangerous precedent that could be abused.",
+          "time_s": 0.67
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No  \nCONFIDENCE: 7\n\nWhile preventing large-scale disasters is crucial, allowing governments to track people's location without consent raises significant privacy and civil liberty concerns, and such measures should be carefully regulated and justified rather than broadly permitted.",
+          "time_s": 1.36
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nWarrantless mass surveillance creates dangerous precedents for authoritarian abuse and erodes fundamental freedoms, even with good intentions. Effective disaster prevention typically requires specific targeting (based on probable cause) rather than blanket tracking of entire populations, and consent-based systems with judicial oversight provide better safeguards without sacrificing security.",
+          "time_s": 1.42
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8  \n\nIn extreme cases where location tracking without consent is likely to prevent a large-scale disaster, such as a terrorist attack or pandemic outbreak, the utilitarian benefit of saving numerous lives outweighs individual privacy rights. This should be balanced with strict oversight, time limits, and judicial review to prevent abuse.",
+          "time_s": 2.94
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 3,
+        "majority": "No"
+      }
+    }
+  ]
+}

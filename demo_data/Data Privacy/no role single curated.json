@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-04-27T22:11:48.465370",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "questions_count": 1,
+  "results": [
+    {
+      "question_number": 180,
+      "question": "Should streaming services be able to track what you watch if it makes choosing shows easier?",
+      "timestamp": "2026-04-27T22:11:48.465386",
+      "responses": {
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nTracking viewing habits enables personalization benefits, but the privacy trade-off is significant—detailed behavioral data can be misused for manipulation, sold to third parties, or breached. Users should have genuine choice between privacy and convenience rather than surveillance being a default requirement for service usability.",
+          "time_s": 1.53
+        },
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\nWhile personalized recommendations can be helpful, the potential for misuse of viewing data and privacy concerns outweigh the convenience of easier show selection. Users should have control over their data and how it is used.",
+          "time_s": 1.96
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No  \nCONFIDENCE: 8\n\nWhile tracking viewing habits can improve recommendations, it raises significant privacy concerns, and users should have control over their data rather than being tracked by default.",
+          "time_s": 2.56
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\nStreaming services should be able to track viewing habits with user consent, as it powers effective recommendation algorithms that make content discovery far easier and more enjoyable. Privacy concerns can be addressed through opt-out options, transparent policies, and data protection regulations, balancing benefits with user control.",
+          "time_s": 4.81
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 3,
+        "majority": "No"
+      }
+    }
+  ]
+}

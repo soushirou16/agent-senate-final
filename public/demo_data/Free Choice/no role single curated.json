@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-04-27T22:11:55.912411",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "questions_count": 1,
+  "results": [
+    {
+      "question_number": 63,
+      "question": "Should people be allowed to live in a home they know is unsafe, even if the government thinks the danger is serious enough to step in?",
+      "timestamp": "2026-04-27T22:11:55.912418",
+      "responses": {
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nPeople should generally have the autonomy to make decisions about their own living situations, even risky ones, as a matter of personal freedom and self-determination. However, this conflicts with legitimate government interests in preventing serious harm, which is why reasonable exceptions exist (e.g., imminent threats to life, situations involving dependent children) where intervention may be justified despite the presumption favoring individual choice.",
+          "time_s": 1.4
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nWhile individuals have autonomy, the government has a responsibility to protect public safety, and if a home poses serious danger, intervention is justified to prevent harm. Allowing people to live in unsafe conditions can lead to severe injury or death, which outweighs personal choice in this context.",
+          "time_s": 1.52
+        },
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\nThe government has a responsibility to protect its citizens from serious harm, and allowing individuals to remain in demonstrably unsafe conditions could endanger not only themselves but also potentially others. While personal autonomy is important, it generally does not extend to choices that pose a clear and present danger to life or well-being.",
+          "time_s": 2.2
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\nIndividuals should have autonomy over their personal risks when they are informed and consenting adults, as long as it does not harm others or the public. Government paternalism undermines liberty and sets a precedent for excessive intervention in private decisions.",
+          "time_s": 4.43
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 2,
+        "majority": "Stalemate"
+      }
+    }
+  ]
+}

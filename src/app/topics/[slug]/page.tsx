@@ -19,6 +19,7 @@ import {
   useOverviewMetrics,
   useTopicConversations,
   useTopicQuestions,
+  useDemoSamples,
 } from "@/hooks/use-study-data";
 import { CONDITION_LABELS } from "@/lib/constants";
 import {
@@ -54,15 +55,16 @@ const CHART_CONDITION_ORDER: ConditionLabel[] = [
 ];
 const STORY_STEPS = [
   { title: "Set the Question", shortTitle: "Intro", kicker: "What this topic is asking" },
-  { title: "Sample 1", shortTitle: "Sample 1", kicker: "Start with a cleaner case" },
-  { title: "Sample 2", shortTitle: "Sample 2", kicker: "See where setup changes the answer" },
-  { title: "Sample 3", shortTitle: "Sample 3", kicker: "Check a harder split" },
+  { title: "Single, No Role", shortTitle: "Sample 1", kicker: "Baseline setup" },
+  { title: "Single, Role", shortTitle: "Sample 2", kicker: "With role assignments" },
+  { title: "Debate, No Role", shortTitle: "Sample 3", kicker: "Group without roles" },
+  { title: "Debate, Role", shortTitle: "Sample 4", kicker: "Full group debate" },
   { title: "One Debate", shortTitle: "Debate", kicker: "Watch one real disagreement play out" },
   { title: "Whole Topic", shortTitle: "Data", kicker: "Step back to the larger pattern" },
   { title: "Final Answer", shortTitle: "Final", kicker: "Where you land after the evidence" },
 ] as const;
 
-const ROMAN_STEPS = ["I", "II", "III", "IV", "V", "VI", "VII"] as const;
+const ROMAN_STEPS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"] as const;
 
 function getRomanStep(index: number) {
   return ROMAN_STEPS[index] ?? String(index + 1);
@@ -562,6 +564,7 @@ export default function TopicDetailPage({
   const { data: conversations, isLoading: isConversationsLoading, error: conversationsError } =
     useTopicConversations(slug);
   const { data: metrics, isLoading: isMetricsLoading, error: metricsError } = useOverviewMetrics();
+  const { data: demoSamplesData, isLoading: isDemoSamplesLoading, error: demoSamplesError } = useDemoSamples(slug);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -574,7 +577,7 @@ export default function TopicDetailPage({
     void initSession(found.slug, found.title);
   }, [slug, manifest, initSession]);
 
-  if (isManifestLoading || isQuestionsLoading || isConversationsLoading || isMetricsLoading) {
+  if (isManifestLoading || isQuestionsLoading || isConversationsLoading || isMetricsLoading || isDemoSamplesLoading) {
     return (
       <StateBox
         title="Loading topic..."
@@ -607,7 +610,63 @@ export default function TopicDetailPage({
   const topicMetrics = topicMetric ? [topicMetric] : [];
   const metricHighlights = getMetricHighlights(topicMetric);
   const storyQuestions = pickStoryQuestions(questions);
-  const [sampleOne, sampleTwo, sampleThree] = storyQuestions;
+  
+  // Create our 4 samples from demo data if available, fallback to storyQuestions
+  const demoSamples = (demoSamplesData || []).map((sampleList, idx) => {
+    if (!sampleList || !sampleList.results || sampleList.results.length === 0) return null;
+    const item = sampleList.results[0];
+    const conditionKeys = [
+      "single_no_role",
+      "single_role",
+      "debate_no_role",
+      "debate_role"
+    ];
+    
+    const agents = ["ChatGPT", "Claude", "Gemini", "Grok"];
+    const cards = agents.map((agent, agentIdx) => {
+      const resp = item.responses[agent] || {};
+      const reasoning = resp.response || null;
+      const previewText = reasoning ? reasoning.replace(/^ANSWER:.*?\nCONFIDENCE:.*?\n\n?/, '') : null;
+      
+      return {
+        slot: ["A", "B", "C", "D"][agentIdx],
+        agent,
+        role: null,
+        decision: resp.decision || "Maybe",
+        rawDecision: resp.decision || "Maybe",
+        confidence: resp.confidence || null,
+        reasoning: reasoning,
+        reasoningPreview: previewText,
+      };
+    });
+
+    const defaultSummary = { outcome: "Maybe", rawOutcome: "Maybe", yesVotes: 0, noVotes: 0, maybeVotes: 0 };
+    const conditionSummary = {
+       "single_no_role": defaultSummary,
+       "single_role": defaultSummary,
+       "debate_no_role": defaultSummary,
+       "debate_role": defaultSummary,
+    };
+
+    return {
+      id: `demo-${idx}`,
+      topicSlug: slug,
+      questionNumber: item.question_number,
+      prompt: item.question,
+      tags: [],
+      conditionSummary: conditionSummary as any,
+      blindMatch: {
+        sourceCondition: conditionKeys[idx],
+        cards,
+      },
+    } as any;
+  });
+
+  const sampleOne = demoSamples[0] || storyQuestions[0];
+  const sampleTwo = demoSamples[1] || storyQuestions[1] || storyQuestions[0];
+  const sampleThree = demoSamples[2] || storyQuestions[2] || storyQuestions[0];
+  const sampleFour = demoSamples[3] || storyQuestions[1] || storyQuestions[0];
+
   const featuredConversation = getFeaturedConversation(
     conversations,
     storyQuestions.map((question) => question.id)
@@ -709,8 +768,17 @@ export default function TopicDetailPage({
           />
         );
       case 4:
-        return <DebateStep conversation={featuredConversation} />;
+        return (
+          <SampleStep
+            key={sampleFour?.id ?? "sample-4"}
+            topicSlug={topic.slug}
+            label="Sample 4"
+            question={sampleFour}
+          />
+        );
       case 5:
+        return <DebateStep conversation={featuredConversation} />;
+      case 6:
         return (
           <div className="grid gap-4">
             {topicMetric && metricHighlights ? (

@@ -393,3 +393,26 @@ export async function getOverviewMetrics() {
   const chunk = await fetchJson<MetricsChunk>(manifest.paths.metrics);
   return chunk.items;
 }
+
+export async function getTopicDemoSamples(topicSlug: string) {
+  // Map 'data-privacy' to 'Data Privacy'
+  const folderName = topicSlug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  const files = [
+    "no role single curated.json",
+    "role single curated.json",
+    "role group curated.json",
+    "no role group curated.json"
+  ];
+  
+  const results = await Promise.all(files.map(async (file) => {
+    try {
+      const res = await fetch(`/demo_data/${folderName}/${file}`);
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  }));
+  
+  return results;
+}
