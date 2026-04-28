@@ -74,6 +74,9 @@ export function FeedbackProvider({ children }: { children: React.ReactNode }) {
     }
   });
 
+  // Initialized once on mount — stable for the entire browser session across all topics
+  const [participantId] = useState<string>(() => getOrCreateParticipantId());
+
   const [sessionId, setSessionId] = useState<string | null>(null);
   // Ref so the submit callback always reads the latest session ID without stale closure issues
   const sessionIdRef = useRef<string | null>(null);
@@ -83,7 +86,6 @@ export function FeedbackProvider({ children }: { children: React.ReactNode }) {
   }, [entries]);
 
   const initSession = useCallback(async (topicSlug: string, topicTitle: string) => {
-    const participantId = getOrCreateParticipantId();
     const newId = crypto.randomUUID();
     console.log("[initSession] participant_id:", participantId, "| new session_id:", newId, "| topic:", topicSlug);
     const { error } = await supabase.from("study_sessions").insert({
@@ -98,7 +100,7 @@ export function FeedbackProvider({ children }: { children: React.ReactNode }) {
     }
     sessionIdRef.current = newId;
     setSessionId(newId);
-  }, []);
+  }, [participantId]);
 
   const submit = useCallback((entry: NewFeedbackInput) => {
     // 1. Persist to localStorage (existing behavior, kept as backup)
