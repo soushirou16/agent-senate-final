@@ -162,6 +162,83 @@ export interface MetricsChunk {
   items: TopicMetric[];
 }
 
+export interface TopicPolarity {
+  topicSlug: string;
+  title: string;
+  spectrum: string;
+  firstAspect: string;
+  secondAspect: string;
+  yesLeansFirst: boolean;
+}
+
+export interface TopicLeanConditionStat {
+  firstRate: number;
+  secondRate: number;
+  undecidedRate: number;
+  netLean: number;
+  stalemateRate: number;
+  mindChangedRate: number | null;
+  initialAgreementRate: number | null;
+  avgDebateRounds: number | null;
+}
+
+export interface TopicLeanEntry extends TopicPolarity {
+  questionCount: number;
+  byCondition: Record<ConditionKey, TopicLeanConditionStat>;
+  debateShiftNoRole: number;
+  debateShiftRole: number;
+  debateOutcomeFlipRateNoRole: number;
+  debateOutcomeFlipRateRole: number;
+  avgDebateRoundsNoRole: number;
+  avgDebateRoundsRole: number;
+  initialAgreementRateNoRole: number;
+  initialSplitRateNoRole: number;
+}
+
+export interface AgentLeanEntry extends TopicPolarity {
+  byAgent: Record<
+    AgentName,
+    {
+      firstRate: number;
+      secondRate: number;
+      maybeRate?: number;
+      undecidedRate?: number;
+    }
+  >;
+}
+
+export interface PersuadabilityRoleEffect {
+  role: string;
+  changeRate: number;
+  sampleSize: number;
+}
+
+export interface PersuadabilityAgentEntry {
+  agent: AgentName;
+  provider: string;
+  model: string;
+  overallChangeRate: number;
+  noRoleChangeRate: number;
+  roleChangeRate: number;
+  roleEffects: PersuadabilityRoleEffect[];
+}
+
+export interface VisualizationSummary {
+  topicCount: number;
+  questionCount: number;
+  averageDebateShiftNoRole: number;
+  averageDebateShiftRole: number;
+  averagePersuadability: number;
+}
+
+export interface VisualizationDataset {
+  generatedAt: string;
+  summary: VisualizationSummary;
+  topicLean: TopicLeanEntry[];
+  singleNoRoleAgentLean: AgentLeanEntry[];
+  persuadability: PersuadabilityAgentEntry[];
+}
+
 export interface DataManifest {
   version: string;
   generatedAt: string;
@@ -169,6 +246,7 @@ export interface DataManifest {
   paths: {
     questionsByTopic: Record<string, string[]>;
     conversationsByTopic: Record<string, string[]>;
+    conversationsByQuestion: Record<string, string[]>;
     metrics: string;
   };
   conditionMeta: Record<ConditionKey, { runMode: RunMode; roleMode: RoleMode }>;

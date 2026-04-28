@@ -22,6 +22,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 ```bash
 npm install
 npm run generate:demo-data
+npm run generate:visualization-data
 npm run dev
 ```
 

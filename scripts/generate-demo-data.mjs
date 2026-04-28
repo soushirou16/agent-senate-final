@@ -6,6 +6,7 @@ const rawDataDir = path.join(rootDir, "data");
 const publicDir = path.join(rootDir, "public", "data");
 const questionsDir = path.join(publicDir, "questions");
 const conversationsDir = path.join(publicDir, "conversations");
+const questionConversationsDir = path.join(conversationsDir, "by-question");
 const metricsDir = path.join(publicDir, "metrics");
 
 const AGENT_ORDER = ["ChatGPT", "Claude", "Gemini", "Grok"];
@@ -549,6 +550,7 @@ async function ensureDirs() {
   await fs.rm(publicDir, { recursive: true, force: true });
   await fs.mkdir(questionsDir, { recursive: true });
   await fs.mkdir(conversationsDir, { recursive: true });
+  await fs.mkdir(questionConversationsDir, { recursive: true });
   await fs.mkdir(metricsDir, { recursive: true });
 }
 
@@ -660,6 +662,7 @@ async function main() {
   const topics = [];
   const questionsByTopic = {};
   const conversationsByTopic = {};
+  const conversationsByQuestion = {};
   const metrics = [];
   const roleDescriptions = {};
 
@@ -683,6 +686,19 @@ async function main() {
       topicSlug: topicData.topic.slug,
       items: topicData.conversations,
     });
+
+    for (const question of topicData.questions) {
+      const items = topicData.conversations.filter(
+        (conversation) => conversation.questionId === question.id
+      );
+      conversationsByQuestion[question.id] = [
+        `/data/conversations/by-question/${question.id}.json`,
+      ];
+      await writeJson(path.join(questionConversationsDir, `${question.id}.json`), {
+        topicSlug: topicData.topic.slug,
+        items,
+      });
+    }
   }
 
   await writeJson(path.join(metricsDir, "overview.json"), { items: metrics });
@@ -697,6 +713,7 @@ async function main() {
       conversationsByTopic: Object.fromEntries(
         topics.map((topic) => [topic.slug, [`/data/conversations/${topic.slug}.json`]])
       ),
+      conversationsByQuestion,
       metrics: "/data/metrics/overview.json",
     },
     conditionMeta: CONDITION_META,

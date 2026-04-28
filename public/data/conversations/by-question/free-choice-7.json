@@ -1,0 +1,480 @@
+{
+  "topicSlug": "free-choice",
+  "items": [
+    {
+      "id": "free-choice-7-no-role",
+      "topicSlug": "free-choice",
+      "questionId": "free-choice-7",
+      "questionNumber": 7,
+      "prompt": "Should someone be allowed to drive without a helmet or seat belt if they understand the danger?",
+      "runMode": "debate",
+      "roleMode": "no-role",
+      "roleAssignments": [
+        {
+          "agent": "ChatGPT",
+          "role": null
+        },
+        {
+          "agent": "Claude",
+          "role": null
+        },
+        {
+          "agent": "Gemini",
+          "role": null
+        },
+        {
+          "agent": "Grok",
+          "role": null
+        }
+      ],
+      "initialResponses": {
+        "ChatGPT": {
+          "agent": "ChatGPT",
+          "role": null,
+          "provider": "openai",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "reasoning": "No, because wearing a helmet or seat belt significantly reduces injury risk and protects others on the road, so personal understanding of danger does not justify ignoring safety laws.",
+          "reasoningPreview": "No, because wearing a helmet or seat belt significantly reduces injury risk and protects others on the road, so personal understanding of danger does not justify ignoring safety laws.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.67
+        },
+        "Claude": {
+          "agent": "Claude",
+          "role": null,
+          "provider": "anthropic",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "reasoning": "Understanding danger doesn't eliminate it—safety laws protect people from their own judgment lapses and reduce public healthcare costs. Informed consent has limits when risks externalize onto society.",
+          "reasoningPreview": "Understanding danger doesn't eliminate it—safety laws protect people from their own judgment lapses and reduce public healthcare costs. Informed consent has limits when risks externalize onto society.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 8
+        },
+        "Gemini": {
+          "agent": "Gemini",
+          "role": null,
+          "provider": "gemini",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "reasoning": "While individuals should generally have autonomy over their own risks, the societal costs of severe injuries (healthcare, emergency services, lost productivity) extend beyond the individual.",
+          "reasoningPreview": "While individuals should generally have autonomy over their own risks, the societal costs of severe injuries (healthcare, emergency services, lost productivity) extend beyond the individual.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.33
+        },
+        "Grok": {
+          "agent": "Grok",
+          "role": null,
+          "provider": "xai",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 9,
+          "reasoning": "Adults should have autonomy over personal safety choices like helmets or seatbelts if they understand the risks, as these primarily affect themselves without directly harming others.",
+          "reasoningPreview": "Adults should have autonomy over personal safety choices like helmets or seatbelts if they understand the risks, as these primarily affect themselves without directly harming others.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7
+        }
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "votes": {
+            "round": 1,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "While personal freedom is important, mandatory safety laws protect public health and reduce societal costs, justifying reasonable limits on individual choices for the greater good.",
+              "reasoningPreview": "While personal freedom is important, mandatory safety laws protect public health and reduce societal costs, justifying reasonable limits on individual choices for the greater good.",
+              "moderatorRedirect": "How would you address Grok’s point that mandatory safety laws infringe on personal freedom even if societal costs exist?",
+              "coalitionCounter": "Allowing individuals to forgo helmets or seat belts disregards the broader societal costs of increased medical expenses and emergency services, meaning personal risk-taking inevitably harms others.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Informed autonomy doesn't negate externalities—injury costs burden healthcare systems and first responders regardless of consent, justifying protective mandates.",
+              "reasoningPreview": "Informed autonomy doesn't negate externalities—injury costs burden healthcare systems and first responders regardless of consent, justifying protective mandates.",
+              "moderatorRedirect": "How do you respond to Grok’s argument that adults should have autonomy to accept personal risk if fully informed?",
+              "coalitionCounter": "Mandating helmets and seat belts is justified because individual risk-taking often results in broader societal costs, such as emergency services and insurance burdens, which infringe on others' rights and resources.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.67
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "While societal costs are real, Grok's point about personal responsibility highlights individual liberty and the right to choose risks.",
+              "reasoningPreview": "While societal costs are real, Grok's point about personal responsibility highlights individual liberty and the right to choose risks.",
+              "moderatorRedirect": "How might you steelman Grok’s position that personal responsibility should sometimes override collective safety mandates?",
+              "coalitionCounter": "Allowing individuals to forgo helmets or seat belts ignores the broader societal burden of increased medical costs and emergency resources that ultimately impact everyone.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Societal costs can be addressed via insurance and personal responsibility; direct harms to others from unbelted riders are rare and overstated relative to autonomy.",
+              "reasoningPreview": "Societal costs can be addressed via insurance and personal responsibility; direct harms to others from unbelted riders are rare and overstated relative to autonomy.",
+              "moderatorRedirect": "How do you address the strongest argument that individual risk-taking imposes real costs and harms on others beyond the individual?",
+              "coalitionCounter": "Allowing individuals to forgo helmets or seat belts ignores the substantial societal costs and risks to others that arise from preventable injuries, making personal understanding of danger insufficient justification to override safety laws.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            }
+          }
+        },
+        {
+          "round": 2,
+          "votes": {
+            "round": 2,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "Even with insurance, injuries can cause broader societal impacts like lost productivity and emergency resource strain, so personal freedom must be balanced with public safety.",
+              "reasoningPreview": "Even with insurance, injuries can cause broader societal impacts like lost productivity and emergency resource strain, so personal freedom must be balanced with public safety.",
+              "moderatorRedirect": "How would you respond to the argument that mandatory safety laws infringe on personal freedom when individuals knowingly accept the risks and can mitigate societal costs through insurance?",
+              "coalitionCounter": "Mandating helmets and seat belts is essential because individual choices that increase injury risk inevitably burden public healthcare systems and emergency services, imposing costs and risks on society regardless of personal responsibility.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 8
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "Insurance premiums and user fees can internalize externalities; mandates remain paternalistic when fully informed adults accept documented risks.",
+              "reasoningPreview": "Insurance premiums and user fees can internalize externalities; mandates remain paternalistic when fully informed adults accept documented risks.",
+              "moderatorRedirect": "How do you address concerns that even with personal responsibility, preventable injuries still impose unavoidable burdens on public healthcare and emergency services?",
+              "coalitionCounter": "Mandating helmets and seat belts infringes on personal freedom when individuals fully understand and accept the risks, and societal costs can be mitigated through insurance without blanket restrictions.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 8
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "While societal costs are a concern, personal liberty to choose risks, even those with collective impact, remains a fundamental right.",
+              "reasoningPreview": "While societal costs are a concern, personal liberty to choose risks, even those with collective impact, remains a fundamental right.",
+              "moderatorRedirect": "Given the coalition’s emphasis on societal costs, how do you reconcile personal choice with the collective impact of increased medical expenses?",
+              "coalitionCounter": "Allowing individuals to forgo helmets or seat belts ignores the broader societal impact of increased medical costs and emergency services, which cannot be fully mitigated by personal insurance and ultimately burden the community regardless of personal choice.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 5
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Personal insurance and user-paid premiums can fully offset societal costs, making mandates an unnecessary infringement on autonomy.",
+              "reasoningPreview": "Personal insurance and user-paid premiums can fully offset societal costs, making mandates an unnecessary infringement on autonomy.",
+              "moderatorRedirect": "How do you respond to the point that personal insurance might reduce societal costs, challenging the necessity of blanket mandates?",
+              "coalitionCounter": "Allowing individuals to forgo helmets or seat belts ignores the undeniable burden their preventable injuries place on public healthcare and emergency services, making personal autonomy insufficient justification for risking collective societal harm.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            }
+          }
+        },
+        {
+          "round": 3,
+          "votes": {
+            "round": 3,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "Personal freedom is important but must be limited when individual choices impose significant risks and costs on society, justifying mandatory safety laws.",
+              "reasoningPreview": "Personal freedom is important but must be limited when individual choices impose significant risks and costs on society, justifying mandatory safety laws.",
+              "moderatorRedirect": "How would you address concerns that mandatory safety laws might infringe on personal freedom and autonomy, even if they reduce societal costs?",
+              "coalitionCounter": "Allowing individuals to forgo helmets or seat belts based solely on personal understanding ignores the unpredictable nature of accidents and the inevitable burden on emergency services and public resources that cannot be fully mitigated by insurance.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 8
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Informed consent doesn't eliminate externalities—emergency costs, trauma to first responders, and potential bystander harm justify protective mandates despite individual autonomy claims.",
+              "reasoningPreview": "Informed consent doesn't eliminate externalities—emergency costs, trauma to first responders, and potential bystander harm justify protective mandates despite individual autonomy claims.",
+              "moderatorRedirect": "How do you respond to the argument that individuals fully informed of risks and costs should have the right to make their own safety choices without state intervention?",
+              "coalitionCounter": "Even if individuals understand the risks, allowing them to forgo helmets or seat belts endangers others through increased emergency response costs and potential harm to bystanders, making mandates necessary to protect public welfare beyond personal choice.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "While societal costs are a concern, personal liberty to choose risks, even those with collective impact, remains a fundamental right.",
+              "reasoningPreview": "While societal costs are a concern, personal liberty to choose risks, even those with collective impact, remains a fundamental right.",
+              "moderatorRedirect": "How might you steelman the minority position that personal responsibility and insurance coverage could sufficiently mitigate the societal burdens of accidents?",
+              "coalitionCounter": "Allowing individuals to forgo helmets or seat belts ignores the broader public health impact and increased emergency costs that cannot be fully mitigated by personal insurance, justifying mandates to protect society as a whole.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Risk-adjusted insurance premiums and user fees can internalize emergency and productivity costs, preserving liberty without mandates.",
+              "reasoningPreview": "Risk-adjusted insurance premiums and user fees can internalize emergency and productivity costs, preserving liberty without mandates.",
+              "moderatorRedirect": "How do you address the strongest argument that mandatory helmet and seat belt laws infringe on individual liberty and that personal understanding should allow exceptions?",
+              "coalitionCounter": "Even if individuals accept personal risks and pay insurance, driving without helmets or seat belts imposes unavoidable societal burdens like emergency response strain and lost productivity that justify safety mandates to protect public welfare.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            }
+          }
+        }
+      ],
+      "voteHistory": [
+        {
+          "round": 1,
+          "yes": 1,
+          "no": 3
+        },
+        {
+          "round": 2,
+          "yes": 1,
+          "no": 3
+        },
+        {
+          "round": 3,
+          "yes": 1,
+          "no": 3
+        }
+      ],
+      "finalConsensus": "No",
+      "rawFinalConsensus": "No",
+      "roundsCompleted": 3,
+      "finalState": {
+        "ChatGPT": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "everConceded": false
+        },
+        "Claude": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Gemini": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Grok": {
+          "role": null,
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 7,
+          "everConceded": false
+        }
+      }
+    },
+    {
+      "id": "free-choice-7-role",
+      "topicSlug": "free-choice",
+      "questionId": "free-choice-7",
+      "questionNumber": 7,
+      "prompt": "Should someone be allowed to drive without a helmet or seat belt if they understand the danger?",
+      "runMode": "debate",
+      "roleMode": "role",
+      "roleAssignments": [
+        {
+          "agent": "ChatGPT",
+          "role": "Optimist"
+        },
+        {
+          "agent": "Claude",
+          "role": "Contrarian"
+        },
+        {
+          "agent": "Gemini",
+          "role": "Absolutist"
+        },
+        {
+          "agent": "Grok",
+          "role": "Utilitarian"
+        }
+      ],
+      "initialResponses": {
+        "ChatGPT": {
+          "agent": "ChatGPT",
+          "role": "Optimist",
+          "provider": "openai",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "reasoning": "Allowing individuals to drive without helmets or seat belts risks public safety and increases healthcare costs; personal understanding doesn't mitigate these broader consequences. Mandatory safety measures protect everyone effectively.",
+          "reasoningPreview": "Allowing individuals to drive without helmets or seat belts risks public safety and increases healthcare costs; personal understanding doesn't mitigate these broader consequences. Mandatory safety measures protect...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7
+        },
+        "Claude": {
+          "agent": "Claude",
+          "role": "Contrarian",
+          "provider": "anthropic",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "reasoning": "The unexamined assumption here is that individual understanding and consent override collective costs—but externalities (emergency services, insurance pools, family trauma) aren't borne by the individual alone. Informed consent doesn't eliminate societal burden.",
+          "reasoningPreview": "The unexamined assumption here is that individual understanding and consent override collective costs—but externalities (emergency services, insurance pools, family trauma) aren't borne by the individual alone. Informed...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 8.33
+        },
+        "Gemini": {
+          "agent": "Gemini",
+          "role": "Absolutist",
+          "provider": "gemini",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "reasoning": "No, because established laws and safety regulations universally mandate the use of helmets and seat belts to protect individuals, regardless of their perceived understanding of risk. Allowing exceptions would undermine the principle of these protective laws.",
+          "reasoningPreview": "No, because established laws and safety regulations universally mandate the use of helmets and seat belts to protect individuals, regardless of their perceived understanding of risk. Allowing exceptions would undermine...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 4.67
+        },
+        "Grok": {
+          "agent": "Grok",
+          "role": "Utilitarian",
+          "provider": "xai",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "reasoning": "Mandating helmets/seat belts saves thousands of lives yearly, reduces societal healthcare/insurance costs, and minimizes harm to others in crashes; individual liberty gains are minor compared to aggregate harms from relaxed rules.",
+          "reasoningPreview": "Mandating helmets/seat belts saves thousands of lives yearly, reduces societal healthcare/insurance costs, and minimizes harm to others in crashes; individual liberty gains are minor compared to aggregate harms from...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.67
+        }
+      },
+      "rounds": [],
+      "voteHistory": [],
+      "finalConsensus": "No",
+      "rawFinalConsensus": "No",
+      "roundsCompleted": 0,
+      "finalState": {
+        "ChatGPT": {
+          "role": "Optimist",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "everConceded": false
+        },
+        "Claude": {
+          "role": "Contrarian",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Gemini": {
+          "role": "Absolutist",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "everConceded": false
+        },
+        "Grok": {
+          "role": "Utilitarian",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "everConceded": false
+        }
+      }
+    }
+  ]
+}

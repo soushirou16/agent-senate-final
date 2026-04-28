@@ -5,14 +5,17 @@ import {
   getAllQuestions,
   getManifest,
   getOverviewMetrics,
+  getQuestionConversations,
   getTopicConversations,
   getTopicQuestions,
+  getVisualizationDataset,
 } from "@/lib/data-client";
 import {
   type ConversationItem,
   type DataManifest,
   type QuestionItem,
   type TopicMetric,
+  type VisualizationDataset,
 } from "@/lib/types";
 
 interface QueryState<T> {
@@ -79,10 +82,29 @@ export function useTopicQuestions(topicSlug: string) {
   return useQueryState<QuestionItem[]>(() => getTopicQuestions(topicSlug), [topicSlug]);
 }
 
+export function useQuestions(topicSlug: "all" | string | null) {
+  return useQueryState<QuestionItem[]>(
+    () =>
+      !topicSlug
+        ? Promise.resolve([])
+        : topicSlug === "all"
+          ? getAllQuestions()
+          : getTopicQuestions(topicSlug),
+    [topicSlug]
+  );
+}
+
 export function useTopicConversations(topicSlug: string) {
   return useQueryState<ConversationItem[]>(
     () => getTopicConversations(topicSlug),
     [topicSlug]
+  );
+}
+
+export function useQuestionConversations(questionId: string | null) {
+  return useQueryState<ConversationItem[]>(
+    () => (questionId ? getQuestionConversations(questionId) : Promise.resolve([])),
+    [questionId]
   );
 }
 
@@ -92,4 +114,8 @@ export function useAllQuestions() {
 
 export function useOverviewMetrics() {
   return useQueryState<TopicMetric[]>(getOverviewMetrics, []);
+}
+
+export function useVisualizationDataset() {
+  return useQueryState<VisualizationDataset>(getVisualizationDataset, []);
 }

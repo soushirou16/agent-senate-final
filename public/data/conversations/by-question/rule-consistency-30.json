@@ -1,0 +1,707 @@
+{
+  "topicSlug": "rule-consistency",
+  "items": [
+    {
+      "id": "rule-consistency-30-no-role",
+      "topicSlug": "rule-consistency",
+      "questionId": "rule-consistency-30",
+      "questionNumber": 30,
+      "prompt": "Should a store enforce the same coupon limit for every customer, even if one customer’s purchase is unusually large and reasonable?",
+      "runMode": "debate",
+      "roleMode": "no-role",
+      "roleAssignments": [
+        {
+          "agent": "ChatGPT",
+          "role": null
+        },
+        {
+          "agent": "Claude",
+          "role": null
+        },
+        {
+          "agent": "Gemini",
+          "role": null
+        },
+        {
+          "agent": "Grok",
+          "role": null
+        }
+      ],
+      "initialResponses": {
+        "ChatGPT": {
+          "agent": "ChatGPT",
+          "role": null,
+          "provider": "openai",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 9,
+          "reasoning": "Enforcing the same coupon limit ensures fairness and prevents abuse, even if a purchase is unusually large but reasonable. Consistency in policy maintains trust and operational efficiency.",
+          "reasoningPreview": "Enforcing the same coupon limit ensures fairness and prevents abuse, even if a purchase is unusually large but reasonable. Consistency in policy maintains trust and operational efficiency.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 8
+        },
+        "Claude": {
+          "agent": "Claude",
+          "role": null,
+          "provider": "anthropic",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 6,
+          "reasoning": "A store should have flexibility to apply coupon limits reasonably—strict uniformity ignores legitimate business concerns about fraud while also creating customer service problems for large legitimate purchases.",
+          "reasoningPreview": "A store should have flexibility to apply coupon limits reasonably—strict uniformity ignores legitimate business concerns about fraud while also creating customer service problems for large legitimate purchases.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 6
+        },
+        "Gemini": {
+          "agent": "Gemini",
+          "role": null,
+          "provider": "gemini",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 8,
+          "reasoning": "Yes, consistent application of store policies, like coupon limits, ensures fairness and prevents arbitrary decisions, even for large purchases. This maintains a predictable shopping experience for all customers.",
+          "reasoningPreview": "Yes, consistent application of store policies, like coupon limits, ensures fairness and prevents arbitrary decisions, even for large purchases. This maintains a predictable shopping experience for all customers.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.33
+        },
+        "Grok": {
+          "agent": "Grok",
+          "role": null,
+          "provider": "xai",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 9,
+          "reasoning": "Enforcing uniform coupon limits maintains fairness, prevents abuse, and avoids disputes, regardless of purchase size.",
+          "reasoningPreview": "Enforcing uniform coupon limits maintains fairness, prevents abuse, and avoids disputes, regardless of purchase size.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.33
+        }
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "votes": {
+            "round": 1,
+            "yes": 3,
+            "no": 1
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "While exceptions might improve satisfaction, consistent limits prevent abuse and ensure fairness, which is crucial for maintaining trust and operational clarity.",
+              "reasoningPreview": "While exceptions might improve satisfaction, consistent limits prevent abuse and ensure fairness, which is crucial for maintaining trust and operational clarity.",
+              "moderatorRedirect": "How would you address concerns that making exceptions for large purchases could lead to perceptions of unfairness or potential abuse by customers?",
+              "coalitionCounter": "Rigidly enforcing the same coupon limit on all customers disregards legitimate variations in purchase size and undermines customer satisfaction by failing to accommodate reasonable exceptions.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 8
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Uniform limits protect fairness and prevent fraud; stores can address legitimate large purchases through case-by-case manager review rather than discretionary enforcement.",
+              "reasoningPreview": "Uniform limits protect fairness and prevent fraud; stores can address legitimate large purchases through case-by-case manager review rather than discretionary enforcement.",
+              "moderatorRedirect": "How do you respond to the argument that strict uniform limits might alienate customers making reasonable large purchases and harm long-term goodwill?",
+              "coalitionCounter": "Uniform coupon limits are essential to ensure fairness, prevent potential abuse, and maintain consistent, transparent policies that build customer trust regardless of purchase size.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "While customer goodwill is important, consistent policy application prevents abuse and maintains operational efficiency, which ultimately benefits all customers.",
+              "reasoningPreview": "While customer goodwill is important, consistent policy application prevents abuse and maintains operational efficiency, which ultimately benefits all customers.",
+              "moderatorRedirect": "How do you reconcile the need for fairness with the possibility that rigid coupon limits might discourage high-value customers?",
+              "coalitionCounter": "Rigidly enforcing the same coupon limit on all customers disregards legitimate variations in purchase size and undermines customer goodwill by penalizing reasonable large transactions.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.67
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Flexibility risks abuse and disputes outweighing goodwill gains, so uniform limits remain best for fairness and simplicity.",
+              "reasoningPreview": "Flexibility risks abuse and disputes outweighing goodwill gains, so uniform limits remain best for fairness and simplicity.",
+              "moderatorRedirect": "How would you propose balancing consistent policy enforcement with flexibility for legitimate large transactions?",
+              "coalitionCounter": "Rigidly enforcing the same coupon limit for every customer disregards legitimate variations in purchase size and undermines customer goodwill by penalizing reasonable large transactions.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            }
+          }
+        },
+        {
+          "round": 2,
+          "votes": {
+            "round": 2,
+            "yes": 3,
+            "no": 1
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "While large purchases deserve recognition, uniform coupon limits ensure fairness and prevent exploitation, but stores can offer alternative rewards to maintain goodwill.",
+              "reasoningPreview": "While large purchases deserve recognition, uniform coupon limits ensure fairness and prevent exploitation, but stores can offer alternative rewards to maintain goodwill.",
+              "moderatorRedirect": "How would you address concerns that strict uniform coupon limits might alienate customers making unusually large but reasonable purchases, potentially harming goodwill?",
+              "coalitionCounter": "Rigidly enforcing the same coupon limit on every customer disregards legitimate large purchases and undermines customer goodwill, which can be better preserved through flexible, case-by-case exceptions rather than inflexible rules.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.67
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "Manager review systems address legitimate large purchases without abandoning uniform limits; discretion need not mean chaos—clear escalation protocols balance fairness with operational clarity.",
+              "reasoningPreview": "Manager review systems address legitimate large purchases without abandoning uniform limits; discretion need not mean chaos—clear escalation protocols balance fairness with operational clarity.",
+              "moderatorRedirect": "How do you respond to the argument that rigid coupon limits can unfairly penalize legitimate large purchases and damage customer trust?",
+              "coalitionCounter": "Consistently enforcing the same coupon limit for every customer is essential to prevent abuse, maintain fairness, and ensure clear, efficient store operations without the complications and potential disputes that discretionary exceptions invite.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 5.67
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Uniform limits ensure fairness and prevent manipulation, even if occasional large purchases seem reasonable; exceptions create a slippery slope for abuse.",
+              "reasoningPreview": "Uniform limits ensure fairness and prevent manipulation, even if occasional large purchases seem reasonable; exceptions create a slippery slope for abuse.",
+              "moderatorRedirect": "How do you justify uniform coupon limits in cases where a customer’s large purchase might reasonably warrant an exception without risking abuse?",
+              "coalitionCounter": "Rigidly enforcing the same coupon limit on every customer disregards legitimate large purchases and undermines customer trust, whereas flexible, case-by-case exceptions better balance fairness with practical needs.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Counter-argument overlooks heightened abuse risks and training/dispute costs of flexibility, favoring uniform policy for equity.",
+              "reasoningPreview": "Counter-argument overlooks heightened abuse risks and training/dispute costs of flexibility, favoring uniform policy for equity.",
+              "moderatorRedirect": "How do you balance the need for operational simplicity with the potential benefits of flexible coupon limit exceptions for large purchases?",
+              "coalitionCounter": "Rigid uniform coupon limits ignore legitimate large purchases and undermine customer goodwill, whereas flexible, case-by-case exceptions enhance fairness without inviting abuse.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            }
+          }
+        },
+        {
+          "round": 3,
+          "votes": {
+            "round": 3,
+            "yes": 3,
+            "no": 1
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Strict limits maintain fairness and prevent abuse, but stores can address concerns by offering special rewards or personalized discounts for large, reasonable purchases outside standard coupons.",
+              "reasoningPreview": "Strict limits maintain fairness and prevent abuse, but stores can address concerns by offering special rewards or personalized discounts for large, reasonable purchases outside standard coupons.",
+              "moderatorRedirect": "How would you address concerns that strict uniform coupon limits might alienate customers making unusually large but reasonable purchases?",
+              "coalitionCounter": "Rigidly enforcing the same coupon limit on all customers ignores legitimate large purchases and undermines customer goodwill, which can be better preserved through flexible, manager-approved exceptions rather than inflexible uniformity.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Documented escalation protocols with manager authorization, purchase verification, and audit trails systematically prevent abuse while accommodating legitimate large orders.",
+              "reasoningPreview": "Documented escalation protocols with manager authorization, purchase verification, and audit trails systematically prevent abuse while accommodating legitimate large orders.",
+              "moderatorRedirect": "How can you ensure fairness and prevent exploitation if exceptions to coupon limits are allowed on a case-by-case basis?",
+              "coalitionCounter": "Uniform coupon limits are essential to ensure fairness, prevent exploitation, and avoid the costly complexities and risks of subjective exceptions that undermine consistent policy enforcement.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 5.67
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 6,
+              "reasoning": "While goodwill is important, the risk of abuse from exceptions outweighs the benefit of accommodating occasional large, reasonable purchases.",
+              "reasoningPreview": "While goodwill is important, the risk of abuse from exceptions outweighs the benefit of accommodating occasional large, reasonable purchases.",
+              "moderatorRedirect": "How do you respond to the argument that rigid uniform limits might harm customer goodwill in exceptional large purchase cases?",
+              "coalitionCounter": "Rigidly enforcing uniform coupon limits ignores legitimate large purchases and undermines customer goodwill, whereas a structured manager review process can fairly accommodate exceptions without risking abuse.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Manager review risks inconsistent judgments, abuse exploitation, and added training/dispute costs, justifying uniform limits for equity and simplicity.",
+              "reasoningPreview": "Manager review risks inconsistent judgments, abuse exploitation, and added training/dispute costs, justifying uniform limits for equity and simplicity.",
+              "moderatorRedirect": "What safeguards would you propose to maintain consistent policy enforcement while allowing flexibility for large purchases?",
+              "coalitionCounter": "A rigid uniform coupon limit ignores legitimate large purchases and undermines customer trust, whereas a clear manager review process ensures fairness without sacrificing control.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.33
+            }
+          }
+        }
+      ],
+      "voteHistory": [
+        {
+          "round": 1,
+          "yes": 3,
+          "no": 1
+        },
+        {
+          "round": 2,
+          "yes": 3,
+          "no": 1
+        },
+        {
+          "round": 3,
+          "yes": 3,
+          "no": 1
+        }
+      ],
+      "finalConsensus": "Yes",
+      "rawFinalConsensus": "Yes",
+      "roundsCompleted": 3,
+      "finalState": {
+        "ChatGPT": {
+          "role": null,
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 8,
+          "everConceded": false
+        },
+        "Claude": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Gemini": {
+          "role": null,
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 6,
+          "everConceded": false
+        },
+        "Grok": {
+          "role": null,
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 7,
+          "everConceded": false
+        }
+      }
+    },
+    {
+      "id": "rule-consistency-30-role",
+      "topicSlug": "rule-consistency",
+      "questionId": "rule-consistency-30",
+      "questionNumber": 30,
+      "prompt": "Should a store enforce the same coupon limit for every customer, even if one customer’s purchase is unusually large and reasonable?",
+      "runMode": "debate",
+      "roleMode": "role",
+      "roleAssignments": [
+        {
+          "agent": "ChatGPT",
+          "role": "Optimist"
+        },
+        {
+          "agent": "Claude",
+          "role": "Contrarian"
+        },
+        {
+          "agent": "Gemini",
+          "role": "Utilitarian"
+        },
+        {
+          "agent": "Grok",
+          "role": "Absolutist"
+        }
+      ],
+      "initialResponses": {
+        "ChatGPT": {
+          "agent": "ChatGPT",
+          "role": "Optimist",
+          "provider": "openai",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 8,
+          "reasoning": "Yes, enforcing the same coupon limit ensures fairness and prevents potential abuse, but the store could consider exceptions with clear criteria for unusually large, reasonable purchases to maintain customer goodwill.",
+          "reasoningPreview": "Yes, enforcing the same coupon limit ensures fairness and prevents potential abuse, but the store could consider exceptions with clear criteria for unusually large, reasonable purchases to maintain customer goodwill.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 6.33
+        },
+        "Claude": {
+          "agent": "Claude",
+          "role": "Contrarian",
+          "provider": "anthropic",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 6,
+          "reasoning": "We're assuming uniform rules are always fair—but what if rigid coupon limits actually *prevent* legitimate bulk purchases (restaurants restocking, small businesses) while catching nobody who matters? The weakest link is treating \"fairness\" as synonymous with \"identical treatment.\"",
+          "reasoningPreview": "We're assuming uniform rules are always fair—but what if rigid coupon limits actually *prevent* legitimate bulk purchases (restaurants restocking, small businesses) while catching nobody who matters? The weakest link is...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 5.67
+        },
+        "Gemini": {
+          "agent": "Gemini",
+          "role": "Utilitarian",
+          "provider": "gemini",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 7,
+          "reasoning": "Enforcing the same coupon limit for every customer, regardless of purchase size, maximizes overall customer satisfaction and store profitability by ensuring fairness and preventing potential abuse, even if it means a slight inconvenience for a customer with a large, reasonable purchase.",
+          "reasoningPreview": "Enforcing the same coupon limit for every customer, regardless of purchase size, maximizes overall customer satisfaction and store profitability by ensuring fairness and preventing potential abuse, even if it means a...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7
+        },
+        "Grok": {
+          "agent": "Grok",
+          "role": "Absolutist",
+          "provider": "xai",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 10,
+          "reasoning": "Stores must enforce uniform rules like coupon limits on all customers to ensure fairness, consistency, and prevent subjective exceptions that erode policy integrity.",
+          "reasoningPreview": "Stores must enforce uniform rules like coupon limits on all customers to ensure fairness, consistency, and prevent subjective exceptions that erode policy integrity.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.33
+        }
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "votes": {
+            "round": 1,
+            "yes": 3,
+            "no": 1
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": "Optimist",
+              "provider": "openai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "A fair approach is to enforce uniform limits but allow verified exceptions for bulk buyers with clear, transparent criteria to prevent abuse while accommodating legitimate needs.",
+              "reasoningPreview": "A fair approach is to enforce uniform limits but allow verified exceptions for bulk buyers with clear, transparent criteria to prevent abuse while accommodating legitimate needs.",
+              "moderatorRedirect": "How would you fairly address Claude’s concern that uniform coupon limits may unfairly penalize legitimate bulk buyers without opening the door to abuse?",
+              "coalitionCounter": "Enforcing the same coupon limit for every customer ignores legitimate needs of bulk buyers and ultimately undermines true fairness by punishing reasonable large purchases rather than preventing abuse.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": "Contrarian",
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Subjective judgment *under clear criteria* (business resale, bulk purchase documentation) differs fundamentally from arbitrary discrimination—uniformity itself can mask unfairness.",
+              "reasoningPreview": "Subjective judgment *under clear criteria* (business resale, bulk purchase documentation) differs fundamentally from arbitrary discrimination—uniformity itself can mask unfairness.",
+              "moderatorRedirect": "How do you respond to the argument that allowing exceptions for large purchases risks subjective judgments that could undermine consistent and equitable store policies?",
+              "coalitionCounter": "Uniform coupon limits are essential to maintain fairness, prevent abuse, and uphold consistent store policies, as allowing exceptions for large purchases invites subjective judgments that undermine both equity and operational integrity.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": "Utilitarian",
+              "provider": "gemini",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 6,
+              "reasoning": "Uniformity, while imperfect, prevents subjective judgment and ensures broader, more predictable benefits for the majority of customers and the store.",
+              "reasoningPreview": "Uniformity, while imperfect, prevents subjective judgment and ensures broader, more predictable benefits for the majority of customers and the store.",
+              "moderatorRedirect": "How would you fairly incorporate Claude’s point that rigid uniformity might ignore practical equity for customers with legitimate large purchase needs?",
+              "coalitionCounter": "Rigidly enforcing the same coupon limit for every customer ignores legitimate needs of bulk buyers and small businesses, ultimately undermining true fairness by penalizing reasonable large purchases rather than preventing abuse.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": "Absolutist",
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Uniform limits prevent subjective \"reasonableness\" judgments that invite abuse, ensuring consistent fairness outweighs occasional inequities in large legitimate purchases.",
+              "reasoningPreview": "Uniform limits prevent subjective \"reasonableness\" judgments that invite abuse, ensuring consistent fairness outweighs occasional inequities in large legitimate purchases.",
+              "moderatorRedirect": "How do you reconcile your support for uniform limits with Claude’s argument that such limits can unfairly punish reasonable large purchases rather than prevent abuse?",
+              "coalitionCounter": "Enforcing identical coupon limits ignores legitimate differences in customer needs and unfairly penalizes large but reasonable purchases, ultimately undermining true fairness by prioritizing rigid uniformity over practical equity.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.33
+            }
+          }
+        },
+        {
+          "round": 2,
+          "votes": {
+            "round": 2,
+            "yes": 3,
+            "no": 1
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": "Optimist",
+              "provider": "openai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "I agree that clear, objective exceptions are essential, but a baseline uniform limit ensures fairness and prevents confusion, with exceptions carefully managed to balance both needs.",
+              "reasoningPreview": "I agree that clear, objective exceptions are essential, but a baseline uniform limit ensures fairness and prevents confusion, with exceptions carefully managed to balance both needs.",
+              "moderatorRedirect": "How would you respond to the argument that a rigid coupon limit can unfairly penalize reasonable bulk buyers and that clear, objective exceptions could maintain fairness without risking abuse?",
+              "coalitionCounter": "Enforcing the same coupon limit for every customer ignores legitimate bulk purchasing needs and unfairly penalizes large, reasonable buyers, while clear, objective exceptions prevent abuse without compromising fairness.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": "Contrarian",
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Clear, pre-published exception criteria (business resale, documented bulk purchase) eliminate subjectivity—opacity undermines trust far more than transparent, consistent rule-making does.",
+              "reasoningPreview": "Clear, pre-published exception criteria (business resale, documented bulk purchase) eliminate subjectivity—opacity undermines trust far more than transparent, consistent rule-making does.",
+              "moderatorRedirect": "How do you address concerns that allowing exceptions might introduce subjective judgments that undermine consistent fairness and trust in store policies?",
+              "coalitionCounter": "Enforcing the same coupon limit for every customer ensures consistent fairness and prevents subjective judgments that can lead to abuse and undermine trust in the store’s policies.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": "Utilitarian",
+              "provider": "gemini",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "While exceptions could benefit a few, the aggregate benefit of predictable policy for the many outweighs the harm to a few.",
+              "reasoningPreview": "While exceptions could benefit a few, the aggregate benefit of predictable policy for the many outweighs the harm to a few.",
+              "moderatorRedirect": "Can you fairly acknowledge the minority’s point that some large purchases may justify exceptions to the coupon limit, and explain how your position accounts for those cases?",
+              "coalitionCounter": "Enforcing a rigid coupon limit ignores legitimate, verifiable exceptions like bulk purchases, ultimately punishing reasonable customers and undermining fairness in favor of an inflexible rule that benefits the majority only superficially.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.33
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": "Absolutist",
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Exceptions based on \"reasonableness\" rely on subjective judgments prone to inconsistent application and abuse, undermining fairness more than uniform rules ever could.",
+              "reasoningPreview": "Exceptions based on \"reasonableness\" rely on subjective judgments prone to inconsistent application and abuse, undermining fairness more than uniform rules ever could.",
+              "moderatorRedirect": "How do you respond to the concern that enforcing exceptions could lead to inconsistent application and potential abuse, thereby undermining overall fairness?",
+              "coalitionCounter": "Rigid uniform coupon limits ignore legitimate large purchases and, by dismissing clear, objective criteria for reasonableness, they enforce fairness in form but perpetuate unfairness in practice.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            }
+          }
+        },
+        {
+          "round": 3,
+          "votes": {
+            "round": 3,
+            "yes": 3,
+            "no": 1
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": "Optimist",
+              "provider": "openai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "A fair approach combines a clear uniform limit with publicly stated, case-by-case exceptions for large, reasonable purchases to maintain trust and fairness transparently.",
+              "reasoningPreview": "A fair approach combines a clear uniform limit with publicly stated, case-by-case exceptions for large, reasonable purchases to maintain trust and fairness transparently.",
+              "moderatorRedirect": "How would you fairly and transparently address Claude’s concern that a rigid uniform coupon limit without exceptions can unfairly penalize legitimate bulk buyers and erode customer trust?",
+              "coalitionCounter": "Enforcing a rigid uniform coupon limit without transparent, pre-published exceptions for reasonable large purchases breeds customer distrust and unfairly penalizes legitimate bulk buyers, undermining the very fairness the policy aims to uphold.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": "Contrarian",
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Pre-published exception criteria (bulk purchase documentation, resale certification) are objective, not subjective—uniformity that ignores legitimate differences *is* unfairness masquerading as transparency.",
+              "reasoningPreview": "Pre-published exception criteria (bulk purchase documentation, resale certification) are objective, not subjective—uniformity that ignores legitimate differences *is* unfairness masquerading as transparency.",
+              "moderatorRedirect": "How do you respond to the argument that allowing exceptions introduces subjective judgments that could create inconsistency and ultimately undermine overall fairness and transparency?",
+              "coalitionCounter": "Even with clear exceptions, allowing variable coupon limits invites subjective judgments that breed inconsistency and erode customer trust far more than a simple, uniformly enforced policy that guarantees fairness and transparency for all.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": "Utilitarian",
+              "provider": "gemini",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 6,
+              "reasoning": "While customer trust is a factor, the aggregate benefit of consistent policy for the majority outweighs the harm of occasional perceived unfairness.",
+              "reasoningPreview": "While customer trust is a factor, the aggregate benefit of consistent policy for the majority outweighs the harm of occasional perceived unfairness.",
+              "moderatorRedirect": "Can you fairly present Claude’s strongest point that exceptions for large purchases are necessary to maintain customer trust and avoid unfair penalties, despite the risk of inconsistency?",
+              "coalitionCounter": "Enforcing a rigid coupon limit without transparent exceptions for reasonable large purchases sacrifices customer trust and fairness, ultimately harming the store’s reputation and long-term utility more than the occasional exception would.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": "Absolutist",
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Uniform rules build enduring trust through predictable fairness, preventing abuse claims from subjective exceptions that more severely damage reputation over time.",
+              "reasoningPreview": "Uniform rules build enduring trust through predictable fairness, preventing abuse claims from subjective exceptions that more severely damage reputation over time.",
+              "moderatorRedirect": "How do you address Claude’s concern that a uniform policy without exceptions might harm customer trust and the store’s reputation by punishing reasonable bulk buyers?",
+              "coalitionCounter": "Enforcing a rigid coupon limit without allowing transparent, well-defined exceptions for reasonable bulk purchases punishes legitimate customers and erodes trust far more than a consistent policy that openly accommodates such exceptions.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            }
+          }
+        }
+      ],
+      "voteHistory": [
+        {
+          "round": 1,
+          "yes": 3,
+          "no": 1
+        },
+        {
+          "round": 2,
+          "yes": 3,
+          "no": 1
+        },
+        {
+          "round": 3,
+          "yes": 3,
+          "no": 1
+        }
+      ],
+      "finalConsensus": "Yes",
+      "rawFinalConsensus": "Yes",
+      "roundsCompleted": 3,
+      "finalState": {
+        "ChatGPT": {
+          "role": "Optimist",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 8,
+          "everConceded": false
+        },
+        "Claude": {
+          "role": "Contrarian",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Gemini": {
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 6,
+          "everConceded": false
+        },
+        "Grok": {
+          "role": "Absolutist",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 8,
+          "everConceded": false
+        }
+      }
+    }
+  ]
+}

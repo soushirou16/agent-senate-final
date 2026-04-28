@@ -23,7 +23,7 @@ export function FeedbackDock() {
   return (
     <>
       <button
-        className="feedback-button fixed z-50 flex h-12 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--accent)] px-4 text-sm font-semibold text-[var(--accent-foreground)] shadow-[0_14px_30px_rgba(58,35,18,.22)] transition-transform duration-150 hover:-translate-y-0.5"
+        className="feedback-button fixed z-50 flex h-12 items-center justify-center gap-2 rounded-full border border-[var(--line)] bg-[var(--accent)] px-4 text-sm font-semibold text-[var(--accent-foreground)] shadow-[0_14px_30px_rgba(58,35,18,.22)] transition-transform duration-150 hover:-translate-y-0.5"
         onClick={() => setOpen((current) => !current)}
       >
         <MessageSquareText className="h-4 w-4" />

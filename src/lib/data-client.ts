@@ -15,6 +15,7 @@ import {
   type RoleMode,
   type RunMode,
   type TopicConversationsChunk,
+  type VisualizationDataset,
   type TopicQuestionsChunk,
 } from "@/lib/types";
 
@@ -380,6 +381,19 @@ export async function getTopicConversations(topicSlug: string) {
   );
 }
 
+export async function getQuestionConversations(questionId: string) {
+  const manifest = await getManifest();
+  const paths = manifest.paths.conversationsByQuestion[questionId] ?? [];
+  const chunks = await Promise.all(
+    paths.map((chunkPath) => fetchJson<TopicConversationsChunk>(chunkPath))
+  );
+  return chunks.flatMap((chunk) =>
+    chunk.items.map((item) =>
+      normalizeConversationItem(item as Partial<ConversationItem> & Record<string, unknown>)
+    )
+  );
+}
+
 export async function getAllQuestions() {
   const manifest = await getManifest();
   const questions = await Promise.all(
@@ -392,4 +406,8 @@ export async function getOverviewMetrics() {
   const manifest = await getManifest();
   const chunk = await fetchJson<MetricsChunk>(manifest.paths.metrics);
   return chunk.items;
+}
+
+export async function getVisualizationDataset() {
+  return fetchJson<VisualizationDataset>("/data/metrics/visualization.json");
 }

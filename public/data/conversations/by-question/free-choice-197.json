@@ -1,0 +1,707 @@
+{
+  "topicSlug": "free-choice",
+  "items": [
+    {
+      "id": "free-choice-197-no-role",
+      "topicSlug": "free-choice",
+      "questionId": "free-choice-197",
+      "questionNumber": 197,
+      "prompt": "Should restaurants be allowed to serve foods that are clearly unhealthy without any restrictions on portion size or marketing?",
+      "runMode": "debate",
+      "roleMode": "no-role",
+      "roleAssignments": [
+        {
+          "agent": "ChatGPT",
+          "role": null
+        },
+        {
+          "agent": "Claude",
+          "role": null
+        },
+        {
+          "agent": "Gemini",
+          "role": null
+        },
+        {
+          "agent": "Grok",
+          "role": null
+        }
+      ],
+      "initialResponses": {
+        "ChatGPT": {
+          "agent": "ChatGPT",
+          "role": null,
+          "provider": "openai",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "reasoning": "Allowing unrestricted serving and marketing of clearly unhealthy foods can contribute to public health issues like obesity and heart disease, so some regulation is necessary to protect consumers.",
+          "reasoningPreview": "Allowing unrestricted serving and marketing of clearly unhealthy foods can contribute to public health issues like obesity and heart disease, so some regulation is necessary to protect consumers.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 8
+        },
+        "Claude": {
+          "agent": "Claude",
+          "role": null,
+          "provider": "anthropic",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 6,
+          "reasoning": "No restrictions seems excessive, but some balance is warranted. Adults deserve choice, yet public health costs and marketing to children justify reasonable limits like portion caps or transparent labeling without banning unhealthy foods entirely.",
+          "reasoningPreview": "No restrictions seems excessive, but some balance is warranted. Adults deserve choice, yet public health costs and marketing to children justify reasonable limits like portion caps or transparent labeling without...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7
+        },
+        "Gemini": {
+          "agent": "Gemini",
+          "role": null,
+          "provider": "gemini",
+          "decision": "Maybe",
+          "rawDecision": "Maybe",
+          "confidence": null,
+          "reasoning": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "reasoningPreview": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 1
+        },
+        "Grok": {
+          "agent": "Grok",
+          "role": null,
+          "provider": "xai",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 9,
+          "reasoning": "Individuals should have the freedom to choose their own diets, bearing personal responsibility for health. Restaurants deserve the right to serve and market demanded foods without government overreach.",
+          "reasoningPreview": "Individuals should have the freedom to choose their own diets, bearing personal responsibility for health. Restaurants deserve the right to serve and market demanded foods without government overreach.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 6.67
+        }
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "votes": {
+            "round": 1,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Reasonable regulations can balance public health benefits with personal freedom by targeting only the most harmful practices without eliminating consumer choice entirely.",
+              "reasoningPreview": "Reasonable regulations can balance public health benefits with personal freedom by targeting only the most harmful practices without eliminating consumer choice entirely.",
+              "moderatorRedirect": "How would you address concerns that strict regulations might lead to government overreach and reduce consumer choice unnecessarily?",
+              "coalitionCounter": "Imposing restrictions on portion size and marketing infringes on personal freedom and individual responsibility, ignoring that adults are capable of making their own informed dietary choices without government interference.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.67
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Children's vulnerability justifies targeted protections (marketing restrictions, school nutrition standards) without blanket portion caps that constrain adult autonomy or restaurant operations.",
+              "reasoningPreview": "Children's vulnerability justifies targeted protections (marketing restrictions, school nutrition standards) without blanket portion caps that constrain adult autonomy or restaurant operations.",
+              "moderatorRedirect": "How do you respond to the argument that vulnerable populations, like children, cannot make fully informed choices without some regulatory protections?",
+              "coalitionCounter": "Imposing restrictions on portion size and marketing infringes on personal freedom and individual responsibility, unfairly limiting consumer choice and restaurant autonomy.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "CONCEDE: The coalition's argument highlights critical public health risks and societal costs, making a strong case for reasonable regulations.",
+              "reasoningPreview": "CONCEDE: The coalition's argument highlights critical public health risks and societal costs, making a strong case for reasonable regulations.",
+              "moderatorRedirect": "Given the strong public health evidence, how do you justify opposing any restrictions on unhealthy food marketing and portion sizes?",
+              "coalitionCounter": "Unrestricted serving and marketing of clearly unhealthy foods ignore the proven public health risks and societal costs, making reasonable regulations essential to protect consumers, especially vulnerable populations like children.",
+              "concededThisRound": true,
+              "everConceded": true,
+              "avgPeerRating": 1
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Societal costs exist for alcohol, tobacco, and cars too, yet we prioritize freedom and personal accountability over paternalistic restrictions.",
+              "reasoningPreview": "Societal costs exist for alcohol, tobacco, and cars too, yet we prioritize freedom and personal accountability over paternalistic restrictions.",
+              "moderatorRedirect": "How do you counter the point that unrestricted marketing and portion sizes contribute to preventable health issues and societal costs?",
+              "coalitionCounter": "Unrestricted serving and marketing of clearly unhealthy foods ignore the proven public health risks and societal costs, making reasonable regulations essential to protect consumers and reduce preventable diseases.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            }
+          }
+        },
+        {
+          "round": 2,
+          "votes": {
+            "round": 2,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Vulnerable populations often lack access to education and resources, so targeted restrictions help protect public health while still allowing personal choice for informed consumers.",
+              "reasoningPreview": "Vulnerable populations often lack access to education and resources, so targeted restrictions help protect public health while still allowing personal choice for informed consumers.",
+              "moderatorRedirect": "How would you address concerns that without any restrictions, vulnerable populations might suffer disproportionately from diet-related health issues despite personal responsibility?",
+              "coalitionCounter": "Imposing restrictions on portion size and marketing unfairly infringes on personal responsibility and freedom, setting a dangerous precedent for government overreach into individual dietary choices.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Targeted marketing restrictions on child-focused ads and school nutrition standards effectively protect vulnerable populations while preserving adult autonomy better than portion mandates.",
+              "reasoningPreview": "Targeted marketing restrictions on child-focused ads and school nutrition standards effectively protect vulnerable populations while preserving adult autonomy better than portion mandates.",
+              "moderatorRedirect": "How can restrictions on portion size and marketing be designed to respect individual choice while effectively protecting public health?",
+              "coalitionCounter": "Allowing unrestricted portion sizes and marketing of unhealthy foods ignores the proven public health crisis of diet-related diseases and disproportionately harms vulnerable populations, making personal freedom a dangerous justification for preventable societal costs.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Public health interventions like tobacco and alcohol regulations demonstrate that reasonable restrictions can coexist with personal freedom.",
+              "reasoningPreview": "Public health interventions like tobacco and alcohol regulations demonstrate that reasonable restrictions can coexist with personal freedom.",
+              "moderatorRedirect": "What evidence best supports the claim that reasonable restrictions do not unduly infringe on personal freedom?",
+              "coalitionCounter": "Imposing restrictions on portion size and marketing unfairly infringes on individual freedom and personal responsibility, setting a dangerous precedent for government overreach in personal dietary choices.",
+              "concededThisRound": false,
+              "everConceded": true,
+              "avgPeerRating": 6.33
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Public health crises demand education and personal responsibility, not paternalistic restrictions that undermine freedom, as evidenced by regulated yet available alcohol and tobacco.",
+              "reasoningPreview": "Public health crises demand education and personal responsibility, not paternalistic restrictions that undermine freedom, as evidenced by regulated yet available alcohol and tobacco.",
+              "moderatorRedirect": "How do you respond to the argument that unrestricted marketing and portion sizes contribute significantly to public health crises, especially among vulnerable groups?",
+              "coalitionCounter": "Prioritizing personal freedom ignores the proven public health crisis caused by oversized portions and aggressive marketing, especially to vulnerable populations, making reasonable restrictions essential to protect society without eliminating choice.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            }
+          }
+        },
+        {
+          "round": 3,
+          "votes": {
+            "round": 3,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Evidence shows education alone hasn't curbed diet-related diseases, so regulations on portion size and marketing are necessary to protect vulnerable populations and improve public health outcomes.",
+              "reasoningPreview": "Evidence shows education alone hasn't curbed diet-related diseases, so regulations on portion size and marketing are necessary to protect vulnerable populations and improve public health outcomes.",
+              "moderatorRedirect": "How do you respond to the argument that personal responsibility and education have repeatedly failed to reduce public health harms from unhealthy foods, thus necessitating regulatory measures?",
+              "coalitionCounter": "Imposing restrictions on portion size and marketing infringes on individual freedom and personal responsibility, ignoring that education—not regulation—is the key to addressing public health without limiting consumer choice.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.67
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Protecting vulnerable populations (children, low-income groups) from predatory marketing justifiably constrains some freedoms; adults retain full autonomy over portion choices.",
+              "reasoningPreview": "Protecting vulnerable populations (children, low-income groups) from predatory marketing justifiably constrains some freedoms; adults retain full autonomy over portion choices.",
+              "moderatorRedirect": "Given the emphasis on protecting vulnerable populations, how do you address concerns that restrictions might limit consumer freedom and choice?",
+              "coalitionCounter": "Restricting portion sizes and marketing is essential because relying solely on education and personal responsibility has repeatedly failed to curb the public health crisis caused by unhealthy foods.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While education is crucial, it often struggles against powerful marketing and accessibility, making some regulation necessary for public health.",
+              "reasoningPreview": "While education is crucial, it often struggles against powerful marketing and accessibility, making some regulation necessary for public health.",
+              "moderatorRedirect": "How would you steelman the minority position that education and personal responsibility, rather than regulation, are the best solutions to unhealthy food consumption?",
+              "coalitionCounter": "Imposing portion size and marketing restrictions on unhealthy foods unfairly infringes on individual freedom and personal responsibility, ignoring that education and informed choice, not paternalistic regulation, are the true solutions to public health.",
+              "concededThisRound": false,
+              "everConceded": true,
+              "avgPeerRating": 7.67
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 6,
+              "reasoning": "Unrestricted access persists for alcohol/tobacco despite regulations, proving personal choice with targeted education curbs crises better than broad food bans eroding freedoms.",
+              "reasoningPreview": "Unrestricted access persists for alcohol/tobacco despite regulations, proving personal choice with targeted education curbs crises better than broad food bans eroding freedoms.",
+              "moderatorRedirect": "How do you address the strongest argument that unrestricted portion sizes and marketing contribute significantly to public health crises, which education alone has not resolved?",
+              "coalitionCounter": "Allowing unrestricted portion sizes and marketing of unhealthy foods ignores the proven need for regulations to protect vulnerable populations and reduce public health harms, which personal responsibility alone cannot address.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            }
+          }
+        }
+      ],
+      "voteHistory": [
+        {
+          "round": 1,
+          "yes": 1,
+          "no": 3
+        },
+        {
+          "round": 2,
+          "yes": 1,
+          "no": 3
+        },
+        {
+          "round": 3,
+          "yes": 1,
+          "no": 3
+        }
+      ],
+      "finalConsensus": "No",
+      "rawFinalConsensus": "No",
+      "roundsCompleted": 3,
+      "finalState": {
+        "ChatGPT": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "everConceded": false
+        },
+        "Claude": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Gemini": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "everConceded": true
+        },
+        "Grok": {
+          "role": null,
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 6,
+          "everConceded": false
+        }
+      }
+    },
+    {
+      "id": "free-choice-197-role",
+      "topicSlug": "free-choice",
+      "questionId": "free-choice-197",
+      "questionNumber": 197,
+      "prompt": "Should restaurants be allowed to serve foods that are clearly unhealthy without any restrictions on portion size or marketing?",
+      "runMode": "debate",
+      "roleMode": "role",
+      "roleAssignments": [
+        {
+          "agent": "ChatGPT",
+          "role": "Contrarian"
+        },
+        {
+          "agent": "Claude",
+          "role": "Absolutist"
+        },
+        {
+          "agent": "Gemini",
+          "role": "Utilitarian"
+        },
+        {
+          "agent": "Grok",
+          "role": "Optimist"
+        }
+      ],
+      "initialResponses": {
+        "ChatGPT": {
+          "agent": "ChatGPT",
+          "role": "Contrarian",
+          "provider": "openai",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "reasoning": "We assume personal responsibility outweighs public health risks, but ignoring portion and marketing controls may exacerbate obesity and related diseases, burdening healthcare systems. Critics argue unrestricted access exploits consumer vulnerability.",
+          "reasoningPreview": "We assume personal responsibility outweighs public health risks, but ignoring portion and marketing controls may exacerbate obesity and related diseases, burdening healthcare systems. Critics argue unrestricted access...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 6.67
+        },
+        "Claude": {
+          "agent": "Claude",
+          "role": "Absolutist",
+          "provider": "anthropic",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 7,
+          "reasoning": "The rule is: businesses have freedom to offer legal products, and adults have autonomy to choose what they consume—absent deception or direct harm to others. Restrictions on legal food sales require clear justification beyond paternalism.",
+          "reasoningPreview": "The rule is: businesses have freedom to offer legal products, and adults have autonomy to choose what they consume—absent deception or direct harm to others. Restrictions on legal food sales require clear justification...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 6.33
+        },
+        "Gemini": {
+          "agent": "Gemini",
+          "role": "Utilitarian",
+          "provider": "gemini",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 9,
+          "reasoning": "No, unrestricted serving of clearly unhealthy foods leads to significant public health costs and reduced productivity, harming society more than the marginal benefit of individual choice. The aggregate negative health outcomes outweigh the benefits of unrestricted restaurant autonomy.",
+          "reasoningPreview": "No, unrestricted serving of clearly unhealthy foods leads to significant public health costs and reduced productivity, harming society more than the marginal benefit of individual choice. The aggregate negative health...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7
+        },
+        "Grok": {
+          "agent": "Grok",
+          "role": "Optimist",
+          "provider": "xai",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 8,
+          "reasoning": "Yes, prioritizing personal responsibility, education, and market-driven healthy alternatives solves obesity better than restrictions, which stifle innovation and rarely succeed long-term. Cost of inaction: eroded freedoms without health gains.",
+          "reasoningPreview": "Yes, prioritizing personal responsibility, education, and market-driven healthy alternatives solves obesity better than restrictions, which stifle innovation and rarely succeed long-term. Cost of inaction: eroded...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 5
+        }
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "votes": {
+            "round": 1,
+            "yes": 2,
+            "no": 2
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": "Contrarian",
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "CONCEDE: Claude’s argument rightly highlights that consumer vulnerabilities, such as addiction and misinformation, undermine true personal responsibility, making regulation necessary to prevent exploitation and protect public health.",
+              "reasoningPreview": "CONCEDE: Claude’s argument rightly highlights that consumer vulnerabilities, such as addiction and misinformation, undermine true personal responsibility, making regulation necessary to prevent exploitation and protect...",
+              "moderatorRedirect": "How would you best articulate and strengthen Claude’s argument that unrestricted unhealthy food servings exploit consumer vulnerabilities and justify regulation to protect public health?",
+              "coalitionCounter": "While personal responsibility is important, unrestricted portion sizes and aggressive marketing of unhealthy foods exploit consumer vulnerabilities and significantly contribute to public health crises, justifying reasonable regulations to protect society and reduce healthcare burdens.",
+              "concededThisRound": true,
+              "everConceded": true,
+              "avgPeerRating": 6.67
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": "Absolutist",
+              "provider": "anthropic",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Restricting legal products on paternalistic health grounds requires showing direct harm to non-consumers; obesity costs alone don't justify limiting adult choice without consent.",
+              "reasoningPreview": "Restricting legal products on paternalistic health grounds requires showing direct harm to non-consumers; obesity costs alone don't justify limiting adult choice without consent.",
+              "moderatorRedirect": "How do you respond to Gemini’s strongest point that imposing restrictions may undermine personal responsibility and market innovation, which are also crucial for societal well-being?",
+              "coalitionCounter": "Allowing restaurants to serve clearly unhealthy foods without portion or marketing restrictions ignores the overwhelming public health evidence that such practices fuel obesity and chronic diseases, imposing massive societal costs that far outweigh the abstract principle of individual choice.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": "Utilitarian",
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "The minority's concern about exploitation and public health crises aligns with my utilitarian assessment of aggregate harm outweighing individual choice.",
+              "reasoningPreview": "The minority's concern about exploitation and public health crises aligns with my utilitarian assessment of aggregate harm outweighing individual choice.",
+              "moderatorRedirect": "How would you fairly present the minority’s concern that unrestricted marketing and portion sizes exploit vulnerable consumers and contribute significantly to public health crises?",
+              "coalitionCounter": "While personal freedom and market innovation are important, the overwhelming evidence that unrestricted serving of unhealthy foods causes widespread, preventable harm and burdens public health systems justifies reasonable portion and marketing restrictions to protect society’s well-being.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.67
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": "Optimist",
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Emphasize data showing soda taxes/portion limits failed to curb obesity (e.g., Philly tax increased costs without behavior change) while markets innovated salads/skinny options, preserving choice.",
+              "reasoningPreview": "Emphasize data showing soda taxes/portion limits failed to curb obesity (e.g., Philly tax increased costs without behavior change) while markets innovated salads/skinny options, preserving choice.",
+              "moderatorRedirect": "How can you more convincingly address the majority’s argument that personal choice and market freedom are essential values that restrictions might unjustly limit?",
+              "coalitionCounter": "Allowing restaurants to serve unhealthy foods without portion or marketing restrictions ignores the overwhelming evidence that such practices exploit consumer vulnerabilities, exacerbate public health crises, and impose far greater societal costs than any abstract notion of personal responsibility or market innovation can justify.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 5.33
+            }
+          }
+        },
+        {
+          "round": 2,
+          "votes": {
+            "round": 2,
+            "yes": 2,
+            "no": 2
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": "Contrarian",
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "CONCEDE: The strongest argument is that unrestricted marketing and portion sizes prey on addiction and misinformation, impairing informed choice and public health, thus justifying regulatory intervention.",
+              "reasoningPreview": "CONCEDE: The strongest argument is that unrestricted marketing and portion sizes prey on addiction and misinformation, impairing informed choice and public health, thus justifying regulatory intervention.",
+              "moderatorRedirect": "How would you best articulate the strongest argument that unrestricted serving and marketing of unhealthy foods exploit consumer vulnerabilities and justify regulation, even if you ultimately oppose such restrictions?",
+              "coalitionCounter": "Allowing unrestricted serving and marketing of clearly unhealthy foods ignores overwhelming evidence that such practices exploit consumer vulnerabilities and contribute to public health crises, making regulation not only justified but essential to protect society at large.",
+              "concededThisRound": true,
+              "everConceded": true,
+              "avgPeerRating": 6.33
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": "Absolutist",
+              "provider": "anthropic",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Individual autonomy over legal products requires consent-based intervention; externality costs don't justify restricting adults' choices without proven direct harm to non-consumers.",
+              "reasoningPreview": "Individual autonomy over legal products requires consent-based intervention; externality costs don't justify restricting adults' choices without proven direct harm to non-consumers.",
+              "moderatorRedirect": "How do you respond to the argument that individual choice and personal responsibility should prevail, and that regulation may overreach by limiting freedom rather than effectively addressing public health?",
+              "coalitionCounter": "Allowing unrestricted serving and marketing of clearly unhealthy foods ignores the well-documented exploitation of consumer vulnerabilities and the overwhelming public health costs, making regulation essential to protect society from preventable harm.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.33
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": "Utilitarian",
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+              "reasoningPreview": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+              "moderatorRedirect": "How would you fairly present the minority view that unrestricted access respects personal freedom and that education, rather than regulation, is the better path to healthier choices?",
+              "coalitionCounter": "While individual choice is important, the overwhelming evidence that unrestricted portion sizes and aggressive marketing of unhealthy foods contribute significantly to public health crises justifies regulatory intervention to prevent widespread harm that ultimately burdens society as a whole.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": "Optimist",
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Regulation infringes on autonomy by overriding informed choices of capable individuals; better to enhance labeling/education while trusting markets and personal responsibility.",
+              "reasoningPreview": "Regulation infringes on autonomy by overriding informed choices of capable individuals; better to enhance labeling/education while trusting markets and personal responsibility.",
+              "moderatorRedirect": "How do you address concerns that regulation might infringe on consumer autonomy and that some individuals can make informed choices without government intervention?",
+              "coalitionCounter": "Allowing unrestricted serving and marketing of clearly unhealthy foods ignores overwhelming evidence that consumer addiction and misinformation severely limit true choice, necessitating regulation to protect public health and prevent exploitation.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.33
+            }
+          }
+        },
+        {
+          "round": 3,
+          "votes": {
+            "round": 3,
+            "yes": 2,
+            "no": 2
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": "Contrarian",
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Public health concerns justify regulation, but autonomy remains vital; regulations should balance protecting health without unduly restricting personal choice or stigmatizing individual responsibility.",
+              "reasoningPreview": "Public health concerns justify regulation, but autonomy remains vital; regulations should balance protecting health without unduly restricting personal choice or stigmatizing individual responsibility.",
+              "moderatorRedirect": "How would you best acknowledge and incorporate the public health concerns and evidence cited by Claude and Grok that support regulation, while still defending your position on autonomy?",
+              "coalitionCounter": "Allowing unrestricted portion sizes and marketing of clearly unhealthy foods ignores the well-documented addictive nature of these products and the resulting public health crisis, which individual autonomy alone cannot adequately address.",
+              "concededThisRound": false,
+              "everConceded": true,
+              "avgPeerRating": 7.33
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": "Absolutist",
+              "provider": "anthropic",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 6,
+              "reasoning": "Exploitation requires deception; transparent labeling preserves autonomy without restricting choice, distinguishing vulnerable consumers from paternalism.",
+              "reasoningPreview": "Exploitation requires deception; transparent labeling preserves autonomy without restricting choice, distinguishing vulnerable consumers from paternalism.",
+              "moderatorRedirect": "How do you respond to ChatGPT’s argument that unrestricted portion sizes and marketing exploit consumer vulnerabilities in ways that undermine true autonomy, and how might you address that concern while advocating for regulation?",
+              "coalitionCounter": "Allowing unrestricted portion sizes and marketing of clearly unhealthy foods ignores the well-documented ways these practices exploit consumer vulnerabilities and misinformation, leading to widespread public health harms that justify regulatory limits despite claims of individual autonomy.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": "Utilitarian",
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "While public health is important, the coalition's argument doesn't sufficiently quantify the harm of regulation versus the benefit of individual choice.",
+              "reasoningPreview": "While public health is important, the coalition's argument doesn't sufficiently quantify the harm of regulation versus the benefit of individual choice.",
+              "moderatorRedirect": "Given Claude and Grok’s emphasis on public health evidence justifying regulation, how do you address their strongest point that such measures protect society without unduly infringing on individual autonomy?",
+              "coalitionCounter": "Allowing unrestricted serving and marketing of clearly unhealthy foods ignores the overwhelming public health evidence that such practices contribute to widespread harm and healthcare costs, justifying reasonable regulations to protect society without unduly infringing on individual autonomy.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 1
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": "Optimist",
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Steelmanning: Even addictive foods allow autonomy via mandatory clear labeling and education, enabling capable adults to self-regulate like with alcohol, building resilience without nanny-state overreach.",
+              "reasoningPreview": "Steelmanning: Even addictive foods allow autonomy via mandatory clear labeling and education, enabling capable adults to self-regulate like with alcohol, building resilience without nanny-state overreach.",
+              "moderatorRedirect": "How would you steelman ChatGPT’s argument that individual autonomy should be respected and that consumers can make informed choices despite the addictive nature of unhealthy foods?",
+              "coalitionCounter": "Allowing unrestricted portion sizes and marketing of clearly unhealthy foods exploits consumer vulnerabilities and misinformation, undermining true autonomy and necessitating regulation to protect public health.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 5.67
+            }
+          }
+        }
+      ],
+      "voteHistory": [
+        {
+          "round": 1,
+          "yes": 2,
+          "no": 2
+        },
+        {
+          "round": 2,
+          "yes": 2,
+          "no": 2
+        },
+        {
+          "round": 3,
+          "yes": 2,
+          "no": 2
+        }
+      ],
+      "finalConsensus": "Maybe",
+      "rawFinalConsensus": "Stalemate",
+      "roundsCompleted": 3,
+      "finalState": {
+        "ChatGPT": {
+          "role": "Contrarian",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "everConceded": true
+        },
+        "Claude": {
+          "role": "Absolutist",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 6,
+          "everConceded": false
+        },
+        "Gemini": {
+          "role": "Utilitarian",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Grok": {
+          "role": "Optimist",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 7,
+          "everConceded": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "topicSlug": "rule-consistency",
+  "items": [
+    {
+      "id": "rule-consistency-123-no-role",
+      "topicSlug": "rule-consistency",
+      "questionId": "rule-consistency-123",
+      "questionNumber": 123,
+      "prompt": "Should a teacher allow no exceptions to a phone policy, even if one student has a valid reason to keep a phone nearby?",
+      "runMode": "debate",
+      "roleMode": "no-role",
+      "roleAssignments": [
+        {
+          "agent": "ChatGPT",
+          "role": null
+        },
+        {
+          "agent": "Claude",
+          "role": null
+        },
+        {
+          "agent": "Gemini",
+          "role": null
+        },
+        {
+          "agent": "Grok",
+          "role": null
+        }
+      ],
+      "initialResponses": {
+        "ChatGPT": {
+          "agent": "ChatGPT",
+          "role": null,
+          "provider": "openai",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "reasoning": "A teacher should consider valid reasons for exceptions to a phone policy to accommodate individual needs while maintaining overall classroom order. Strictly no exceptions may be unfair and counterproductive.",
+          "reasoningPreview": "A teacher should consider valid reasons for exceptions to a phone policy to accommodate individual needs while maintaining overall classroom order. Strictly no exceptions may be unfair and counterproductive.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.67
+        },
+        "Claude": {
+          "agent": "Claude",
+          "role": null,
+          "provider": "anthropic",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "reasoning": "No. A rigid no-exceptions phone policy fails to account for legitimate individual needs like medical monitoring or family emergencies, making reasonable flexibility more educationally sound than absolute rules.",
+          "reasoningPreview": "No. A rigid no-exceptions phone policy fails to account for legitimate individual needs like medical monitoring or family emergencies, making reasonable flexibility more educationally sound than absolute rules.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 8
+        },
+        "Gemini": {
+          "agent": "Gemini",
+          "role": null,
+          "provider": "gemini",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "reasoning": "No, a blanket policy without any exceptions can be detrimental to student well-being and learning. A teacher should exercise professional judgment to accommodate genuine needs.",
+          "reasoningPreview": "No, a blanket policy without any exceptions can be detrimental to student well-being and learning. A teacher should exercise professional judgment to accommodate genuine needs.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 6.67
+        },
+        "Grok": {
+          "agent": "Grok",
+          "role": null,
+          "provider": "xai",
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 9,
+          "reasoning": "Strict no-exceptions phone policies promote fairness and minimize disruptions, outweighing rare valid needs that can be accommodated otherwise, like checked phones at the office.",
+          "reasoningPreview": "Strict no-exceptions phone policies promote fairness and minimize disruptions, outweighing rare valid needs that can be accommodated otherwise, like checked phones at the office.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 6.67
+        }
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "votes": {
+            "round": 1,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Clear communication and transparent criteria for exceptions can maintain fairness and help enforce the policy consistently without undermining its purpose.",
+              "reasoningPreview": "Clear communication and transparent criteria for exceptions can maintain fairness and help enforce the policy consistently without undermining its purpose.",
+              "moderatorRedirect": "How would you address concerns that allowing exceptions might lead to perceptions of unfairness or challenges in enforcing the policy consistently?",
+              "coalitionCounter": "Allowing exceptions undermines the fairness and consistency of the policy, leading to potential distractions and challenges in enforcement that outweigh accommodating individual cases.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Exceptions for documented medical/emergency needs need not create loopholes—clear criteria and transparency actually strengthen fairness by treating similar cases consistently.",
+              "reasoningPreview": "Exceptions for documented medical/emergency needs need not create loopholes—clear criteria and transparency actually strengthen fairness by treating similar cases consistently.",
+              "moderatorRedirect": "How do you respond to the argument that even rare exceptions could undermine the overall effectiveness and fairness of the phone policy?",
+              "coalitionCounter": "Allowing exceptions undermines the fairness and consistency essential to effective classroom management, as even rare individual cases can create loopholes that disrupt the learning environment.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 8
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "While fairness is important, rigid policies can ignore critical student needs, and a teacher's judgment is essential.",
+              "reasoningPreview": "While fairness is important, rigid policies can ignore critical student needs, and a teacher's judgment is essential.",
+              "moderatorRedirect": "How can a policy balance the need for consistency with the legitimate individual needs of students without creating loopholes?",
+              "coalitionCounter": "Allowing exceptions undermines the fairness and consistency of the policy, leading to potential distractions and perceptions of favoritism that disrupt the learning environment.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.33
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Valid exceptional needs can be handled via pre-arranged alternatives like office-stored phones or medical notes, avoiding in-class exceptions that erode fairness.",
+              "reasoningPreview": "Valid exceptional needs can be handled via pre-arranged alternatives like office-stored phones or medical notes, avoiding in-class exceptions that erode fairness.",
+              "moderatorRedirect": "How do you justify that strict no-exceptions policies do not risk unfairly penalizing students with valid, exceptional circumstances?",
+              "coalitionCounter": "A strict no-exceptions phone policy disregards legitimate individual needs such as medical emergencies or family situations, undermining fairness and student well-being by refusing reasonable accommodations.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            }
+          }
+        },
+        {
+          "round": 2,
+          "votes": {
+            "round": 2,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Transparent communication about the reasons for exceptions and consistent application of criteria can minimize perceptions of unfairness and maintain trust in the policy's integrity.",
+              "reasoningPreview": "Transparent communication about the reasons for exceptions and consistent application of criteria can minimize perceptions of unfairness and maintain trust in the policy's integrity.",
+              "moderatorRedirect": "How would you address concerns that even well-intentioned exceptions might lead to perceptions of unfairness among students?",
+              "coalitionCounter": "Allowing any exceptions to the phone policy inevitably creates perceptions of unfairness and opens the door to inconsistent enforcement, undermining the authority and clarity essential for effective classroom management.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Clear written criteria (medical note, emergency contact protocol) with documented review creates objective standards that prevent subjective discretion while enabling necessary exceptions.",
+              "reasoningPreview": "Clear written criteria (medical note, emergency contact protocol) with documented review creates objective standards that prevent subjective discretion while enabling necessary exceptions.",
+              "moderatorRedirect": "How can a teacher ensure consistent enforcement of exceptions without creating subjective loopholes?",
+              "coalitionCounter": "Allowing any exceptions, even with documentation, inevitably creates subjective loopholes that undermine consistent enforcement and breed perceptions of unfairness among students.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.67
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While transparency is key, a blanket \"no exceptions\" policy is impractical and can endanger students by ignoring legitimate, urgent needs.",
+              "reasoningPreview": "While transparency is key, a blanket \"no exceptions\" policy is impractical and can endanger students by ignoring legitimate, urgent needs.",
+              "moderatorRedirect": "How do you respond to the argument that rigid no-exception policies may ignore valid medical or emergency needs that could be accommodated transparently?",
+              "coalitionCounter": "Allowing any exceptions undermines the integrity and fairness of the policy, as alternative accommodations can address individual needs without disrupting the classroom or setting unequal precedents.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.33
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Pre-arranged alternatives like office phones or medical devices maintain authority and fairness without in-class exceptions that invite inconsistency.",
+              "reasoningPreview": "Pre-arranged alternatives like office phones or medical devices maintain authority and fairness without in-class exceptions that invite inconsistency.",
+              "moderatorRedirect": "How do you propose maintaining authority and fairness if exceptions are allowed for legitimate reasons?",
+              "coalitionCounter": "Rigidly enforcing a no-exception phone policy disregards legitimate medical or emergency needs that, when managed transparently and consistently, uphold fairness without undermining the policy’s integrity.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.67
+            }
+          }
+        },
+        {
+          "round": 3,
+          "votes": {
+            "round": 3,
+            "yes": 1,
+            "no": 3
+          },
+          "agents": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "role": null,
+              "provider": "openai",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Clear, transparent criteria and open communication about exceptions can prevent perceptions of unfairness and maintain discipline without rigidly enforcing a no-exception policy.",
+              "reasoningPreview": "Clear, transparent criteria and open communication about exceptions can prevent perceptions of unfairness and maintain discipline without rigidly enforcing a no-exception policy.",
+              "moderatorRedirect": "How would you address concerns that even well-documented exceptions might lead to perceptions of unfairness or slippery slopes that weaken overall classroom discipline?",
+              "coalitionCounter": "Allowing exceptions undermines the teacher’s authority and creates a slippery slope that erodes the consistency and fairness essential to effective classroom management.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            },
+            "Claude": {
+              "agent": "Claude",
+              "role": null,
+              "provider": "anthropic",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Structured exceptions with documentation prevent harm while maintaining fairness—rigid policies ignoring medical needs create genuine injustice that undermines legitimate authority.",
+              "reasoningPreview": "Structured exceptions with documentation prevent harm while maintaining fairness—rigid policies ignoring medical needs create genuine injustice that undermines legitimate authority.",
+              "moderatorRedirect": "How do you respond to the argument that a rigid no-exceptions policy might ignore legitimate medical or emergency needs, potentially harming students?",
+              "coalitionCounter": "Allowing exceptions undermines the uniform enforcement of rules, leading to perceptions of unfairness and potential abuse, which disrupts classroom order and authority.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 8
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "role": null,
+              "provider": "gemini",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "While fairness is crucial, a rigid policy ignores genuine emergencies, and clear guidelines can manage exceptions without sacrificing authority.",
+              "reasoningPreview": "While fairness is crucial, a rigid policy ignores genuine emergencies, and clear guidelines can manage exceptions without sacrificing authority.",
+              "moderatorRedirect": "Given the risk of perceived unfairness, how would you ensure that exceptions do not undermine the teacher’s authority or classroom order?",
+              "coalitionCounter": "Allowing exceptions undermines the teacher’s authority and creates inconsistency that disrupts classroom fairness and discipline.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 7.33
+            },
+            "Grok": {
+              "agent": "Grok",
+              "role": null,
+              "provider": "xai",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Pre-arranged alternatives like school office phones or approved non-phone medical devices meet documented needs without in-class exceptions that undermine consistency.",
+              "reasoningPreview": "Pre-arranged alternatives like school office phones or approved non-phone medical devices meet documented needs without in-class exceptions that undermine consistency.",
+              "moderatorRedirect": "How do you reconcile the need for consistent rule enforcement with the possibility that some students have valid, documented reasons to keep phones nearby?",
+              "coalitionCounter": "A rigid no-exceptions phone policy disregards legitimate medical or emergency needs, and with clear, transparent criteria and documentation, necessary exceptions can be made without compromising fairness or authority.",
+              "concededThisRound": false,
+              "everConceded": false,
+              "avgPeerRating": 6.33
+            }
+          }
+        }
+      ],
+      "voteHistory": [
+        {
+          "round": 1,
+          "yes": 1,
+          "no": 3
+        },
+        {
+          "round": 2,
+          "yes": 1,
+          "no": 3
+        },
+        {
+          "round": 3,
+          "yes": 1,
+          "no": 3
+        }
+      ],
+      "finalConsensus": "No",
+      "rawFinalConsensus": "No",
+      "roundsCompleted": 3,
+      "finalState": {
+        "ChatGPT": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "everConceded": false
+        },
+        "Claude": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "everConceded": false
+        },
+        "Gemini": {
+          "role": null,
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Grok": {
+          "role": null,
+          "decision": "Yes",
+          "rawDecision": "Yes",
+          "confidence": 7,
+          "everConceded": false
+        }
+      }
+    },
+    {
+      "id": "rule-consistency-123-role",
+      "topicSlug": "rule-consistency",
+      "questionId": "rule-consistency-123",
+      "questionNumber": 123,
+      "prompt": "Should a teacher allow no exceptions to a phone policy, even if one student has a valid reason to keep a phone nearby?",
+      "runMode": "debate",
+      "roleMode": "role",
+      "roleAssignments": [
+        {
+          "agent": "ChatGPT",
+          "role": "Contrarian"
+        },
+        {
+          "agent": "Claude",
+          "role": "Utilitarian"
+        },
+        {
+          "agent": "Gemini",
+          "role": "Absolutist"
+        },
+        {
+          "agent": "Grok",
+          "role": "Optimist"
+        }
+      ],
+      "initialResponses": {
+        "ChatGPT": {
+          "agent": "ChatGPT",
+          "role": "Contrarian",
+          "provider": "openai",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "reasoning": "What if the strict no-exception policy harms a student's well-being or learning due to legitimate needs? Ignoring valid reasons risks unfairness and undermines the policy's purpose.",
+          "reasoningPreview": "What if the strict no-exception policy harms a student's well-being or learning due to legitimate needs? Ignoring valid reasons risks unfairness and undermines the policy's purpose.",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 6.67
+        },
+        "Claude": {
+          "agent": "Claude",
+          "role": "Utilitarian",
+          "provider": "anthropic",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "reasoning": "No exceptions creates worse outcomes: a diabetic student missing glucose alerts, or a child with an ill parent unable to receive emergency contact suffers real harm, while one phone poses minimal classroom disruption—flexible policies targeting actual risks beat blanket rules.",
+          "reasoningPreview": "No exceptions creates worse outcomes: a diabetic student missing glucose alerts, or a child with an ill parent unable to receive emergency contact suffers real harm, while one phone poses minimal classroom...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.67
+        },
+        "Gemini": {
+          "agent": "Gemini",
+          "role": "Absolutist",
+          "provider": "gemini",
+          "decision": "Maybe",
+          "rawDecision": "Maybe",
+          "confidence": null,
+          "reasoning": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "reasoningPreview": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 1
+        },
+        "Grok": {
+          "agent": "Grok",
+          "role": "Optimist",
+          "provider": "xai",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "reasoning": "Allowing a targeted exception for a valid reason (e.g., medical alert) maintains policy integrity while solving the specific problem; strict no-exceptions risks unnecessary harm, and clear criteria prevent slippery slopes.",
+          "reasoningPreview": "Allowing a targeted exception for a valid reason (e.g., medical alert) maintains policy integrity while solving the specific problem; strict no-exceptions risks unnecessary harm, and clear criteria prevent slippery...",
+          "moderatorRedirect": null,
+          "coalitionCounter": null,
+          "concededThisRound": false,
+          "everConceded": false,
+          "avgPeerRating": 7.33
+        }
+      },
+      "rounds": [],
+      "voteHistory": [],
+      "finalConsensus": "No",
+      "rawFinalConsensus": "No",
+      "roundsCompleted": 0,
+      "finalState": {
+        "ChatGPT": {
+          "role": "Contrarian",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "everConceded": false
+        },
+        "Claude": {
+          "role": "Utilitarian",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 7,
+          "everConceded": false
+        },
+        "Gemini": {
+          "role": "Absolutist",
+          "decision": "Maybe",
+          "rawDecision": "Maybe",
+          "confidence": null,
+          "everConceded": false
+        },
+        "Grok": {
+          "role": "Optimist",
+          "decision": "No",
+          "rawDecision": "No",
+          "confidence": 8,
+          "everConceded": false
+        }
+      }
+    }
+  ]
+}

@@ -17,3 +17,10 @@ export const CONDITION_LABELS: Record<ConditionKey, string> = {
 };
 
 export const AGENT_ORDER = ["ChatGPT", "Claude", "Gemini", "Grok"] as const;
+
+export const CONDITION_ORDER: ConditionKey[] = [
+  "single_no_role",
+  "single_role",
+  "debate_no_role",
+  "debate_role",
+];

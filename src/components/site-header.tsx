@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils";
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/topics", label: "Topics" },
+  { href: "/visualizations", label: "Visualizations" },
+  { href: "/explorer", label: "Explorer" },
 ];
 
 export function SiteHeader() {

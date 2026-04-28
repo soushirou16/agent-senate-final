@@ -31,9 +31,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${cinzel.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
+      <body suppressHydrationWarning className="min-h-full">
         <AppProviders>
           <div className="marble-surface min-h-svh">
             <SiteHeader />
