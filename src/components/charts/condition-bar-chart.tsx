@@ -37,12 +37,12 @@ export function ConditionBarChart({
   });
 
   return (
-    <Card className="stage-card h-full">
+    <Card className="stage-card h-full min-w-0">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
-      <CardContent className="h-[280px]">
-        <ResponsiveContainer width="100%" height="100%">
+      <CardContent className="h-[280px] min-w-0">
+        <ResponsiveContainer width="100%" height="100%" minWidth={0}>
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--line-subtle)" />
             <XAxis dataKey="condition" tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} />

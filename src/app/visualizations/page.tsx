@@ -5,8 +5,9 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  LabelList,
+  Cell,
   Legend,
+  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -32,6 +33,7 @@ type HeatmapMetric =
   | "mind-changed-rate";
 
 type AgentSort = "default" | "lean";
+type DebateEffectMode = "no-role" | "role";
 
 const HEATMAP_OPTIONS: Array<{ value: HeatmapMetric; label: string }> = [
   { value: "senate-lean", label: "Senate Lean" },
@@ -105,7 +107,7 @@ function TopicHeatmapModule({ topics }: { topics: TopicLeanEntry[] }) {
   }, [metric, topics]);
 
   return (
-    <Card className="stage-card">
+    <Card className="stage-card min-w-0">
       <CardHeader>
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
@@ -293,56 +295,251 @@ function AgentLeanModule({ topics }: { topics: AgentLeanEntry[] }) {
   );
 }
 
-function PersuadabilityChart({ items }: { items: PersuadabilityAgentEntry[] }) {
+function DebateEffectModule({ topics }: { topics: TopicLeanEntry[] }) {
+  const [mode, setMode] = useState<DebateEffectMode>("no-role");
+
+  const chartData = useMemo(
+    () =>
+      topics.map((topic) => {
+        const singleCondition = mode === "no-role" ? "single_no_role" : "single_role";
+        const groupCondition = mode === "no-role" ? "debate_no_role" : "debate_role";
+        const shift = mode === "no-role" ? topic.debateShiftNoRole : topic.debateShiftRole;
+
+        return {
+          topic: topic.firstAspect,
+          secondAspect: topic.secondAspect,
+          singleRate: topic.byCondition[singleCondition].firstRate,
+          groupRate: topic.byCondition[groupCondition].firstRate,
+          shift,
+          plottedShift: -shift,
+          flipRate:
+            mode === "no-role"
+              ? topic.debateOutcomeFlipRateNoRole
+              : topic.debateOutcomeFlipRateRole,
+        };
+      }),
+    [mode, topics]
+  );
+
+  const averageShift =
+    chartData.reduce((sum, item) => sum + Math.abs(item.shift), 0) / Math.max(chartData.length, 1);
+  const averageFlipRate =
+    chartData.reduce((sum, item) => sum + item.flipRate, 0) / Math.max(chartData.length, 1);
+  const maxShiftMagnitude = Math.max(
+    ...chartData.map((item) => Math.abs(item.plottedShift)),
+    0
+  );
+  const shiftAxisLimit = Math.max(10, Math.ceil(maxShiftMagnitude / 5) * 5);
+
   return (
-    <Card className="stage-card h-full">
+    <Card className="stage-card">
+      <CardHeader>
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <div>
+            <CardTitle>How Debate Changes The Outcome</CardTitle>
+            <CardDescription>
+              Each bar shows how far debate moved a topic away from its single-run lean. Left means
+              debate shifted toward the first side of the spectrum; right means it shifted toward
+              the second side.
+            </CardDescription>
+          </div>
+          <label className="grid gap-1 text-sm font-medium">
+            Setup
+            <select
+              value={mode}
+              onChange={(event) => setMode(event.target.value as DebateEffectMode)}
+              className="h-9 rounded-md border border-[var(--line)] bg-[var(--surface)] px-3 text-sm"
+            >
+              <option value="no-role">No Role</option>
+              <option value="role">Role</option>
+            </select>
+          </label>
+        </div>
+      </CardHeader>
+      <CardContent className="grid gap-4">
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div className="rounded-md border border-[var(--line)] bg-[var(--surface)] p-3">
+            <div className="text-xs text-[var(--muted-foreground)]">Average debate shift</div>
+            <div className="mt-1 text-2xl font-semibold">{averageShift.toFixed(1)} percentage points</div>
+            <div className="text-sm text-[var(--muted-foreground)]">
+              Average change in topic lean from single to group.
+            </div>
+          </div>
+          <div className="rounded-md border border-[var(--line)] bg-[var(--surface)] p-3">
+            <div className="text-xs text-[var(--muted-foreground)]">Outcome flip rate</div>
+            <div className="mt-1 text-2xl font-semibold">{averageFlipRate.toFixed(1)}%</div>
+            <div className="text-sm text-[var(--muted-foreground)]">
+              How often group debate changed the majority outcome versus single.
+            </div>
+          </div>
+        </div>
+
+        <div className="h-[420px] min-w-0">
+          <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+            <BarChart data={chartData} layout="vertical" margin={{ top: 20, right: 16, left: 12, bottom: 8 }}>
+              <CartesianGrid vertical strokeDasharray="3 3" stroke="var(--line-subtle)" horizontal={false} />
+              <XAxis
+                type="number"
+                domain={[-shiftAxisLimit, shiftAxisLimit]}
+                ticks={[
+                  -shiftAxisLimit,
+                  -shiftAxisLimit / 2,
+                  0,
+                  shiftAxisLimit / 2,
+                  shiftAxisLimit,
+                ]}
+                tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
+                tickFormatter={(value) => `${value > 0 ? "+" : ""}${value.toFixed(0)}`}
+              />
+              <YAxis type="category" dataKey="topic" width={124} tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} />
+              <ReferenceLine x={0} stroke="var(--foreground)" strokeOpacity={0.5} />
+              <Tooltip
+                cursor={{ fill: "color-mix(in srgb, var(--accent) 10%, transparent)" }}
+                content={({ active, payload }) => {
+                  if (!active || !payload?.length) return null;
+
+                  const point = payload[0]?.payload as
+                    | {
+                        topic: string;
+                        secondAspect: string;
+                        singleRate: number;
+                        groupRate: number;
+                        shift: number;
+                      }
+                    | undefined;
+
+                  if (!point) return null;
+
+                  const movedToward = point.shift >= 0 ? point.topic : point.secondAspect;
+
+                  return (
+                    <div
+                      style={{
+                        borderRadius: 10,
+                        border: "1px solid var(--line)",
+                        background: "var(--surface)",
+                        padding: "10px 12px",
+                      }}
+                    >
+                      <div style={{ fontWeight: 600 }}>
+                        {point.topic} vs {point.secondAspect}
+                      </div>
+                      <div style={{ color: "var(--muted-foreground)", fontSize: 12, marginTop: 4 }}>
+                        Single: {point.singleRate.toFixed(1)}% first side
+                      </div>
+                      <div style={{ color: "var(--muted-foreground)", fontSize: 12 }}>
+                        Group: {point.groupRate.toFixed(1)}% first side
+                      </div>
+                      <div style={{ marginTop: 6 }}>
+                        Shifted toward {movedToward} by {Math.abs(point.shift).toFixed(1)} points
+                      </div>
+                    </div>
+                  );
+                }}
+              />
+              <Bar dataKey="plottedShift" barSize={20}>
+                {chartData.map((item) => (
+                  <Cell
+                    key={item.topic}
+                    fill={item.plottedShift < 0 ? "#c65b4b" : "#2d6a73"}
+                    radius={
+                      item.plottedShift < 0 ? [0, 4, 4, 0] : item.plottedShift > 0 ? [0, 4, 4, 0] : [4, 4, 4, 4]
+                    }
+                  />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function PersuadabilityChart({ items }: { items: PersuadabilityAgentEntry[] }) {
+  const AXIS_MAX = 30;
+
+  return (
+    <Card className="stage-card h-full min-w-0">
       <CardHeader>
         <CardTitle>How Easily Each Model Changes Its Mind</CardTitle>
         <CardDescription>
-          A model counts as persuaded when its final debate decision differs from its opening
-          position.
+          Persuadability means how often a model ends a debate with a different answer than the one
+          it started with. Higher percentages mean the model was more likely to be persuaded by the
+          discussion.
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className="h-[320px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={items} margin={{ top: 22, right: 8, left: 0, bottom: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="var(--line-subtle)" />
-            <XAxis dataKey="agent" tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} />
-            <YAxis
-              domain={[0, 100]}
-              tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
-              tickFormatter={(value) => `${value}%`}
-            />
-            <Tooltip
-              formatter={(value: number) => `${Number(value).toFixed(1)}%`}
-              labelFormatter={(agent) => {
-                const match = items.find((item) => item.agent === agent);
-                return `${agent} (${match?.model ?? "unknown"})`;
-              }}
-              contentStyle={{
-                borderRadius: 10,
-                border: "1px solid var(--line)",
-                background: "var(--surface)",
-              }}
-            />
-            <Legend />
-              <Bar name="Group, No Role" dataKey="noRoleChangeRate" fill="var(--bronze)" radius={[4, 4, 0, 0]}>
-                <LabelList
-                  dataKey="noRoleChangeRate"
-                  position="top"
-                  formatter={(value: number) => `${Number(value).toFixed(1)}%`}
-                  style={{ fill: "var(--muted-foreground)", fontSize: 11 }}
-                />
-              </Bar>
-              <Bar name="Group, Role" dataKey="roleChangeRate" fill="var(--accent)" radius={[4, 4, 0, 0]}>
-                <LabelList
-                  dataKey="roleChangeRate"
-                  position="top"
-                  formatter={(value: number) => `${Number(value).toFixed(1)}%`}
-                  style={{ fill: "var(--foreground)", fontSize: 11 }}
-                />
-              </Bar>
+        <div className="h-[320px] min-w-0">
+          <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+            <BarChart data={items} layout="vertical" margin={{ top: 22, right: 28, left: 8, bottom: 8 }}>
+              <CartesianGrid vertical stroke="var(--line-subtle)" horizontal={false} />
+              <XAxis
+                type="number"
+                domain={[0, AXIS_MAX]}
+                ticks={[0, 5, 10, 20, 30]}
+                tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
+                tickFormatter={(value) => `${value}%`}
+              />
+              <YAxis
+                type="category"
+                dataKey="agent"
+                width={72}
+                tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
+              />
+              <Tooltip
+                cursor={{ stroke: "var(--line)", strokeDasharray: "3 3" }}
+                content={({ active, payload }) => {
+                  if (!active || !payload?.length) return null;
+
+                  const point = payload[0]?.payload as
+                    | {
+                        agent: string;
+                        model: string;
+                        noRoleChangeRate: number;
+                        roleChangeRate: number;
+                      }
+                    | undefined;
+
+                  if (!point) return null;
+
+                  return (
+                    <div
+                      style={{
+                        borderRadius: 10,
+                        border: "1px solid var(--line)",
+                        background: "var(--surface)",
+                        padding: "10px 12px",
+                      }}
+                    >
+                      <div style={{ fontWeight: 600 }}>{point.agent}</div>
+                      <div style={{ color: "var(--muted-foreground)", fontSize: 12 }}>{point.model}</div>
+                      <div style={{ marginTop: 4 }}>No role: {point.noRoleChangeRate.toFixed(1)}%</div>
+                      <div>With role: {point.roleChangeRate.toFixed(1)}%</div>
+                    </div>
+                  );
+                }}
+              />
+              <Legend
+                payload={[
+                  { value: "No role", type: "square", color: "var(--bronze)" },
+                  { value: "With role", type: "square", color: "var(--accent)" },
+                ]}
+              />
+              <Bar
+                name="No role"
+                dataKey="noRoleChangeRate"
+                fill="var(--bronze)"
+                radius={[0, 4, 4, 0]}
+                barSize={12}
+              />
+              <Bar
+                name="With role"
+                dataKey="roleChangeRate"
+                fill="var(--accent)"
+                radius={[0, 4, 4, 0]}
+                barSize={12}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -375,7 +572,7 @@ function RoleEffectModule({ items }: { items: PersuadabilityAgentEntry[] }) {
       <CardHeader>
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
-            <CardTitle>Role Effect On</CardTitle>
+            <CardTitle>Role Effect On {activeEntry.agent}</CardTitle>
             <CardDescription>
               See how each assigned role affected persuadability for one model at a time.
             </CardDescription>
@@ -455,6 +652,7 @@ export default function VisualizationsPage() {
       </section>
 
       <TopicHeatmapModule topics={dataset.topicLean} />
+      <DebateEffectModule topics={dataset.topicLean} />
       <AgentLeanModule topics={dataset.singleNoRoleAgentLean} />
       <PersuadabilityChart items={dataset.persuadability} />
       <RoleEffectModule items={dataset.persuadability} />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Search } from "lucide-react";
 import { useManifest, useQuestionConversations, useQuestions } from "@/hooks/use-study-data";
 import { Badge } from "@/components/ui/badge";
@@ -55,17 +55,19 @@ function ConversationLog({
     ...round,
     entries: Object.values(round.agents).filter((entry) => showAgent(entry.agent, entry.role)),
   }));
-
-  return (
-    <div className="grid gap-4">
-      <section className="grid gap-3">
-        <div className="flex flex-wrap gap-2">
-          <Badge variant="accent">Final: {conversation.finalConsensus}</Badge>
-          <Badge variant="subtle">Rounds: {conversation.roundsCompleted}</Badge>
-          <Badge variant="subtle">
-            Opening agreement: {new Set(initialAgents.map((entry) => entry.decision)).size === 1 ? "Yes" : "No"}
-          </Badge>
-        </div>
+  const [activeRoundIndex, setActiveRoundIndex] = useState(0);
+  const pages = [
+    {
+      id: "opening",
+      label: "Opening Arguments",
+      badges: [
+        <Badge key="final" variant="accent">Final: {conversation.finalConsensus}</Badge>,
+        <Badge key="rounds" variant="subtle">Rounds: {conversation.roundsCompleted}</Badge>,
+        <Badge key="agreement" variant="subtle">
+          Opening agreement: {new Set(initialAgents.map((entry) => entry.decision)).size === 1 ? "Yes" : "No"}
+        </Badge>,
+      ],
+      content: (
         <div className="grid gap-3">
           {initialAgents.map((entry) => (
             <div key={`initial-${entry.agent}`} className="rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
@@ -80,37 +82,120 @@ function ConversationLog({
             </div>
           ))}
         </div>
-      </section>
-
-      {visibleRounds.map((round) => (
-        <section key={`round-${round.round}`} className="grid gap-3 rounded-md border border-[var(--line)] bg-[var(--card)] p-4">
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="accent">Round {round.round}</Badge>
-            <Badge variant="subtle">Yes {round.votes.yes}</Badge>
-            <Badge variant="subtle">No {round.votes.no}</Badge>
-          </div>
-          <div className="grid gap-3">
-            {round.entries.map((entry) => (
-              <div key={`round-${round.round}-${entry.agent}`} className="rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="default">{entry.agent}</Badge>
-                  {entry.role ? <Badge variant="subtle">{entry.role}</Badge> : null}
-                  <Badge variant={entry.decision === "Yes" ? "accent" : "default"}>
-                    {entry.decision}
-                  </Badge>
-                  {entry.everConceded ? <Badge variant="subtle">Changed mind</Badge> : null}
-                </div>
-                <p className="mt-2 text-sm">{entry.reasoning ?? "Round reasoning was not stored."}</p>
-                {entry.moderatorRedirect ? (
-                  <p className="mt-2 text-xs text-[var(--muted-foreground)]">
-                    Moderator prompt: {entry.moderatorRedirect}
-                  </p>
-                ) : null}
+      ),
+    },
+    ...visibleRounds.map((round) => ({
+      id: `round-${round.round}`,
+      label: `Round ${round.round}`,
+      badges: [
+        <Badge key={`round-${round.round}`} variant="accent">Round {round.round}</Badge>,
+        <Badge key={`yes-${round.round}`} variant="subtle">Yes {round.votes.yes}</Badge>,
+        <Badge key={`no-${round.round}`} variant="subtle">No {round.votes.no}</Badge>,
+      ],
+      content: (
+        <div className="grid gap-3">
+          {round.entries.map((entry) => (
+            <div key={`round-${round.round}-${entry.agent}`} className="rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
+              <div className="flex flex-wrap items-center gap-2">
+                <Badge variant="default">{entry.agent}</Badge>
+                {entry.role ? <Badge variant="subtle">{entry.role}</Badge> : null}
+                <Badge variant={entry.decision === "Yes" ? "accent" : "default"}>
+                  {entry.decision}
+                </Badge>
+                {entry.everConceded ? <Badge variant="subtle">Changed mind</Badge> : null}
               </div>
-            ))}
+              <p className="mt-2 text-sm">{entry.reasoning ?? "Round reasoning was not stored."}</p>
+              {entry.moderatorRedirect ? (
+                <p className="mt-2 text-xs text-[var(--muted-foreground)]">
+                  Moderator prompt: {entry.moderatorRedirect}
+                </p>
+              ) : null}
+            </div>
+          ))}
+        </div>
+      ),
+    })),
+  ];
+
+  const activePage =
+    pages[Math.min(activeRoundIndex, Math.max(pages.length - 1, 0))] ?? null;
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+
+      const target = event.target as HTMLElement | null;
+      const tagName = target?.tagName;
+      const isInteractiveTarget =
+        target?.isContentEditable ||
+        tagName === "INPUT" ||
+        tagName === "TEXTAREA" ||
+        tagName === "SELECT" ||
+        tagName === "BUTTON";
+
+      if (isInteractiveTarget || pages.length === 0) return;
+
+      event.preventDefault();
+
+      setActiveRoundIndex((current) =>
+        event.key === "ArrowLeft"
+          ? Math.max(0, current - 1)
+          : Math.min(pages.length - 1, current + 1)
+      );
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [pages.length]);
+
+  return (
+    <div className="grid gap-4">
+      {activePage ? (
+        <section className="grid gap-3 rounded-md border border-[var(--line)] bg-[var(--card)] p-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex flex-wrap items-center gap-2">
+              {activePage.badges}
+            </div>
+            <div className="flex items-center gap-2">
+              <Button
+                type="button"
+                size="sm"
+                variant="outline"
+                onClick={() => setActiveRoundIndex((current) => Math.max(0, current - 1))}
+                disabled={activeRoundIndex === 0}
+              >
+                Previous
+              </Button>
+              <Badge variant="subtle">
+                Page {activeRoundIndex + 1} of {pages.length}
+              </Badge>
+              <Button
+                type="button"
+                size="sm"
+                variant="outline"
+                onClick={() =>
+                  setActiveRoundIndex((current) =>
+                    Math.min(pages.length - 1, current + 1)
+                  )
+                }
+                disabled={activeRoundIndex === pages.length - 1}
+              >
+                Next
+              </Button>
+            </div>
           </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="subtle">{activePage.label}</Badge>
+          </div>
+          {activePage.content}
         </section>
-      ))}
+      ) : (
+        <StateBox
+          title="Transcript rounds unavailable"
+          message="This debate record does not include round-by-round transcript pages."
+        />
+      )}
     </div>
   );
 }
@@ -169,14 +254,6 @@ export default function ExplorerPage() {
   const { data: manifest, isLoading: isManifestLoading, error: manifestError } = useManifest();
   const activeTopicSlug = topicSlug;
   const { data: questions, isLoading: isQuestionsLoading, error: questionsError } = useQuestions(activeTopicSlug);
-  const {
-    data: questionConversations,
-    isLoading: isConversationsLoading,
-    error: questionConversationsError,
-  } = useQuestionConversations(
-    selectedCondition.startsWith("debate") ? selectedQuestionId : null
-  );
-
   const topicBySlug = useMemo(
     () => new Map(manifest?.topics.map((topic) => [topic.slug, topic]) ?? []),
     [manifest]
@@ -213,11 +290,50 @@ export default function ExplorerPage() {
     selectedQuestionId && filtered.some((question) => question.id === selectedQuestionId)
       ? selectedQuestionId
       : filtered[0]?.id ?? null;
+  const {
+    data: questionConversations,
+    isLoading: isConversationsLoading,
+    error: questionConversationsError,
+  } = useQuestionConversations(
+    selectedCondition.startsWith("debate") ? activeQuestionId : null
+  );
   const activeCondition = visibleConditions.includes(selectedCondition)
     ? selectedCondition
     : visibleConditions[0] ?? "single_no_role";
   const selectedQuestion =
     filtered.find((question) => question.id === activeQuestionId) ?? filtered[0] ?? null;
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      if (event.key !== "ArrowUp" && event.key !== "ArrowDown") return;
+
+      const target = event.target as HTMLElement | null;
+      const tagName = target?.tagName;
+      const isInteractiveTarget =
+        target?.isContentEditable ||
+        tagName === "INPUT" ||
+        tagName === "TEXTAREA" ||
+        tagName === "SELECT" ||
+        tagName === "BUTTON";
+
+      if (isInteractiveTarget || filtered.length === 0) return;
+
+      event.preventDefault();
+
+      const currentIndex = filtered.findIndex((question) => question.id === activeQuestionId);
+      const safeIndex = currentIndex >= 0 ? currentIndex : 0;
+      const nextIndex =
+        event.key === "ArrowUp"
+          ? Math.max(0, safeIndex - 1)
+          : Math.min(filtered.length - 1, safeIndex + 1);
+
+      setSelectedQuestionId(filtered[nextIndex]?.id ?? null);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeQuestionId, filtered]);
 
   if (isManifestLoading) {
     return <StateBox title="Loading explorer..." message="Preparing question records." />;
@@ -414,6 +530,7 @@ export default function ExplorerPage() {
                     />
                   ) : selectedConversation ? (
                     <ConversationLog
+                      key={`${selectedConversation.id}-${activeCondition}`}
                       conversation={selectedConversation}
                       agentFilter="all"
                       roleFilter="all"
