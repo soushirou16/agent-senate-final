@@ -520,12 +520,12 @@ function PersuadabilityChart({ items }: { items: PersuadabilityAgentEntry[] }) {
                   );
                 }}
               />
-              <Legend
-                payload={[
+              {(Legend as any)({
+                payload: [
                   { value: "No role", type: "square", color: "var(--bronze)" },
                   { value: "With role", type: "square", color: "var(--accent)" },
-                ]}
-              />
+                ]
+              })}
               <Bar
                 name="No role"
                 dataKey="noRoleChangeRate"
@@ -581,7 +581,7 @@ function RoleEffectModule({ items }: { items: PersuadabilityAgentEntry[] }) {
             Agent
             <select
               value={activeEntry.agent}
-              onChange={(event) => setAgent(event.target.value)}
+              onChange={(event) => setAgent(event.target.value as "ChatGPT" | "Claude" | "Gemini" | "Grok")}
               className="h-9 rounded-md border border-[var(--line)] bg-[var(--surface)] px-3 text-sm"
             >
               {items.map((item) => (
