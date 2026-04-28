@@ -724,6 +724,24 @@ h4 {
   outline-offset: 3px;
 }
 
+.senate-topic-seat--display {
+  cursor: default;
+  pointer-events: none;
+}
+
+.senate-topic-seat--display:hover,
+.senate-topic-seat--display:focus-visible {
+  border-color: var(--line);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.88) inset,
+    0 10px 26px rgba(58, 35, 18, 0.09);
+  transform: translateY(var(--seat-y));
+}
+
+.senate-topic-seat--display:focus-visible {
+  outline: none;
+}
+
 .seat-index {
   color: var(--accent);
   font-family: var(--font-cinzel), serif;
@@ -787,6 +805,30 @@ h4 {
     0 1px 0 rgba(255, 255, 255, 0.82) inset,
     0 18px 34px rgba(58, 35, 18, 0.14);
   transform: translateX(50%);
+}
+
+button.forum-dais {
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+button.forum-dais:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+button.forum-dais:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 3px;
+}
+
+button.forum-dais:hover:not(:disabled) {
+  border-color: rgba(105, 69, 31, 0.58);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.88) inset,
+    0 22px 38px rgba(58, 35, 18, 0.18);
 }
 
 .forum-dais-mark {
@@ -1188,6 +1230,11 @@ h4 {
   .senate-topic-seat:hover,
   .senate-topic-seat:focus-visible {
     transform: translateY(-0.25rem);
+  }
+
+  .senate-topic-seat--display:hover,
+  .senate-topic-seat--display:focus-visible {
+    transform: none;
   }
 
   .forum-dais {
