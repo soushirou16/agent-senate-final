@@ -124,6 +124,10 @@ function getTopicSides(title: string) {
   };
 }
 
+function getJudgmentPrompt(base: string, yesSide: string, counterSide: string) {
+  return `${base} Yes means ${yesSide}. No means ${counterSide}.`;
+}
+
 function getNarrativeQuestion(title: string) {
   const { yesSide, counterSide } = getTopicSides(title);
   return `When ${yesSide.toLowerCase()} conflicts with ${counterSide.toLowerCase()}, what should win?`;
@@ -725,7 +729,7 @@ export default function TopicDetailPage({
             <TopicFeedbackCheckpoint
               topicSlug={topic.slug}
               stage="Whole topic"
-              prompt="After the topic-wide evidence, which side feels best supported?"
+              prompt={`After the topic-wide evidence, which side feels best supported?\nYes: lean ${yesSide}. No: lean ${counterSide}.`}
               showEvidenceSlider
             />
           </div>
@@ -759,7 +763,7 @@ export default function TopicDetailPage({
             <TopicFeedbackCheckpoint
               topicSlug={topic.slug}
               stage="Final answer"
-              prompt="After the full session, where do you land?"
+              prompt={`After the full session, where do you land?\nYes: lean ${yesSide}. No: lean ${counterSide}.`}
               showEvidenceSlider
             />
           </div>
