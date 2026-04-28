@@ -1095,17 +1095,17 @@ button.forum-dais:hover:not(:disabled) {
 }
 
 .feedback-button {
-  top: 50%;
+  bottom: 1.5rem;
   right: 1rem;
-  bottom: auto;
+  top: auto;
   width: 3rem;
   padding-right: 0;
   padding-left: 0;
-  transform: translateY(-50%);
+  transform: none;
 }
 
 .feedback-button:hover {
-  transform: translateY(calc(-50% - 0.25rem));
+  transform: translateY(-0.125rem);
 }
 
 .feedback-label {
@@ -1113,12 +1113,12 @@ button.forum-dais:hover:not(:disabled) {
 }
 
 .feedback-panel {
-  top: 50%;
-  right: 4.75rem;
-  bottom: auto;
+  bottom: 4.5rem;
+  right: 1rem;
+  top: auto;
   max-height: min(80svh, 36rem);
   overflow: auto;
-  transform: translateY(-50%);
+  transform: none;
 }
 
 @media (max-width: 768px) {

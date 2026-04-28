@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-27T22:12:31.581181",
+  "timestamp": "2026-04-28T10:42:11.350135",
   "agents": [
     {
       "name": "ChatGPT",
@@ -28,9 +28,64 @@
     "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
     "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
   },
-  "questions_count": 1,
+  "questions_count": 8,
   "total_permutations": 24,
   "results": [
+    {
+      "question_number": 180,
+      "question": "Should streaming services be able to track what you watch if it makes choosing shows easier?",
+      "rotation_index": 12,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Contrarian",
+        "Gemini": "Optimist",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:41:39.233003",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.02
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nAllowing streaming services to track viewing habits helps users find content they enjoy more efficiently, increasing overall satisfaction and utility, while the potential privacy concerns are outweighed by the widespread benefit of improved recommendations.",
+          "time_s": 1.16
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No  \nCONFIDENCE: 10  \n\nPrivacy is an absolute right that must never be violated, regardless of any claimed benefits like easier show selection. No convenience justifies surveillance or data tracking.",
+          "time_s": 3.1
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nThe default assumption is that convenience justifies surveillance, but this ignores how tracking creates asymmetrical power dynamics where corporations harvest intimate behavioral data for manipulation, profiling, and sale—conveniences can be achieved through transparent, on-device recommendations without pervasive monitoring. The framing itself is suspect: we're told tracking is *necessary* for ease, when it primarily benefits corporate interests in targeting and prediction.",
+          "time_s": 3.29
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
     {
       "question_number": 80,
       "question": "Should event venues be allowed to require a personal profile to enter if it makes ticket lines shorter?",
@@ -41,34 +96,34 @@
         "Gemini": "Contrarian",
         "Grok": "Absolutist"
       },
-      "timestamp": "2026-04-27T22:12:31.581219",
+      "timestamp": "2026-04-28T10:41:46.468045",
       "responses": {
-        "ChatGPT": {
-          "provider": "openai",
-          "model": "gpt-4.1-mini",
-          "role": "Optimist",
-          "decision": "Yes",
-          "confidence": 8,
-          "response": "ANSWER: Yes  \nCONFIDENCE: 8\n\nRequiring a personal profile can streamline entry processes and reduce wait times, enhancing the overall event experience for attendees while maintaining security and organization.",
-          "time_s": 1.06
-        },
-        "Claude": {
-          "provider": "anthropic",
-          "model": "claude-haiku-4-5-20251001",
-          "role": "Utilitarian",
-          "decision": "Yes",
-          "confidence": 7,
-          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, if requiring personal profiles meaningfully reduces waiting times for the majority of attendees, the aggregate welfare gain from shorter lines and improved event experience outweighs the minor privacy intrusion for most people, especially if the data collection is transparent and reasonably secured. However, this depends on the magnitude of line reduction and whether vulnerable populations face disproportionate burdens.",
-          "time_s": 1.98
-        },
         "Gemini": {
           "provider": "gemini",
           "model": "gemini-2.5-flash-lite",
           "role": "Contrarian",
           "decision": "Maybe",
           "confidence": null,
-          "response": "ERROR: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "time_s": 2.99
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8\n\nRequiring a personal profile can streamline entry processes and reduce wait times, improving the overall experience for attendees while maintaining security and organization.",
+          "time_s": 1.3
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, while shorter lines provide modest convenience benefits to attendees, requiring personal profiles imposes significant harms: privacy violations and data risks affecting potentially thousands of people, potential discrimination through profiling, and exclusion of privacy-conscious individuals. The aggregate harm from widespread privacy erosion and security risks outweighs the marginal benefit of faster entry, especially since alternative solutions (more staff, better queue management) can reduce lines without these costs.",
+          "time_s": 2.22
         },
         "Grok": {
           "provider": "xai",
@@ -76,13 +131,343 @@
           "role": "Absolutist",
           "decision": "Yes",
           "confidence": 10,
-          "response": "ANSWER: Yes  \nCONFIDENCE: 10  \n\nAs an Absolutist, private property rights are absolute: event venues, as owners, may impose any entry conditions they deem fit, including personal profiles. No external authority should override this, regardless of efficiency gains like shorter lines.",
-          "time_s": 6.78
+          "response": "ANSWER: Yes\nCONFIDENCE: 10\nAs an Absolutist prioritizing absolute private property rights, event venues own their space and can impose any entry requirements, including a personal profile, to optimize operations like shortening lines without government interference. Precedent in property law supports unrestricted owner discretion over access.",
+          "time_s": 7.23
         }
       },
       "summary": {
-        "yes_count": 3,
-        "no_count": 0,
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 95,
+      "question": "Should grocery stores be allowed to use loyalty cards that track every purchase if it makes discounts easier?",
+      "rotation_index": 23,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Utilitarian",
+        "Gemini": "Optimist",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:41:50.417680",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\n\nFrom an absolutist perspective, individual privacy and autonomy are paramount and should not be compromised for convenience or discounts, as tracking every purchase infringes on personal freedoms and sets a dangerous precedent.",
+          "time_s": 1.52
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 6,
+          "response": "ANSWER: Yes\nCONFIDENCE: 6\n\nFrom a utilitarian perspective, the aggregate benefit of lower prices and personalized discounts for most consumers likely outweighs privacy harms, especially since participation is voluntary and consumers gain direct economic benefit. However, this depends on actual implementation details—if data is sold to third parties, misused, or if vulnerable populations face discrimination based on purchase patterns, the calculus shifts significantly toward rejection.",
+          "time_s": 1.69
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nThe common assumption that discounts justify blanket purchase tracking ignores how it fuels invasive surveillance capitalism, turning shoppers into data commodities without true consent. Alternatives like universal price matching or anonymous coupons could deliver savings without eroding privacy.",
+          "time_s": 3.95
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 176,
+      "question": "Should online shopping sites be allowed to remember everything you buy if it helps with one-click ordering?",
+      "rotation_index": 8,
+      "role_assignment": {
+        "ChatGPT": "Optimist",
+        "Claude": "Utilitarian",
+        "Gemini": "Contrarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:41:56.197156",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nRemembering purchase history can greatly enhance convenience and speed for customers through one-click ordering, making the shopping experience smoother and more personalized while still allowing users to control their privacy settings.",
+          "time_s": 1.17
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, the aggregate benefit of convenience and time savings for the majority of users who appreciate one-click ordering outweighs privacy concerns for most people, especially since users can opt-out and the primary harm (data storage) is relatively minor compared to the substantial quality-of-life improvement from reduced friction in purchasing. However, confidence is not higher because edge cases exist where data breaches or misuse could create significant harms that offset these benefits.",
+          "time_s": 1.96
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No\nCONFIDENCE: 10\nAs an Absolutist, privacy is an inviolable right that permits no exceptions for convenience; sites must not retain any purchase history without absolute, irrevocable user control, as any data memory enables potential abuse. Precedent demands default rejection of incomplete consents or utilitarian trade-offs.",
+          "time_s": 5.78
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 188,
+      "question": "Should an email service be allowed to sort your messages using details about your life if it improves convenience?",
+      "rotation_index": 20,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Optimist",
+        "Gemini": "Contrarian",
+        "Grok": "Utilitarian"
+      },
+      "timestamp": "2026-04-28T10:42:01.610003",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\n\nFrom an Absolutist perspective, privacy and consent are paramount; using personal life details without explicit permission violates fundamental rights regardless of convenience. Therefore, such sorting should not be allowed without clear, informed consent.",
+          "time_s": 1.12
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom an optimistic perspective, there exists a constructive pathway where users can benefit meaningfully from intelligent message organization—sorting by priority, filtering newsletters, or grouping communications by life domains—while maintaining reasonable control through clear consent and robust privacy protections. The convenience gains can be substantial and genuinely improve daily quality of life when implemented with transparency and user agency.",
+          "time_s": 1.48
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\nAllowing email services to sort messages using personal details greatly enhances user convenience, productivity, and time savings for millions of users, producing massive aggregate utility gains. While privacy risks exist, they are typically outweighed by the widespread benefits when users opt-in for improved functionality, with harms mitigable through consent and security measures.",
+          "time_s": 5.41
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 33,
+      "question": "Should online classrooms be allowed to keep detailed records of student behavior if that makes feedback and participation easier?",
+      "rotation_index": 9,
+      "role_assignment": {
+        "ChatGPT": "Optimist",
+        "Claude": "Utilitarian",
+        "Gemini": "Absolutist",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:42:04.188893",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Absolutist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nKeeping detailed records of student behavior can greatly enhance personalized feedback and encourage active participation, leading to improved learning outcomes and a more supportive educational environment.",
+          "time_s": 1.04
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, the aggregate benefit of improved educational outcomes through better feedback and participation tracking likely outweighs privacy concerns, especially if reasonable safeguards exist against misuse. The harm to students from record-keeping is primarily risk-based and abstract, while the benefits—better learning, targeted interventions, reduced dropout rates—are concrete and affect many people positively.",
+          "time_s": 1.38
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\n\nThe assumption that \"easier\" feedback justifies invasive surveillance ignores the chilling effect on free expression and the risks of data misuse or bias in tracking \"behavior,\" prioritizing administrative convenience over student privacy and autonomy. True participation thrives without Big Brother oversight, as history shows surveillance stifles dissent and creativity.",
+          "time_s": 2.58
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 110,
+      "question": "Should colleges be allowed to connect your academic, housing, and dining information if it makes student services easier?",
+      "rotation_index": 14,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Optimist",
+        "Gemini": "Contrarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:42:08.690259",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nConnecting academic, housing, and dining information can streamline student services, improving efficiency and convenience for the majority of students, thereby maximizing overall benefits despite potential privacy concerns for a minority.",
+          "time_s": 1.28
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nIntegrating student data systems can genuinely streamline operations—reducing redundant form-filling, enabling faster housing accommodations for students with disabilities, and helping dining services understand accessibility needs. While privacy safeguards must exist (clear consent, secure systems, limited access), the concrete benefit of smoother, more responsive student services justifies data connection when properly governed.",
+          "time_s": 1.77
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No  \nCONFIDENCE: 10  \n\nAs an Absolutist, individual privacy rights must remain inviolable silos, with no institutional integration of personal data permitted under any pretext of convenience. Defaulting to absolute prohibition when balancing institutional efficiency against personal sovereignty, as rules against data linkage are clear and precedent demands strict \"No\" without explicit, irrevocable consent.",
+          "time_s": 4.5
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 51,
+      "question": "Should a food app be allowed to store your allergies and preferences in a way that other services can access if it makes ordering easier?",
+      "rotation_index": 3,
+      "role_assignment": {
+        "ChatGPT": "Contrarian",
+        "Claude": "Utilitarian",
+        "Gemini": "Absolutist",
+        "Grok": "Optimist"
+      },
+      "timestamp": "2026-04-28T10:42:11.349826",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Absolutist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No  \nCONFIDENCE: 8  \n\nAllowing other services to access your allergy and preference data increases the risk of privacy breaches and misuse, which outweighs the convenience of easier ordering. Protecting sensitive health information should take precedence over interoperability.",
+          "time_s": 1.18
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, the aggregate benefit of easier, safer food ordering for millions of users (reducing ordering friction, preventing allergic reactions through better information sharing, and improving service quality) outweighs the privacy harms to individuals, provided adequate security safeguards exist to prevent misuse and users can opt out. The key utilitarian calculation depends heavily on implementation details—strong encryption, user consent, and liability protections would shift this more firmly toward yes.",
+          "time_s": 1.9
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nSharing allergies and preferences across services streamlines ordering, reduces errors like allergic reactions, and enhances user safety and convenience with proper opt-in consent and privacy controls. This positive integration fosters a more efficient, user-friendly ecosystem for everyone.",
+          "time_s": 2.66
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
         "majority": "Yes"
       }
     }

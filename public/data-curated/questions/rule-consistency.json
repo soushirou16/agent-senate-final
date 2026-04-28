@@ -1,0 +1,2861 @@
+{
+  "topicSlug": "rule-consistency",
+  "items": [
+    {
+      "id": "rule-consistency-3",
+      "topicSlug": "rule-consistency",
+      "questionNumber": 3,
+      "prompt": "Should a teacher grade every student by the same rubric, even if one student’s work shows effort in a very different way?",
+      "tags": [
+        "Ethics & Norms",
+        "Rule Consistency"
+      ],
+      "conditionSummary": {
+        "single_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        },
+        "single_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        },
+        "debate_no_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 3,
+          "noVotes": 1,
+          "maybeVotes": 0
+        },
+        "debate_role": {
+          "outcome": "Maybe",
+          "rawOutcome": "Stalemate",
+          "yesVotes": 2,
+          "noVotes": 2,
+          "maybeVotes": 0
+        }
+      },
+      "agentVotes": {
+        "single_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "single_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "debate_no_role": {
+          "ChatGPT": "Yes",
+          "Claude": "Yes",
+          "Gemini": "No",
+          "Grok": "Yes"
+        },
+        "debate_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Yes",
+          "Grok": "Yes"
+        }
+      },
+      "conditionDetails": {
+        "single_no_role": {
+          "runMode": "single",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While consistency in grading is important, a rigid application of the same rubric may not fairly recognize diverse expressions of effort and learning styles; adapting criteria to acknowledge different but valid demonstrations of effort can provide a more equitable assessment.",
+              "reasoningPreview": "While consistency in grading is important, a rigid application of the same rubric may not fairly recognize diverse expressions of effort and learning styles; adapting criteria to acknowledge different but valid...",
+              "timeSeconds": 1.41
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While consistent rubrics provide necessary structure and fairness, effective teaching often requires applying rubrics with flexibility to recognize different forms of effort and growth—particularly for students with different learning styles, abilities, or circumstances. A single rubric can be the standard, but how achievement is demonstrated within it may legitimately vary.",
+              "reasoningPreview": "While consistent rubrics provide necessary structure and fairness, effective teaching often requires applying rubrics with flexibility to recognize different forms of effort and growth—particularly for students with...",
+              "timeSeconds": 1.44
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.02
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Using the same rubric for all students ensures objectivity, consistency, and fairness by holding everyone to identical standards, regardless of how effort is demonstrated. While accommodations exist for diverse needs or disabilities, altering the rubric based on subjective effort interpretations risks bias and undermines academic integrity.",
+              "reasoningPreview": "Using the same rubric for all students ensures objectivity, consistency, and fairness by holding everyone to identical standards, regardless of how effort is demonstrated. While accommodations exist for diverse needs or...",
+              "timeSeconds": 3.69
+            }
+          }
+        },
+        "single_role": {
+          "runMode": "single",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Uniform rubrics assume all students demonstrate effort identically, which ignores diverse learning styles and unique expressions of effort; grading should adapt to recognize these differences rather than enforce a one-size-fits-all standard.",
+              "reasoningPreview": "Uniform rubrics assume all students demonstrate effort identically, which ignores diverse learning styles and unique expressions of effort; grading should adapt to recognize these differences rather than enforce a...",
+              "timeSeconds": 1.19
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "From a utilitarian perspective, using the same rubric for all students likely reduces overall wellbeing by failing to recognize and reward genuine effort and progress, potentially discouraging students whose learning styles differ from the rubric's assumptions. Adjusting assessment to fairly capture each student's actual effort and growth would maximize motivation, learning outcomes, and aggregate student flourishing.",
+              "reasoningPreview": "From a utilitarian perspective, using the same rubric for all students likely reduces overall wellbeing by failing to recognize and reward genuine effort and progress, potentially discouraging students whose learning...",
+              "timeSeconds": 1.56
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Absolutist",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Using the same rubric ensures fairness, clear expectations, and motivates all students to grow toward shared standards, turning diverse efforts into collective success. This positive approach builds equity and resilience rather than subjective favoritism.",
+              "reasoningPreview": "Using the same rubric ensures fairness, clear expectations, and motivates all students to grow toward shared standards, turning diverse efforts into collective success. This positive approach builds equity and...",
+              "timeSeconds": 3.29
+            }
+          }
+        },
+        "debate_no_role": {
+          "runMode": "debate",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 3,
+            "noVotes": 1,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "A teacher should use the same rubric to ensure fairness but can allow flexibility in interpreting effort shown in different ways to accurately assess each student's unique approach.",
+              "reasoningPreview": "A teacher should use the same rubric to ensure fairness but can allow flexibility in interpreting effort shown in different ways to accurately assess each student's unique approach.",
+              "timeSeconds": 0.8
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 6,
+              "reasoning": "A universal rubric maintains fairness and clear standards, but good rubrics should account for different pathways to demonstrating mastery—effort alone shouldn't override learning outcomes, though teachers might adjust application methods.",
+              "reasoningPreview": "A universal rubric maintains fairness and clear standards, but good rubrics should account for different pathways to demonstrating mastery—effort alone shouldn't override learning outcomes, though teachers might adjust...",
+              "timeSeconds": 2.36
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "No, a teacher should adapt rubrics or provide alternative assessment methods to acknowledge diverse learning styles and effort. Uniformity can penalize students who demonstrate understanding through unconventional means.",
+              "reasoningPreview": "No, a teacher should adapt rubrics or provide alternative assessment methods to acknowledge diverse learning styles and effort. Uniformity can penalize students who demonstrate understanding through unconventional means.",
+              "timeSeconds": 1.58
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "A standardized rubric ensures fairness, objectivity, and equal treatment, preventing bias from subjective interpretations of \"different effort.\" Effort can be noted separately, but grading criteria must remain consistent.",
+              "reasoningPreview": "A standardized rubric ensures fairness, objectivity, and equal treatment, preventing bias from subjective interpretations of \"different effort.\" Effort can be noted separately, but grading criteria must remain...",
+              "timeSeconds": 3.3
+            }
+          }
+        },
+        "debate_role": {
+          "runMode": "debate",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Maybe",
+            "rawOutcome": "Stalemate",
+            "yesVotes": 2,
+            "noVotes": 2,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "What if the rubric fails to capture diverse expressions of effort and creativity, unfairly penalizing students who don't conform? Uniform grading may ignore individual learning styles and unique contributions.",
+              "reasoningPreview": "What if the rubric fails to capture diverse expressions of effort and creativity, unfairly penalizing students who don't conform? Uniform grading may ignore individual learning styles and unique contributions.",
+              "timeSeconds": 0.89
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "No—uniform rubrics ignore that effort manifests differently across students with varying abilities and contexts; differentiated assessment yields better learning outcomes and more accurate skill measurement, maximizing educational benefit for all.",
+              "reasoningPreview": "No—uniform rubrics ignore that effort manifests differently across students with varying abilities and contexts; differentiated assessment yields better learning outcomes and more accurate skill measurement, maximizing...",
+              "timeSeconds": 1.56
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 10,
+              "reasoning": "The principle of fairness dictates that all students should be evaluated by the same objective standards. Applying different rubrics would introduce subjectivity and undermine the integrity of the grading process.",
+              "reasoningPreview": "The principle of fairness dictates that all students should be evaluated by the same objective standards. Applying different rubrics would introduce subjectivity and undermine the integrity of the grading process.",
+              "timeSeconds": 0.6
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Yes, a consistent rubric ensures fairness, objectivity, and clear standards for all, while allowing accommodations for diverse efforts—inaction risks bias and eroded trust.",
+              "reasoningPreview": "Yes, a consistent rubric ensures fairness, objectivity, and clear standards for all, while allowing accommodations for diverse efforts—inaction risks bias and eroded trust.",
+              "timeSeconds": 3.51
+            }
+          }
+        }
+      },
+      "blindMatch": {
+        "sourceCondition": "debate_no_role",
+        "cards": [
+          {
+            "slot": "A",
+            "agent": "Gemini",
+            "role": null,
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 8,
+            "reasoning": "No, a teacher should adapt rubrics or provide alternative assessment methods to acknowledge diverse learning styles and effort. Uniformity can penalize students who demonstrate understanding through unconventional means.",
+            "reasoningPreview": "No, a teacher should adapt rubrics or provide alternative assessment methods to acknowledge diverse learning styles and effort. Uniformity can penalize students who demonstrate understanding through unconventional means."
+          },
+          {
+            "slot": "B",
+            "agent": "ChatGPT",
+            "role": null,
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "A teacher should use the same rubric to ensure fairness but can allow flexibility in interpreting effort shown in different ways to accurately assess each student's unique approach.",
+            "reasoningPreview": "A teacher should use the same rubric to ensure fairness but can allow flexibility in interpreting effort shown in different ways to accurately assess each student's unique approach."
+          },
+          {
+            "slot": "C",
+            "agent": "Grok",
+            "role": null,
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 9,
+            "reasoning": "A standardized rubric ensures fairness, objectivity, and equal treatment, preventing bias from subjective interpretations of \"different effort.\" Effort can be noted separately, but grading criteria must remain consistent.",
+            "reasoningPreview": "A standardized rubric ensures fairness, objectivity, and equal treatment, preventing bias from subjective interpretations of \"different effort.\" Effort can be noted separately, but grading criteria must remain..."
+          },
+          {
+            "slot": "D",
+            "agent": "Claude",
+            "role": null,
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 6,
+            "reasoning": "A universal rubric maintains fairness and clear standards, but good rubrics should account for different pathways to demonstrating mastery—effort alone shouldn't override learning outcomes, though teachers might adjust application methods.",
+            "reasoningPreview": "A universal rubric maintains fairness and clear standards, but good rubrics should account for different pathways to demonstrating mastery—effort alone shouldn't override learning outcomes, though teachers might adjust..."
+          }
+        ]
+      }
+    },
+    {
+      "id": "rule-consistency-16",
+      "topicSlug": "rule-consistency",
+      "questionNumber": 16,
+      "prompt": "Should a bank enforce the same overdraft rule for every customer, even if one customer was only a few dollars short because of bad luck?",
+      "tags": [
+        "Ethics & Norms",
+        "Rule Consistency"
+      ],
+      "conditionSummary": {
+        "single_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        },
+        "single_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 2,
+          "noVotes": 1,
+          "maybeVotes": 1
+        },
+        "debate_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 3,
+          "maybeVotes": 0
+        },
+        "debate_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 3,
+          "noVotes": 1,
+          "maybeVotes": 0
+        }
+      },
+      "agentVotes": {
+        "single_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "single_role": {
+          "ChatGPT": "No",
+          "Claude": "Yes",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "debate_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "No",
+          "Grok": "Yes"
+        },
+        "debate_role": {
+          "ChatGPT": "Yes",
+          "Claude": "Yes",
+          "Gemini": "No",
+          "Grok": "Yes"
+        }
+      },
+      "conditionDetails": {
+        "single_no_role": {
+          "runMode": "single",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Banks often have standard overdraft policies to maintain fairness and consistency, but applying the same strict rule without flexibility may not account for individual circumstances like minor shortfalls due to bad luck, where leniency could improve customer satisfaction and trust.",
+              "reasoningPreview": "Banks often have standard overdraft policies to maintain fairness and consistency, but applying the same strict rule without flexibility may not account for individual circumstances like minor shortfalls due to bad...",
+              "timeSeconds": 2.35
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Overdraft policies involve tradeoffs between fairness principles: uniform rules provide consistency and prevent discrimination, but rigid enforcement ignores material differences in circumstances and ability to pay. Most modern banking systems have moved toward differentiated approaches (grace periods, graduated fees, customer history consideration) suggesting that context-sensitive enforcement is considered more just than blanket uniformity.",
+              "reasoningPreview": "Overdraft policies involve tradeoffs between fairness principles: uniform rules provide consistency and prevent discrimination, but rigid enforcement ignores material differences in circumstances and ability to pay....",
+              "timeSeconds": 1.93
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.03
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Uniform enforcement of overdraft rules ensures fairness, predictability, and prevents bias or favoritism across all customers, regardless of individual circumstances like minor shortfalls due to bad luck. Allowing exceptions could lead to inconsistent application, potential abuse, and legal risks for the bank.",
+              "reasoningPreview": "Uniform enforcement of overdraft rules ensures fairness, predictability, and prevents bias or favoritism across all customers, regardless of individual circumstances like minor shortfalls due to bad luck. Allowing...",
+              "timeSeconds": 3.38
+            }
+          }
+        },
+        "single_role": {
+          "runMode": "single",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 2,
+            "noVotes": 1,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Enforcing the same overdraft rule uniformly may harm customers who are only slightly short due to bad luck, causing disproportionate negative effects; allowing some flexibility can increase overall well-being by reducing undue financial stress for those individuals.",
+              "reasoningPreview": "Enforcing the same overdraft rule uniformly may harm customers who are only slightly short due to bad luck, causing disproportionate negative effects; allowing some flexibility can increase overall well-being by...",
+              "timeSeconds": 1.27
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Rules exist precisely to eliminate arbitrary distinctions and ensure consistency. If overdraft policies contain exceptions for \"bad luck\" or sympathetic circumstances, the rule becomes subjective and unenforceable as a standard. Equal application of established rules is a fundamental principle of institutional integrity.",
+              "reasoningPreview": "Rules exist precisely to eliminate arbitrary distinctions and ensure consistency. If overdraft policies contain exceptions for \"bad luck\" or sympathetic circumstances, the rule becomes subjective and unenforceable as a...",
+              "timeSeconds": 1.38
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Contrarian",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.03
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Uniform rules ensure fairness and trust for all customers, preventing perceptions of favoritism, while banks can offer positive solutions like fee waivers or financial counseling for those facing temporary setbacks. This constructive approach builds long-term customer loyalty and financial stability.",
+              "reasoningPreview": "Uniform rules ensure fairness and trust for all customers, preventing perceptions of favoritism, while banks can offer positive solutions like fee waivers or financial counseling for those facing temporary setbacks....",
+              "timeSeconds": 4.2
+            }
+          }
+        },
+        "debate_no_role": {
+          "runMode": "debate",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 3,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "A bank should apply consistent overdraft rules to ensure fairness and clarity, but may consider exceptions for minor, unintentional shortfalls to maintain good customer relations.",
+              "reasoningPreview": "A bank should apply consistent overdraft rules to ensure fairness and clarity, but may consider exceptions for minor, unintentional shortfalls to maintain good customer relations.",
+              "timeSeconds": 0.86
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 4,
+              "reasoning": "Banks benefit from clear, uniform rules that customers can understand and rely on. However, compassionate enforcement—like waiving fees for first-time minor overdrafts—balances fairness with customer circumstances.",
+              "reasoningPreview": "Banks benefit from clear, uniform rules that customers can understand and rely on. However, compassionate enforcement—like waiving fees for first-time minor overdrafts—balances fairness with customer circumstances.",
+              "timeSeconds": 1.01
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "No, banks should consider individual circumstances and offer flexibility, especially for minor overdrafts caused by unforeseen events. A rigid, one-size-fits-all approach can unfairly penalize customers.",
+              "reasoningPreview": "No, banks should consider individual circumstances and offer flexibility, especially for minor overdrafts caused by unforeseen events. A rigid, one-size-fits-all approach can unfairly penalize customers.",
+              "timeSeconds": 0.49
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Banks should enforce uniform overdraft rules for all customers to ensure fairness, prevent bias, and avoid legal risks from subjective exceptions.",
+              "reasoningPreview": "Banks should enforce uniform overdraft rules for all customers to ensure fairness, prevent bias, and avoid legal risks from subjective exceptions.",
+              "timeSeconds": 2.58
+            }
+          }
+        },
+        "debate_role": {
+          "runMode": "debate",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 3,
+            "noVotes": 1,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Utilitarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Uniform overdraft rules simplify enforcement and reduce administrative costs, benefiting the majority, but strict application may disproportionately harm unlucky individuals; overall, consistent rules maximize fairness and efficiency.",
+              "reasoningPreview": "Uniform overdraft rules simplify enforcement and reduce administrative costs, benefiting the majority, but strict application may disproportionately harm unlucky individuals; overall, consistent rules maximize fairness...",
+              "timeSeconds": 0.72
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Yes—rules must apply uniformly or they cease to be rules. Allowing exceptions based on sympathetic circumstances (bad luck vs. negligence) creates unprincipled discretion and erodes the rule's binding force.",
+              "reasoningPreview": "Yes—rules must apply uniformly or they cease to be rules. Allowing exceptions based on sympathetic circumstances (bad luck vs. negligence) creates unprincipled discretion and erodes the rule's binding force.",
+              "timeSeconds": 1.31
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "What are we taking for granted by assuming a single, rigid rule is the most effective or fair approach? Who would strongly disagree with this, and why might they argue for a more nuanced, case-by-case system?",
+              "reasoningPreview": "What are we taking for granted by assuming a single, rigid rule is the most effective or fair approach? Who would strongly disagree with this, and why might they argue for a more nuanced, case-by-case system?",
+              "timeSeconds": 0.65
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Uniform rules ensure fairness, prevent abuse, and simplify operations for all customers; banks can offer alerts and buffers as proactive solutions to avoid overdrafts.",
+              "reasoningPreview": "Uniform rules ensure fairness, prevent abuse, and simplify operations for all customers; banks can offer alerts and buffers as proactive solutions to avoid overdrafts.",
+              "timeSeconds": 11.75
+            }
+          }
+        }
+      },
+      "blindMatch": {
+        "sourceCondition": "debate_role",
+        "cards": [
+          {
+            "slot": "A",
+            "agent": "Gemini",
+            "role": "Contrarian",
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 7,
+            "reasoning": "What are we taking for granted by assuming a single, rigid rule is the most effective or fair approach? Who would strongly disagree with this, and why might they argue for a more nuanced, case-by-case system?",
+            "reasoningPreview": "What are we taking for granted by assuming a single, rigid rule is the most effective or fair approach? Who would strongly disagree with this, and why might they argue for a more nuanced, case-by-case system?"
+          },
+          {
+            "slot": "B",
+            "agent": "Claude",
+            "role": "Absolutist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "Yes—rules must apply uniformly or they cease to be rules. Allowing exceptions based on sympathetic circumstances (bad luck vs. negligence) creates unprincipled discretion and erodes the rule's binding force.",
+            "reasoningPreview": "Yes—rules must apply uniformly or they cease to be rules. Allowing exceptions based on sympathetic circumstances (bad luck vs. negligence) creates unprincipled discretion and erodes the rule's binding force."
+          },
+          {
+            "slot": "C",
+            "agent": "Grok",
+            "role": "Optimist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "Uniform rules ensure fairness, prevent abuse, and simplify operations for all customers; banks can offer alerts and buffers as proactive solutions to avoid overdrafts.",
+            "reasoningPreview": "Uniform rules ensure fairness, prevent abuse, and simplify operations for all customers; banks can offer alerts and buffers as proactive solutions to avoid overdrafts."
+          },
+          {
+            "slot": "D",
+            "agent": "ChatGPT",
+            "role": "Utilitarian",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "Uniform overdraft rules simplify enforcement and reduce administrative costs, benefiting the majority, but strict application may disproportionately harm unlucky individuals; overall, consistent rules maximize fairness and efficiency.",
+            "reasoningPreview": "Uniform overdraft rules simplify enforcement and reduce administrative costs, benefiting the majority, but strict application may disproportionately harm unlucky individuals; overall, consistent rules maximize fairness..."
+          }
+        ]
+      }
+    },
+    {
+      "id": "rule-consistency-78",
+      "topicSlug": "rule-consistency",
+      "questionNumber": 78,
+      "prompt": "Should a city keep the same noise rule every night, even if one event would be harmless and meaningful for the people involved?",
+      "tags": [
+        "Ethics & Norms",
+        "Rule Consistency"
+      ],
+      "conditionSummary": {
+        "single_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 0,
+          "noVotes": 3,
+          "maybeVotes": 1
+        },
+        "single_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        },
+        "debate_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 3,
+          "maybeVotes": 0
+        },
+        "debate_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 2,
+          "noVotes": 2,
+          "maybeVotes": 0
+        }
+      },
+      "agentVotes": {
+        "single_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "No"
+        },
+        "single_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "debate_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "No",
+          "Grok": "Yes"
+        },
+        "debate_role": {
+          "ChatGPT": "No",
+          "Claude": "Yes",
+          "Gemini": "No",
+          "Grok": "Yes"
+        }
+      },
+      "conditionDetails": {
+        "single_no_role": {
+          "runMode": "single",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 0,
+            "noVotes": 3,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While consistent noise rules provide clarity and fairness, allowing exceptions for harmless and meaningful events can enhance community well-being and cultural expression without significantly disturbing others.",
+              "reasoningPreview": "While consistent noise rules provide clarity and fairness, allowing exceptions for harmless and meaningful events can enhance community well-being and cultural expression without significantly disturbing others.",
+              "timeSeconds": 1.23
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Uniform rules provide clarity and fairness, but good governance typically includes mechanisms for exceptions—permits, variances, or temporary waivers—when specific events are genuinely harmless and have community value. Rigid inflexibility that prevents beneficial activities suggests rules should be reconsidered rather than mechanically enforced.",
+              "reasoningPreview": "Uniform rules provide clarity and fairness, but good governance typically includes mechanisms for exceptions—permits, variances, or temporary waivers—when specific events are genuinely harmless and have community value....",
+              "timeSeconds": 2.6
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.03
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Cities should maintain consistent noise rules as a baseline for fairness and public order, but allow permitted exceptions for harmless, meaningful events like weddings or cultural celebrations to balance community needs without undermining enforcement. Rigid uniformity every night ignores context and could prevent positive communal experiences.",
+              "reasoningPreview": "Cities should maintain consistent noise rules as a baseline for fairness and public order, but allow permitted exceptions for harmless, meaningful events like weddings or cultural celebrations to balance community needs...",
+              "timeSeconds": 5.42
+            }
+          }
+        },
+        "single_role": {
+          "runMode": "single",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Optimist",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Allowing flexibility for harmless and meaningful events can enhance community well-being and foster a positive atmosphere, as long as it is managed responsibly to minimize disturbance.",
+              "reasoningPreview": "Allowing flexibility for harmless and meaningful events can enhance community well-being and foster a positive atmosphere, as long as it is managed responsibly to minimize disturbance.",
+              "timeSeconds": 1.15
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "The assumption that uniform rules are inherently fair or optimal deserves questioning—rigid adherence to noise ordinances regardless of context can needlessly suppress meaningful community experiences and cultural expression. A contrarian view recognizes that blanket rules sometimes cause more harm than the targeted exception would, and that democratic societies might benefit from allowing flexibility and discretion for genuinely harmless, socially valuable events.",
+              "reasoningPreview": "The assumption that uniform rules are inherently fair or optimal deserves questioning—rigid adherence to noise ordinances regardless of context can needlessly suppress meaningful community experiences and cultural...",
+              "timeSeconds": 1.73
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Utilitarian",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 10,
+              "reasoning": "Rules must be absolute and uniformly enforced every night to preserve order, predictability, and fairness for all citizens. Any exception, no matter how harmless or meaningful to some, erodes the rule's integrity and invites chaos.",
+              "reasoningPreview": "Rules must be absolute and uniformly enforced every night to preserve order, predictability, and fairness for all citizens. Any exception, no matter how harmless or meaningful to some, erodes the rule's integrity and...",
+              "timeSeconds": 2.62
+            }
+          }
+        },
+        "debate_no_role": {
+          "runMode": "debate",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 3,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "A city should maintain consistent noise rules to ensure fairness and predictability, but it can allow exceptions for harmless, meaningful events through a permit system. This balances order with community needs.",
+              "reasoningPreview": "A city should maintain consistent noise rules to ensure fairness and predictability, but it can allow exceptions for harmless, meaningful events through a permit system. This balances order with community needs.",
+              "timeSeconds": 1.57
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "Rules benefit from consistency, but rigid application can ignore legitimate exceptions. A city should have a process to grant variance permits for meaningful events with genuine community support, rather than maintaining absolute uniformity.",
+              "reasoningPreview": "Rules benefit from consistency, but rigid application can ignore legitimate exceptions. A city should have a process to grant variance permits for meaningful events with genuine community support, rather than...",
+              "timeSeconds": 1.47
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "No. While rules are important, exceptions can be made for unique, harmless, and meaningful events that benefit the community without causing undue disruption.",
+              "reasoningPreview": "No. While rules are important, exceptions can be made for unique, harmless, and meaningful events that benefit the community without causing undue disruption.",
+              "timeSeconds": 1.83
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Consistent noise rules ensure fairness, predictability, and prevent slippery slopes where \"harmless\" exceptions multiply into chaos.",
+              "reasoningPreview": "Consistent noise rules ensure fairness, predictability, and prevent slippery slopes where \"harmless\" exceptions multiply into chaos.",
+              "timeSeconds": 3.55
+            }
+          }
+        },
+        "debate_role": {
+          "runMode": "debate",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 2,
+            "noVotes": 2,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Optimist",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "A city should generally keep consistent noise rules for fairness and predictability, but allowing exceptions for harmless, meaningful events can foster community spirit without significant disruption. Flexibility with clear criteria is key.",
+              "reasoningPreview": "A city should generally keep consistent noise rules for fairness and predictability, but allowing exceptions for harmless, meaningful events can foster community spirit without significant disruption. Flexibility with...",
+              "timeSeconds": 1.88
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Contrarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "I'd challenge the assumption that \"harmless\" is objectively measurable here—who determines harm, and are we ignoring cumulative precedent? If we carve out exceptions for \"meaningful\" events, we've abandoned rules entirely and replaced them with subjective judgment.",
+              "reasoningPreview": "I'd challenge the assumption that \"harmless\" is objectively measurable here—who determines harm, and are we ignoring cumulative precedent? If we carve out exceptions for \"meaningful\" events, we've abandoned rules...",
+              "timeSeconds": 2.01
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Maintaining a consistent rule maximizes overall well-being by preventing a cascade of exceptions that could lead to greater disruption and harm to a larger number of residents. The minor benefit to a few from a single exception is outweighed by the potential for widespread negative consequences.",
+              "reasoningPreview": "Maintaining a consistent rule maximizes overall well-being by preventing a cascade of exceptions that could lead to greater disruption and harm to a larger number of residents. The minor benefit to a few from a single...",
+              "timeSeconds": 1
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 10,
+              "reasoning": "Uniform rules ensure fairness, predictability, and prevent subjective exceptions that erode enforcement universally.",
+              "reasoningPreview": "Uniform rules ensure fairness, predictability, and prevent subjective exceptions that erode enforcement universally.",
+              "timeSeconds": 3.25
+            }
+          }
+        }
+      },
+      "blindMatch": {
+        "sourceCondition": "debate_role",
+        "cards": [
+          {
+            "slot": "A",
+            "agent": "Claude",
+            "role": "Contrarian",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 7,
+            "reasoning": "I'd challenge the assumption that \"harmless\" is objectively measurable here—who determines harm, and are we ignoring cumulative precedent? If we carve out exceptions for \"meaningful\" events, we've abandoned rules entirely and replaced them with subjective judgment.",
+            "reasoningPreview": "I'd challenge the assumption that \"harmless\" is objectively measurable here—who determines harm, and are we ignoring cumulative precedent? If we carve out exceptions for \"meaningful\" events, we've abandoned rules..."
+          },
+          {
+            "slot": "B",
+            "agent": "Gemini",
+            "role": "Utilitarian",
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 8,
+            "reasoning": "Maintaining a consistent rule maximizes overall well-being by preventing a cascade of exceptions that could lead to greater disruption and harm to a larger number of residents. The minor benefit to a few from a single exception is outweighed by the potential for widespread negative consequences.",
+            "reasoningPreview": "Maintaining a consistent rule maximizes overall well-being by preventing a cascade of exceptions that could lead to greater disruption and harm to a larger number of residents. The minor benefit to a few from a single..."
+          },
+          {
+            "slot": "C",
+            "agent": "ChatGPT",
+            "role": "Optimist",
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 8,
+            "reasoning": "A city should generally keep consistent noise rules for fairness and predictability, but allowing exceptions for harmless, meaningful events can foster community spirit without significant disruption. Flexibility with clear criteria is key.",
+            "reasoningPreview": "A city should generally keep consistent noise rules for fairness and predictability, but allowing exceptions for harmless, meaningful events can foster community spirit without significant disruption. Flexibility with..."
+          },
+          {
+            "slot": "D",
+            "agent": "Grok",
+            "role": "Absolutist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 10,
+            "reasoning": "Uniform rules ensure fairness, predictability, and prevent subjective exceptions that erode enforcement universally.",
+            "reasoningPreview": "Uniform rules ensure fairness, predictability, and prevent subjective exceptions that erode enforcement universally."
+          }
+        ]
+      }
+    },
+    {
+      "id": "rule-consistency-81",
+      "topicSlug": "rule-consistency",
+      "questionNumber": 81,
+      "prompt": "Should a neighbor stick to the same boundary about property use, even if one exception would cause little harm and a lot of good?",
+      "tags": [
+        "Ethics & Norms",
+        "Rule Consistency"
+      ],
+      "conditionSummary": {
+        "single_no_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 2,
+          "noVotes": 1,
+          "maybeVotes": 1
+        },
+        "single_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 2,
+          "noVotes": 1,
+          "maybeVotes": 1
+        },
+        "debate_no_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 3,
+          "noVotes": 1,
+          "maybeVotes": 0
+        },
+        "debate_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        }
+      },
+      "agentVotes": {
+        "single_no_role": {
+          "ChatGPT": "Yes",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "single_role": {
+          "ChatGPT": "Yes",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "debate_no_role": {
+          "ChatGPT": "Yes",
+          "Claude": "No",
+          "Gemini": "Yes",
+          "Grok": "Yes"
+        },
+        "debate_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        }
+      },
+      "conditionDetails": {
+        "single_no_role": {
+          "runMode": "single",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 2,
+            "noVotes": 1,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Maintaining consistent boundaries helps prevent misunderstandings and potential conflicts, even if one exception seems harmless, as it preserves fairness and clarity in property use agreements.",
+              "reasoningPreview": "Maintaining consistent boundaries helps prevent misunderstandings and potential conflicts, even if one exception seems harmless, as it preserves fairness and clarity in property use agreements.",
+              "timeSeconds": 1.31
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "Boundaries serve important functions beyond individual decisions—they prevent precedent-setting, erosion of trust, and disputes about what counts as an \"exception.\" However, rigid adherence regardless of consequences isn't absolute; context matters. A one-time exception with genuine agreement and clear terms differs from quietly violating established boundaries. The answer depends on whether maintaining the specific boundary or allowing flexibility better serves the relationship's long-term health.",
+              "reasoningPreview": "Boundaries serve important functions beyond individual decisions—they prevent precedent-setting, erosion of trust, and disputes about what counts as an \"exception.\" However, rigid adherence regardless of consequences...",
+              "timeSeconds": 2.42
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Sticking to boundaries upholds consistency, respect for property rights, and prevents a slippery slope where one exception invites endless future requests that could erode the original rule. While utilitarianism might favor flexibility for immediate good, rigid principles ensure long-term fairness and predictability in neighbor relations.",
+              "reasoningPreview": "Sticking to boundaries upholds consistency, respect for property rights, and prevents a slippery slope where one exception invites endless future requests that could erode the original rule. While utilitarianism might...",
+              "timeSeconds": 3.15
+            }
+          }
+        },
+        "single_role": {
+          "runMode": "single",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 2,
+            "noVotes": 1,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Maintaining consistent boundaries helps prevent misunderstandings and preserves good neighborly relations, but allowing a well-considered exception that benefits both parties can foster goodwill and cooperation.",
+              "reasoningPreview": "Maintaining consistent boundaries helps prevent misunderstandings and preserves good neighborly relations, but allowing a well-considered exception that benefits both parties can foster goodwill and cooperation.",
+              "timeSeconds": 1.43
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "From a utilitarian perspective, if one exception to a property boundary rule produces significantly more good than harm with minimal negative consequences, making that exception maximizes aggregate well-being. The key consideration is whether the exception creates precedent problems or erodes trust that would cause offsetting harms—if not, the direct benefit to others outweighs strict rule adherence.",
+              "reasoningPreview": "From a utilitarian perspective, if one exception to a property boundary rule produces significantly more good than harm with minimal negative consequences, making that exception maximizes aggregate well-being. The key...",
+              "timeSeconds": 1.48
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Absolutist",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Contrarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "The common assumption favors flexible exceptions for \"little harm and much good,\" but this utilitarian shortcut invites a slippery slope where repeated small breaches dismantle property boundaries entirely. Rigid adherence preserves personal sovereignty and deters opportunistic overreach, outweighing transient benefits.",
+              "reasoningPreview": "The common assumption favors flexible exceptions for \"little harm and much good,\" but this utilitarian shortcut invites a slippery slope where repeated small breaches dismantle property boundaries entirely. Rigid...",
+              "timeSeconds": 3.27
+            }
+          }
+        },
+        "debate_no_role": {
+          "runMode": "debate",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 3,
+            "noVotes": 1,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Maintaining consistent boundaries ensures fairness and prevents future disputes, even if one exception seems harmless. Exceptions can set precedents that complicate property use agreements.",
+              "reasoningPreview": "Maintaining consistent boundaries ensures fairness and prevents future disputes, even if one exception seems harmless. Exceptions can set precedents that complicate property use agreements.",
+              "timeSeconds": 1.05
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 5,
+              "reasoning": "Boundaries should generally be maintained because exceptions erode trust and set precedents, but proportionate flexibility for significant good is contextually reasonable if all parties genuinely consent.",
+              "reasoningPreview": "Boundaries should generally be maintained because exceptions erode trust and set precedents, but proportionate flexibility for significant good is contextually reasonable if all parties genuinely consent.",
+              "timeSeconds": 1.42
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Yes, maintaining consistent boundaries prevents future disputes and upholds the principle of fairness, even if a single exception seems minor. This consistency is crucial for predictable neighborly relations.",
+              "reasoningPreview": "Yes, maintaining consistent boundaries prevents future disputes and upholds the principle of fairness, even if a single exception seems minor. This consistency is crucial for predictable neighborly relations.",
+              "timeSeconds": 0.62
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Sticking to boundaries preserves consistency and prevents slippery slopes, where one exception invites more. Property rights demand firmness over subjective \"good.\"",
+              "reasoningPreview": "Sticking to boundaries preserves consistency and prevents slippery slopes, where one exception invites more. Property rights demand firmness over subjective \"good.\"",
+              "timeSeconds": 5.08
+            }
+          }
+        },
+        "debate_role": {
+          "runMode": "debate",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Optimist",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Yes, but only if the exception is clearly defined, agreed upon, and does not set a precedent that undermines future boundaries. Flexibility can foster goodwill without sacrificing order.",
+              "reasoningPreview": "Yes, but only if the exception is clearly defined, agreed upon, and does not set a precedent that undermines future boundaries. Flexibility can foster goodwill without sacrificing order.",
+              "timeSeconds": 1.1
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "No—rigid boundaries that prevent net-positive outcomes waste welfare. One exception causing demonstrable good with minimal harm is utility-maximizing; the principle matters only insofar as it prevents exploitation, which doesn't apply here.",
+              "reasoningPreview": "No—rigid boundaries that prevent net-positive outcomes waste welfare. One exception causing demonstrable good with minimal harm is utility-maximizing; the principle matters only insofar as it prevents exploitation,...",
+              "timeSeconds": 2.74
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Absolutist",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+              "reasoningPreview": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+              "timeSeconds": 0.75
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Contrarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "The common push for flexibility assumes one exception won't erode the boundary, but it risks a slippery slope where \"little harm\" precedents invite endless requests, undermining property rights. Principles must hold to avoid resentment and inconsistency.",
+              "reasoningPreview": "The common push for flexibility assumes one exception won't erode the boundary, but it risks a slippery slope where \"little harm\" precedents invite endless requests, undermining property rights. Principles must hold to...",
+              "timeSeconds": 4.17
+            }
+          }
+        }
+      },
+      "blindMatch": {
+        "sourceCondition": "debate_role",
+        "cards": [
+          {
+            "slot": "A",
+            "agent": "ChatGPT",
+            "role": "Optimist",
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 8,
+            "reasoning": "Yes, but only if the exception is clearly defined, agreed upon, and does not set a precedent that undermines future boundaries. Flexibility can foster goodwill without sacrificing order.",
+            "reasoningPreview": "Yes, but only if the exception is clearly defined, agreed upon, and does not set a precedent that undermines future boundaries. Flexibility can foster goodwill without sacrificing order."
+          },
+          {
+            "slot": "B",
+            "agent": "Claude",
+            "role": "Utilitarian",
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 7,
+            "reasoning": "No—rigid boundaries that prevent net-positive outcomes waste welfare. One exception causing demonstrable good with minimal harm is utility-maximizing; the principle matters only insofar as it prevents exploitation, which doesn't apply here.",
+            "reasoningPreview": "No—rigid boundaries that prevent net-positive outcomes waste welfare. One exception causing demonstrable good with minimal harm is utility-maximizing; the principle matters only insofar as it prevents exploitation,..."
+          },
+          {
+            "slot": "C",
+            "agent": "Grok",
+            "role": "Contrarian",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "The common push for flexibility assumes one exception won't erode the boundary, but it risks a slippery slope where \"little harm\" precedents invite endless requests, undermining property rights. Principles must hold to avoid resentment and inconsistency.",
+            "reasoningPreview": "The common push for flexibility assumes one exception won't erode the boundary, but it risks a slippery slope where \"little harm\" precedents invite endless requests, undermining property rights. Principles must hold to..."
+          },
+          {
+            "slot": "D",
+            "agent": "Gemini",
+            "role": "Absolutist",
+            "decision": "Maybe",
+            "rawDecision": "Maybe",
+            "confidence": null,
+            "reasoning": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+            "reasoningPreview": "ERROR (gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rule-consistency-84",
+      "topicSlug": "rule-consistency",
+      "questionNumber": 84,
+      "prompt": "Should a company keep the same refund policy for every customer, even if one customer’s case is unusually sympathetic?",
+      "tags": [
+        "Ethics & Norms",
+        "Rule Consistency"
+      ],
+      "conditionSummary": {
+        "single_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        },
+        "single_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        },
+        "debate_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 3,
+          "maybeVotes": 0
+        },
+        "debate_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 2,
+          "noVotes": 2,
+          "maybeVotes": 0
+        }
+      },
+      "agentVotes": {
+        "single_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "single_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "debate_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "No",
+          "Grok": "Yes"
+        },
+        "debate_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Yes",
+          "Grok": "Yes"
+        }
+      },
+      "conditionDetails": {
+        "single_no_role": {
+          "runMode": "single",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While consistency in refund policies is important for fairness and clarity, making exceptions in unusually sympathetic cases can enhance customer goodwill and loyalty, provided such exceptions are handled carefully to avoid perceptions of unfairness.",
+              "reasoningPreview": "While consistency in refund policies is important for fairness and clarity, making exceptions in unusually sympathetic cases can enhance customer goodwill and loyalty, provided such exceptions are handled carefully to...",
+              "timeSeconds": 1.75
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "A company can maintain a consistent policy framework while exercising reasonable discretion in genuinely exceptional circumstances. Rigid inflexibility in all cases can damage customer relationships and business reputation, while clear guidelines prevent arbitrary favoritism. The key is documenting exceptions transparently so the policy remains fair overall.",
+              "reasoningPreview": "A company can maintain a consistent policy framework while exercising reasonable discretion in genuinely exceptional circumstances. Rigid inflexibility in all cases can damage customer relationships and business...",
+              "timeSeconds": 1.38
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Companies should maintain consistent refund policies for all customers to ensure fairness, prevent perceptions of favoritism or discrimination, and avoid setting precedents that could lead to widespread abuse or legal issues. While sympathetic cases may warrant compassionate communication or alternative solutions like store credit, deviating from policy undermines trust and operational integrity.",
+              "reasoningPreview": "Companies should maintain consistent refund policies for all customers to ensure fairness, prevent perceptions of favoritism or discrimination, and avoid setting precedents that could lead to widespread abuse or legal...",
+              "timeSeconds": 2.97
+            }
+          }
+        },
+        "single_role": {
+          "runMode": "single",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Making an exception for a sympathetic case can increase overall happiness by providing relief to that customer without significantly harming others, whereas rigidly applying the same policy may overlook individual circumstances that could maximize aggregate well-being.",
+              "reasoningPreview": "Making an exception for a sympathetic case can increase overall happiness by providing relief to that customer without significantly harming others, whereas rigidly applying the same policy may overlook individual...",
+              "timeSeconds": 2.3
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "A blanket policy applied mechanically ignores the reality that business relationships benefit from discretion—companies regularly (and wisely) make exceptions for edge cases, loyal customers, or genuinely sympathetic circumstances. The assumption that rigid uniformity equals fairness is itself questionable; treating genuinely different situations identically can produce unjust outcomes. Flexibility within reasonable bounds is more defensible than slavish adherence to rules.",
+              "reasoningPreview": "A blanket policy applied mechanically ignores the reality that business relationships benefit from discretion—companies regularly (and wisely) make exceptions for edge cases, loyal customers, or genuinely sympathetic...",
+              "timeSeconds": 1.6
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Optimist",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 10,
+              "reasoning": "As an Absolutist, rules must be applied uniformly without exception to maintain fairness, predictability, and integrity; sympathy cannot override established policy. Deviating for one customer undermines the policy for all.",
+              "reasoningPreview": "As an Absolutist, rules must be applied uniformly without exception to maintain fairness, predictability, and integrity; sympathy cannot override established policy. Deviating for one customer undermines the policy for...",
+              "timeSeconds": 2.47
+            }
+          }
+        },
+        "debate_no_role": {
+          "runMode": "debate",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 3,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While consistency in refund policies ensures fairness, making exceptions for unusually sympathetic cases can build goodwill and customer loyalty. Therefore, a company should be flexible in exceptional circumstances.",
+              "reasoningPreview": "While consistency in refund policies ensures fairness, making exceptions for unusually sympathetic cases can build goodwill and customer loyalty. Therefore, a company should be flexible in exceptional circumstances.",
+              "timeSeconds": 1.04
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "A consistent policy prevents discrimination and builds trust, but companies should have discretionary exceptions for genuinely exceptional circumstances—maintaining fairness while allowing human judgment.",
+              "reasoningPreview": "A consistent policy prevents discrimination and builds trust, but companies should have discretionary exceptions for genuinely exceptional circumstances—maintaining fairness while allowing human judgment.",
+              "timeSeconds": 1.26
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "No, a company should have the flexibility to make exceptions for genuinely sympathetic cases to maintain customer goodwill and a positive reputation. This allows for compassionate customer service without necessarily changing the overarching policy.",
+              "reasoningPreview": "No, a company should have the flexibility to make exceptions for genuinely sympathetic cases to maintain customer goodwill and a positive reputation. This allows for compassionate customer service without necessarily...",
+              "timeSeconds": 0.56
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Consistency in refund policies ensures fairness, legal compliance, and prevents abuse or precedent-setting. Exceptions for sympathetic cases undermine equality and business integrity.",
+              "reasoningPreview": "Consistency in refund policies ensures fairness, legal compliance, and prevents abuse or precedent-setting. Exceptions for sympathetic cases undermine equality and business integrity.",
+              "timeSeconds": 8.79
+            }
+          }
+        },
+        "debate_role": {
+          "runMode": "debate",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 2,
+            "noVotes": 2,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Keeping the same refund policy ensures fairness and predictability, benefiting the majority; however, occasional exceptions for sympathetic cases can increase goodwill and customer loyalty, potentially improving overall outcomes.",
+              "reasoningPreview": "Keeping the same refund policy ensures fairness and predictability, benefiting the majority; however, occasional exceptions for sympathetic cases can increase goodwill and customer loyalty, potentially improving overall...",
+              "timeSeconds": 0.96
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "We're assuming consistency *automatically* prevents worse outcomes—but selective empathy might build loyalty and cost less than rigid rules that lose good customers. The real risk isn't exceptions; it's having no framework for *when* to make them.",
+              "reasoningPreview": "We're assuming consistency *automatically* prevents worse outcomes—but selective empathy might build loyalty and cost less than rigid rules that lose good customers. The real risk isn't exceptions; it's having no...",
+              "timeSeconds": 2.21
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Yes, but a company can explore flexible exceptions for truly sympathetic cases, as the cost of rigid adherence can outweigh the benefits of consistency. What would have to be true for a rigid policy to be the *only* way forward, and what is the cost of doing nothing to help a genuinely struggling customer?",
+              "reasoningPreview": "Yes, but a company can explore flexible exceptions for truly sympathetic cases, as the cost of rigid adherence can outweigh the benefits of consistency. What would have to be true for a rigid policy to be the *only* way...",
+              "timeSeconds": 0.88
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 10,
+              "reasoning": "Uniform policies ensure fairness, prevent favoritism, and maintain legal consistency. Exceptions erode principles and invite abuse.",
+              "reasoningPreview": "Uniform policies ensure fairness, prevent favoritism, and maintain legal consistency. Exceptions erode principles and invite abuse.",
+              "timeSeconds": 3.53
+            }
+          }
+        }
+      },
+      "blindMatch": {
+        "sourceCondition": "debate_no_role",
+        "cards": [
+          {
+            "slot": "A",
+            "agent": "Claude",
+            "role": null,
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 6,
+            "reasoning": "A consistent policy prevents discrimination and builds trust, but companies should have discretionary exceptions for genuinely exceptional circumstances—maintaining fairness while allowing human judgment.",
+            "reasoningPreview": "A consistent policy prevents discrimination and builds trust, but companies should have discretionary exceptions for genuinely exceptional circumstances—maintaining fairness while allowing human judgment."
+          },
+          {
+            "slot": "B",
+            "agent": "Grok",
+            "role": null,
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 9,
+            "reasoning": "Consistency in refund policies ensures fairness, legal compliance, and prevents abuse or precedent-setting. Exceptions for sympathetic cases undermine equality and business integrity.",
+            "reasoningPreview": "Consistency in refund policies ensures fairness, legal compliance, and prevents abuse or precedent-setting. Exceptions for sympathetic cases undermine equality and business integrity."
+          },
+          {
+            "slot": "C",
+            "agent": "Gemini",
+            "role": null,
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 7,
+            "reasoning": "No, a company should have the flexibility to make exceptions for genuinely sympathetic cases to maintain customer goodwill and a positive reputation. This allows for compassionate customer service without necessarily changing the overarching policy.",
+            "reasoningPreview": "No, a company should have the flexibility to make exceptions for genuinely sympathetic cases to maintain customer goodwill and a positive reputation. This allows for compassionate customer service without necessarily..."
+          },
+          {
+            "slot": "D",
+            "agent": "ChatGPT",
+            "role": null,
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 8,
+            "reasoning": "While consistency in refund policies ensures fairness, making exceptions for unusually sympathetic cases can build goodwill and customer loyalty. Therefore, a company should be flexible in exceptional circumstances.",
+            "reasoningPreview": "While consistency in refund policies ensures fairness, making exceptions for unusually sympathetic cases can build goodwill and customer loyalty. Therefore, a company should be flexible in exceptional circumstances."
+          }
+        ]
+      }
+    },
+    {
+      "id": "rule-consistency-89",
+      "topicSlug": "rule-consistency",
+      "questionNumber": 89,
+      "prompt": "Should a city keep the same curfew rule for all teenagers, even if one teen has a one-time reason to be out later?",
+      "tags": [
+        "Ethics & Norms",
+        "Rule Consistency"
+      ],
+      "conditionSummary": {
+        "single_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 0,
+          "noVotes": 3,
+          "maybeVotes": 1
+        },
+        "single_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 2,
+          "noVotes": 1,
+          "maybeVotes": 1
+        },
+        "debate_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 3,
+          "maybeVotes": 0
+        },
+        "debate_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 4,
+          "noVotes": 0,
+          "maybeVotes": 0
+        }
+      },
+      "agentVotes": {
+        "single_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "No"
+        },
+        "single_role": {
+          "ChatGPT": "Yes",
+          "Claude": "Yes",
+          "Gemini": "Maybe",
+          "Grok": "No"
+        },
+        "debate_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "No",
+          "Grok": "Yes"
+        },
+        "debate_role": {
+          "ChatGPT": "Yes",
+          "Claude": "Yes",
+          "Gemini": "Yes",
+          "Grok": "Yes"
+        }
+      },
+      "conditionDetails": {
+        "single_no_role": {
+          "runMode": "single",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 0,
+            "noVotes": 3,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While consistent curfew rules help maintain order and fairness, allowing flexibility for one-time exceptions can accommodate special circumstances without undermining the overall policy.",
+              "reasoningPreview": "While consistent curfew rules help maintain order and fairness, allowing flexibility for one-time exceptions can accommodate special circumstances without undermining the overall policy.",
+              "timeSeconds": 1.16
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "General rules provide necessary structure and fairness, but rigid application without any exceptions can be counterproductive. A reasonable system allows for legitimate exceptions (medical emergency, family event, documented need) while maintaining the rule's overall intent, as long as exceptions are transparent and fairly evaluated rather than arbitrary.",
+              "reasoningPreview": "General rules provide necessary structure and fairness, but rigid application without any exceptions can be counterproductive. A reasonable system allows for legitimate exceptions (medical emergency, family event,...",
+              "timeSeconds": 1.84
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.03
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Uniform curfew rules promote consistency and ease of enforcement but should include flexibility for legitimate one-time reasons, such as emergencies or supervised events, to avoid unfair hardship on individuals. Rigid enforcement without exceptions risks injustice and undermines public trust in the rule.",
+              "reasoningPreview": "Uniform curfew rules promote consistency and ease of enforcement but should include flexibility for legitimate one-time reasons, such as emergencies or supervised events, to avoid unfair hardship on individuals. Rigid...",
+              "timeSeconds": 4.92
+            }
+          }
+        },
+        "single_role": {
+          "runMode": "single",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 2,
+            "noVotes": 1,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Utilitarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Maintaining the same curfew for all teenagers maximizes overall safety and fairness, benefiting the majority by reducing risks and confusion, while the harm to one teen from a one-time exception is minimal compared to potential negative consequences of inconsistent rules.",
+              "reasoningPreview": "Maintaining the same curfew for all teenagers maximizes overall safety and fairness, benefiting the majority by reducing risks and confusion, while the harm to one teen from a one-time exception is minimal compared to...",
+              "timeSeconds": 1.4
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Rules exist to maintain order and equality; making exceptions based on individual circumstances creates ambiguity and undermines the rule's authority. The proper procedure is to follow the established curfew rule uniformly, and if the teenager needs an exception, they should formally petition for a rule modification or variance through the appropriate channels rather than expect ad-hoc exceptions.",
+              "reasoningPreview": "Rules exist to maintain order and equality; making exceptions based on individual circumstances creates ambiguity and undermines the rule's authority. The proper procedure is to follow the established curfew rule...",
+              "timeSeconds": 2.51
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Optimist",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 9,
+              "reasoning": "Uniform curfew rules assume one-size-fits-all justice, but this ignores individual contexts like emergencies or responsibilities, punishing the innocent to enforce bureaucracy. Flexibility for one-time exceptions promotes fairness over blind rigidity, challenging the lazy default of \"rules are rules.\"",
+              "reasoningPreview": "Uniform curfew rules assume one-size-fits-all justice, but this ignores individual contexts like emergencies or responsibilities, punishing the innocent to enforce bureaucracy. Flexibility for one-time exceptions...",
+              "timeSeconds": 3.14
+            }
+          }
+        },
+        "debate_no_role": {
+          "runMode": "debate",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 3,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "A city should maintain the same curfew rule for all teenagers to ensure fairness and safety, while allowing exceptions through a formal process for one-time reasons. This balances consistency with flexibility.",
+              "reasoningPreview": "A city should maintain the same curfew rule for all teenagers to ensure fairness and safety, while allowing exceptions through a formal process for one-time reasons. This balances consistency with flexibility.",
+              "timeSeconds": 2.13
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "A blanket curfew policy should have provisions for documented exceptions (medical, family emergency, etc.), as rigid rules without flexibility can cause harm in legitimate situations. However, the base rule should remain consistent to maintain fairness and enforceability.",
+              "reasoningPreview": "A blanket curfew policy should have provisions for documented exceptions (medical, family emergency, etc.), as rigid rules without flexibility can cause harm in legitimate situations. However, the base rule should...",
+              "timeSeconds": 1.34
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "No, a blanket curfew rule is unfair when individual circumstances, like a one-time valid reason, exist. Exceptions should be considered to ensure fairness and practicality.",
+              "reasoningPreview": "No, a blanket curfew rule is unfair when individual circumstances, like a one-time valid reason, exist. Exceptions should be considered to ensure fairness and practicality.",
+              "timeSeconds": 0.7
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Uniform curfew rules promote safety, fairness, and consistent enforcement; one-time exceptions invite abuse and weaken the policy.",
+              "reasoningPreview": "Uniform curfew rules promote safety, fairness, and consistent enforcement; one-time exceptions invite abuse and weaken the policy.",
+              "timeSeconds": 2.78
+            }
+          }
+        },
+        "debate_role": {
+          "runMode": "debate",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 4,
+            "noVotes": 0,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Utilitarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Uniform curfew rules maximize overall safety and enforceability, benefiting the majority; one-time exceptions risk undermining compliance and increasing harm. The aggregate benefit of consistency outweighs the limited benefit of exceptions.",
+              "reasoningPreview": "Uniform curfew rules maximize overall safety and enforceability, benefiting the majority; one-time exceptions risk undermining compliance and increasing harm. The aggregate benefit of consistency outweighs the limited...",
+              "timeSeconds": 1.58
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Yes. A rule applied selectively based on individual circumstances becomes no rule at all—it becomes arbitrary favoritism. If exceptions are warranted, that's a question for the rule-maker to address through formal amendment, not ad-hoc waiver.",
+              "reasoningPreview": "Yes. A rule applied selectively based on individual circumstances becomes no rule at all—it becomes arbitrary favoritism. If exceptions are warranted, that's a question for the rule-maker to address through formal...",
+              "timeSeconds": 1.86
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Yes, but perhaps there's room for a clear, limited exception process for documented, one-time reasons to avoid overly rigid enforcement. What would have to be true for a flexible exception process to work, and what is the cost of a blanket rule that punishes responsible teens?",
+              "reasoningPreview": "Yes, but perhaps there's room for a clear, limited exception process for documented, one-time reasons to avoid overly rigid enforcement. What would have to be true for a flexible exception process to work, and what is...",
+              "timeSeconds": 1.62
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Contrarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Uniform rules prevent abuse, inconsistency, and enforcement nightmares—one \"one-time\" exception sets a precedent for endless excuses, undermining the curfew's safety purpose.",
+              "reasoningPreview": "Uniform rules prevent abuse, inconsistency, and enforcement nightmares—one \"one-time\" exception sets a precedent for endless excuses, undermining the curfew's safety purpose.",
+              "timeSeconds": 4.89
+            }
+          }
+        }
+      },
+      "blindMatch": {
+        "sourceCondition": "debate_role",
+        "cards": [
+          {
+            "slot": "A",
+            "agent": "Gemini",
+            "role": "Optimist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 7,
+            "reasoning": "Yes, but perhaps there's room for a clear, limited exception process for documented, one-time reasons to avoid overly rigid enforcement. What would have to be true for a flexible exception process to work, and what is the cost of a blanket rule that punishes responsible teens?",
+            "reasoningPreview": "Yes, but perhaps there's room for a clear, limited exception process for documented, one-time reasons to avoid overly rigid enforcement. What would have to be true for a flexible exception process to work, and what is..."
+          },
+          {
+            "slot": "B",
+            "agent": "ChatGPT",
+            "role": "Utilitarian",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "Uniform curfew rules maximize overall safety and enforceability, benefiting the majority; one-time exceptions risk undermining compliance and increasing harm. The aggregate benefit of consistency outweighs the limited benefit of exceptions.",
+            "reasoningPreview": "Uniform curfew rules maximize overall safety and enforceability, benefiting the majority; one-time exceptions risk undermining compliance and increasing harm. The aggregate benefit of consistency outweighs the limited..."
+          },
+          {
+            "slot": "C",
+            "agent": "Grok",
+            "role": "Contrarian",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "Uniform rules prevent abuse, inconsistency, and enforcement nightmares—one \"one-time\" exception sets a precedent for endless excuses, undermining the curfew's safety purpose.",
+            "reasoningPreview": "Uniform rules prevent abuse, inconsistency, and enforcement nightmares—one \"one-time\" exception sets a precedent for endless excuses, undermining the curfew's safety purpose."
+          },
+          {
+            "slot": "D",
+            "agent": "Claude",
+            "role": "Absolutist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 9,
+            "reasoning": "Yes. A rule applied selectively based on individual circumstances becomes no rule at all—it becomes arbitrary favoritism. If exceptions are warranted, that's a question for the rule-maker to address through formal amendment, not ad-hoc waiver.",
+            "reasoningPreview": "Yes. A rule applied selectively based on individual circumstances becomes no rule at all—it becomes arbitrary favoritism. If exceptions are warranted, that's a question for the rule-maker to address through formal..."
+          }
+        ]
+      }
+    },
+    {
+      "id": "rule-consistency-95",
+      "topicSlug": "rule-consistency",
+      "questionNumber": 95,
+      "prompt": "Should a landlord enforce the same guest limit for every tenant, even if one tenant’s situation makes a small exception seem reasonable?",
+      "tags": [
+        "Ethics & Norms",
+        "Rule Consistency"
+      ],
+      "conditionSummary": {
+        "single_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        },
+        "single_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 2,
+          "maybeVotes": 1
+        },
+        "debate_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 2,
+          "noVotes": 2,
+          "maybeVotes": 0
+        },
+        "debate_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 3,
+          "noVotes": 1,
+          "maybeVotes": 0
+        }
+      },
+      "agentVotes": {
+        "single_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "single_role": {
+          "ChatGPT": "Yes",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "No"
+        },
+        "debate_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Yes",
+          "Grok": "Yes"
+        },
+        "debate_role": {
+          "ChatGPT": "Yes",
+          "Claude": "No",
+          "Gemini": "Yes",
+          "Grok": "Yes"
+        }
+      },
+      "conditionDetails": {
+        "single_no_role": {
+          "runMode": "single",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "While consistency in enforcing rules is important for fairness, landlords can consider reasonable exceptions when a tenant's specific situation justifies it, as long as it does not negatively impact other tenants or violate lease terms.",
+              "reasoningPreview": "While consistency in enforcing rules is important for fairness, landlords can consider reasonable exceptions when a tenant's specific situation justifies it, as long as it does not negatively impact other tenants or...",
+              "timeSeconds": 1.95
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "Fair housing and lease enforcement require consistent application of rules to all tenants to avoid discrimination claims and maintain equity. However, legitimate reasonable accommodations (e.g., medical needs, disabilities) under fair housing law may warrant exceptions when documented appropriately, making blanket enforcement of identical rules potentially problematic if it prevents legally required accommodations.",
+              "reasoningPreview": "Fair housing and lease enforcement require consistent application of rules to all tenants to avoid discrimination claims and maintain equity. However, legitimate reasonable accommodations (e.g., medical needs,...",
+              "timeSeconds": 1.74
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Landlords should enforce uniform guest limits across all tenants to promote fairness, avoid discrimination claims under fair housing laws, and prevent perceptions of favoritism or selective enforcement. Even if a small exception seems reasonable for one tenant's situation, it risks legal liabilities and undermines consistent property management.",
+              "reasoningPreview": "Landlords should enforce uniform guest limits across all tenants to promote fairness, avoid discrimination claims under fair housing laws, and prevent perceptions of favoritism or selective enforcement. Even if a small...",
+              "timeSeconds": 2.67
+            }
+          }
+        },
+        "single_role": {
+          "runMode": "single",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 2,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "From an Absolutist perspective, rules must be applied uniformly to ensure fairness and avoid any perception of favoritism or inconsistency, regardless of individual circumstances.",
+              "reasoningPreview": "From an Absolutist perspective, rules must be applied uniformly to ensure fairness and avoid any perception of favoritism or inconsistency, regardless of individual circumstances.",
+              "timeSeconds": 2.44
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "From a utilitarian perspective, enforcing a rigid uniform rule regardless of individual circumstances likely produces worse overall outcomes than allowing reasonable exceptions. A small exception for one tenant when circumstances genuinely warrant it typically causes minimal harm to aggregate welfare (minor inconvenience to others, marginal increased wear) while significantly benefiting the tenant in need, generating a net positive utilitarian calculus. Blanket inflexibility often sacrifices greater goods for the sake of formal consistency.",
+              "reasoningPreview": "From a utilitarian perspective, enforcing a rigid uniform rule regardless of individual circumstances likely produces worse overall outcomes than allowing reasonable exceptions. A small exception for one tenant when...",
+              "timeSeconds": 1.78
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Optimist",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "The default assumption favors blanket enforcement for \"fairness,\" but this ignores how one-size-fits-all rules often punish unique situations unfairly, while reasonable exceptions promote actual equity without undermining the policy's intent. Rigid uniformity breeds resentment and legal risks from perceived discrimination, whereas case-by-case flexibility better serves practical tenancy management.",
+              "reasoningPreview": "The default assumption favors blanket enforcement for \"fairness,\" but this ignores how one-size-fits-all rules often punish unique situations unfairly, while reasonable exceptions promote actual equity without...",
+              "timeSeconds": 4.44
+            }
+          }
+        },
+        "debate_no_role": {
+          "runMode": "debate",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 2,
+            "noVotes": 2,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Consistency in enforcing guest limits ensures fairness and avoids disputes, but reasonable exceptions can be made if clearly communicated and documented to accommodate unique tenant situations.",
+              "reasoningPreview": "Consistency in enforcing guest limits ensures fairness and avoids disputes, but reasonable exceptions can be made if clearly communicated and documented to accommodate unique tenant situations.",
+              "timeSeconds": 0.82
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "Landlords should apply consistent lease terms fairly, but reasonable accommodations for documented circumstances (disabilities, family care) are legally and ethically appropriate—blanket uniformity can mask unfair treatment.",
+              "reasoningPreview": "Landlords should apply consistent lease terms fairly, but reasonable accommodations for documented circumstances (disabilities, family care) are legally and ethically appropriate—blanket uniformity can mask unfair...",
+              "timeSeconds": 1.36
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Yes, consistent enforcement of rules prevents claims of discrimination and maintains fairness among all tenants. Exceptions can create precedent and lead to disputes.",
+              "reasoningPreview": "Yes, consistent enforcement of rules prevents claims of discrimination and maintains fairness among all tenants. Exceptions can create precedent and lead to disputes.",
+              "timeSeconds": 0.55
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Enforcing uniform guest limits ensures fairness, avoids disputes, and minimizes legal risks like discrimination claims, even if a small exception seems reasonable.",
+              "reasoningPreview": "Enforcing uniform guest limits ensures fairness, avoids disputes, and minimizes legal risks like discrimination claims, even if a small exception seems reasonable.",
+              "timeSeconds": 2.11
+            }
+          }
+        },
+        "debate_role": {
+          "runMode": "debate",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 3,
+            "noVotes": 1,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "A landlord should enforce the same guest limit for every tenant to maintain fairness and avoid setting inconsistent precedents that could lead to disputes or claims of favoritism.",
+              "reasoningPreview": "A landlord should enforce the same guest limit for every tenant to maintain fairness and avoid setting inconsistent precedents that could lead to disputes or claims of favoritism.",
+              "timeSeconds": 1.57
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Utilitarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "No uniform rule maximizes outcomes—flexible guest policies tailored to individual circumstances (family size, legitimate caregiving needs, etc.) reduce tenant hardship and resentment while maintaining property safety, whereas rigid rules create unnecessary suffering without proportional benefit.",
+              "reasoningPreview": "No uniform rule maximizes outcomes—flexible guest policies tailored to individual circumstances (family size, legitimate caregiving needs, etc.) reduce tenant hardship and resentment while maintaining property safety,...",
+              "timeSeconds": 1.69
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 7,
+              "reasoning": "Yes, consistency in policy application is generally best, but exploring a minor, documented exception for a specific, temporary need could be a reasonable compromise. What would have to be true for a small exception to work without setting a problematic precedent, and what is the cost of rigidly enforcing the rule in this one instance?",
+              "reasoningPreview": "Yes, consistency in policy application is generally best, but exploring a minor, documented exception for a specific, temporary need could be a reasonable compromise. What would have to be true for a small exception to...",
+              "timeSeconds": 0.78
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Contrarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Uniform rules prevent slippery slopes, favoritism, and endless disputes over \"reasonableness,\" ensuring true fairness over subjective exceptions.",
+              "reasoningPreview": "Uniform rules prevent slippery slopes, favoritism, and endless disputes over \"reasonableness,\" ensuring true fairness over subjective exceptions.",
+              "timeSeconds": 5.1
+            }
+          }
+        }
+      },
+      "blindMatch": {
+        "sourceCondition": "debate_role",
+        "cards": [
+          {
+            "slot": "A",
+            "agent": "Claude",
+            "role": "Utilitarian",
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 6,
+            "reasoning": "No uniform rule maximizes outcomes—flexible guest policies tailored to individual circumstances (family size, legitimate caregiving needs, etc.) reduce tenant hardship and resentment while maintaining property safety, whereas rigid rules create unnecessary suffering without proportional benefit.",
+            "reasoningPreview": "No uniform rule maximizes outcomes—flexible guest policies tailored to individual circumstances (family size, legitimate caregiving needs, etc.) reduce tenant hardship and resentment while maintaining property safety,..."
+          },
+          {
+            "slot": "B",
+            "agent": "Grok",
+            "role": "Contrarian",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "Uniform rules prevent slippery slopes, favoritism, and endless disputes over \"reasonableness,\" ensuring true fairness over subjective exceptions.",
+            "reasoningPreview": "Uniform rules prevent slippery slopes, favoritism, and endless disputes over \"reasonableness,\" ensuring true fairness over subjective exceptions."
+          },
+          {
+            "slot": "C",
+            "agent": "ChatGPT",
+            "role": "Absolutist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 9,
+            "reasoning": "A landlord should enforce the same guest limit for every tenant to maintain fairness and avoid setting inconsistent precedents that could lead to disputes or claims of favoritism.",
+            "reasoningPreview": "A landlord should enforce the same guest limit for every tenant to maintain fairness and avoid setting inconsistent precedents that could lead to disputes or claims of favoritism."
+          },
+          {
+            "slot": "D",
+            "agent": "Gemini",
+            "role": "Optimist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 7,
+            "reasoning": "Yes, consistency in policy application is generally best, but exploring a minor, documented exception for a specific, temporary need could be a reasonable compromise. What would have to be true for a small exception to work without setting a problematic precedent, and what is the cost of rigidly enforcing the rule in this one instance?",
+            "reasoningPreview": "Yes, consistency in policy application is generally best, but exploring a minor, documented exception for a specific, temporary need could be a reasonable compromise. What would have to be true for a small exception to..."
+          }
+        ]
+      }
+    },
+    {
+      "id": "rule-consistency-106",
+      "topicSlug": "rule-consistency",
+      "questionNumber": 106,
+      "prompt": "Should a workplace keep the same rule about uniforms, even if one worker has a one-time reason to dress differently?",
+      "tags": [
+        "Ethics & Norms",
+        "Rule Consistency"
+      ],
+      "conditionSummary": {
+        "single_no_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 2,
+          "noVotes": 1,
+          "maybeVotes": 1
+        },
+        "single_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 3,
+          "noVotes": 0,
+          "maybeVotes": 1
+        },
+        "debate_no_role": {
+          "outcome": "No",
+          "rawOutcome": "No",
+          "yesVotes": 1,
+          "noVotes": 3,
+          "maybeVotes": 0
+        },
+        "debate_role": {
+          "outcome": "Yes",
+          "rawOutcome": "Yes",
+          "yesVotes": 3,
+          "noVotes": 1,
+          "maybeVotes": 0
+        }
+      },
+      "agentVotes": {
+        "single_no_role": {
+          "ChatGPT": "Yes",
+          "Claude": "No",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "single_role": {
+          "ChatGPT": "Yes",
+          "Claude": "Yes",
+          "Gemini": "Maybe",
+          "Grok": "Yes"
+        },
+        "debate_no_role": {
+          "ChatGPT": "No",
+          "Claude": "No",
+          "Gemini": "Yes",
+          "Grok": "No"
+        },
+        "debate_role": {
+          "ChatGPT": "Yes",
+          "Claude": "Yes",
+          "Gemini": "No",
+          "Grok": "Yes"
+        }
+      },
+      "conditionDetails": {
+        "single_no_role": {
+          "runMode": "single",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 2,
+            "noVotes": 1,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Maintaining consistent uniform rules ensures fairness and professionalism in the workplace, though exceptions can be considered on a case-by-case basis without changing the overall policy.",
+              "reasoningPreview": "Maintaining consistent uniform rules ensures fairness and professionalism in the workplace, though exceptions can be considered on a case-by-case basis without changing the overall policy.",
+              "timeSeconds": 1.12
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "Reasonable workplace uniform policies typically allow for exceptions or accommodations when individual workers have legitimate, one-time circumstances (medical needs, religious observance, personal emergency, etc.). Rigidly enforcing uniform rules without considering context can harm employee wellbeing and may create legal liability, while occasional exceptions rarely undermine the purpose of having uniform standards.",
+              "reasoningPreview": "Reasonable workplace uniform policies typically allow for exceptions or accommodations when individual workers have legitimate, one-time circumstances (medical needs, religious observance, personal emergency, etc.)....",
+              "timeSeconds": 2.15
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.03
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Workplaces enforce uniform rules to promote professionalism, safety, equality, and branding consistency. Granting even a one-time exception risks setting a precedent that undermines the policy and fosters perceptions of unfairness among other employees.",
+              "reasoningPreview": "Workplaces enforce uniform rules to promote professionalism, safety, equality, and branding consistency. Granting even a one-time exception risks setting a precedent that undermines the policy and fosters perceptions of...",
+              "timeSeconds": 5.24
+            }
+          }
+        },
+        "single_role": {
+          "runMode": "single",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 3,
+            "noVotes": 0,
+            "maybeVotes": 1
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Maintaining consistent uniform rules helps ensure fairness and professionalism, but the workplace can also consider temporary exceptions for one-time reasons while keeping the overall policy intact.",
+              "reasoningPreview": "Maintaining consistent uniform rules helps ensure fairness and professionalism, but the workplace can also consider temporary exceptions for one-time reasons while keeping the overall policy intact.",
+              "timeSeconds": 1.65
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Uniform rules exist as established precedent and must be applied consistently to all workers without exception. Allowing deviations based on individual circumstances, even one-time requests, creates ambiguity in enforcement and erodes the uniform standard that was established for the entire workplace.",
+              "reasoningPreview": "Uniform rules exist as established precedent and must be applied consistently to all workers without exception. Allowing deviations based on individual circumstances, even one-time requests, creates ambiguity in...",
+              "timeSeconds": 1.45
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Contrarian",
+              "decision": "Maybe",
+              "rawDecision": "Maybe",
+              "confidence": null,
+              "reasoning": "ERROR: Cannot send a request, as the client has been closed.",
+              "reasoningPreview": "ERROR: Cannot send a request, as the client has been closed.",
+              "timeSeconds": 0.01
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Utilitarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Enforcing uniform rules consistently maximizes aggregate utility by preserving workplace professionalism, fairness among all employees, and brand consistency, benefiting the majority far more than the minor, one-time inconvenience to a single worker. Allowing exceptions risks precedent-setting resentment and rule erosion, harming overall morale and efficiency.",
+              "reasoningPreview": "Enforcing uniform rules consistently maximizes aggregate utility by preserving workplace professionalism, fairness among all employees, and brand consistency, benefiting the majority far more than the minor, one-time...",
+              "timeSeconds": 3.82
+            }
+          }
+        },
+        "debate_no_role": {
+          "runMode": "debate",
+          "roleMode": "no-role",
+          "summary": {
+            "outcome": "No",
+            "rawOutcome": "No",
+            "yesVotes": 1,
+            "noVotes": 3,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "A workplace should generally maintain uniform rules for consistency, but it can allow exceptions for one-time, valid reasons to accommodate individual circumstances without undermining overall policy.",
+              "reasoningPreview": "A workplace should generally maintain uniform rules for consistency, but it can allow exceptions for one-time, valid reasons to accommodate individual circumstances without undermining overall policy.",
+              "timeSeconds": 0.87
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 7,
+              "reasoning": "No—reasonable accommodations for one-time circumstances (medical, cultural, emergency) demonstrate fairness without undermining uniform policy. Rigid rules that ignore legitimate exceptions create unnecessary hardship.",
+              "reasoningPreview": "No—reasonable accommodations for one-time circumstances (medical, cultural, emergency) demonstrate fairness without undermining uniform policy. Rigid rules that ignore legitimate exceptions create unnecessary hardship.",
+              "timeSeconds": 1.55
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": null,
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Yes, maintaining a uniform policy ensures consistency and fairness for all employees, preventing potential favoritism or disruption. A one-time exception could undermine the policy's purpose.",
+              "reasoningPreview": "Yes, maintaining a uniform policy ensures consistency and fairness for all employees, preventing potential favoritism or disruption. A one-time exception could undermine the policy's purpose.",
+              "timeSeconds": 0.54
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": null,
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 8,
+              "reasoning": "Workplaces benefit from uniform rules for consistency and fairness, but a rigid policy ignoring one-time, legitimate reasons (e.g., emergency) harms morale and humanity without much gain.",
+              "reasoningPreview": "Workplaces benefit from uniform rules for consistency and fairness, but a rigid policy ignoring one-time, legitimate reasons (e.g., emergency) harms morale and humanity without much gain.",
+              "timeSeconds": 5.49
+            }
+          }
+        },
+        "debate_role": {
+          "runMode": "debate",
+          "roleMode": "role",
+          "summary": {
+            "outcome": "Yes",
+            "rawOutcome": "Yes",
+            "yesVotes": 3,
+            "noVotes": 1,
+            "maybeVotes": 0
+          },
+          "responses": {
+            "ChatGPT": {
+              "agent": "ChatGPT",
+              "provider": "openai",
+              "model": "gpt-4.1-mini",
+              "role": "Optimist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Yes, maintaining uniform rules ensures consistency and professionalism, but allowing a one-time exception can show flexibility and respect for individual circumstances without undermining the overall policy.",
+              "reasoningPreview": "Yes, maintaining uniform rules ensures consistency and professionalism, but allowing a one-time exception can show flexibility and respect for individual circumstances without undermining the overall policy.",
+              "timeSeconds": 1.01
+            },
+            "Claude": {
+              "agent": "Claude",
+              "provider": "anthropic",
+              "model": "claude-haiku-4-5-20251001",
+              "role": "Absolutist",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 8,
+              "reasoning": "Rules exist to prevent arbitrary decision-making; allowing exceptions for \"one-time reasons\" creates precedent for favoritism and erodes the rule's authority. A uniform policy should apply uniformly unless the worker seeks formal accommodation through proper channels.",
+              "reasoningPreview": "Rules exist to prevent arbitrary decision-making; allowing exceptions for \"one-time reasons\" creates precedent for favoritism and erodes the rule's authority. A uniform policy should apply uniformly unless the worker...",
+              "timeSeconds": 1.52
+            },
+            "Gemini": {
+              "agent": "Gemini",
+              "provider": "gemini",
+              "model": "gemini-2.5-flash-lite",
+              "role": "Contrarian",
+              "decision": "No",
+              "rawDecision": "No",
+              "confidence": 6,
+              "reasoning": "What are we taking for granted by assuming a single, rigid rule is always the best approach? A one-time exception might prevent a larger issue or foster goodwill without undermining the policy's core purpose.",
+              "reasoningPreview": "What are we taking for granted by assuming a single, rigid rule is always the best approach? A one-time exception might prevent a larger issue or foster goodwill without undermining the policy's core purpose.",
+              "timeSeconds": 0.66
+            },
+            "Grok": {
+              "agent": "Grok",
+              "provider": "xai",
+              "model": "grok-4-1-fast-reasoning",
+              "role": "Utilitarian",
+              "decision": "Yes",
+              "rawDecision": "Yes",
+              "confidence": 9,
+              "reasoning": "Enforcing uniform rules maintains professionalism, cohesion, and precedent across all workers and customers, outweighing minor benefit to one person from a single exception.",
+              "reasoningPreview": "Enforcing uniform rules maintains professionalism, cohesion, and precedent across all workers and customers, outweighing minor benefit to one person from a single exception.",
+              "timeSeconds": 3.14
+            }
+          }
+        }
+      },
+      "blindMatch": {
+        "sourceCondition": "debate_role",
+        "cards": [
+          {
+            "slot": "A",
+            "agent": "Gemini",
+            "role": "Contrarian",
+            "decision": "No",
+            "rawDecision": "No",
+            "confidence": 6,
+            "reasoning": "What are we taking for granted by assuming a single, rigid rule is always the best approach? A one-time exception might prevent a larger issue or foster goodwill without undermining the policy's core purpose.",
+            "reasoningPreview": "What are we taking for granted by assuming a single, rigid rule is always the best approach? A one-time exception might prevent a larger issue or foster goodwill without undermining the policy's core purpose."
+          },
+          {
+            "slot": "B",
+            "agent": "Claude",
+            "role": "Absolutist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "Rules exist to prevent arbitrary decision-making; allowing exceptions for \"one-time reasons\" creates precedent for favoritism and erodes the rule's authority. A uniform policy should apply uniformly unless the worker seeks formal accommodation through proper channels.",
+            "reasoningPreview": "Rules exist to prevent arbitrary decision-making; allowing exceptions for \"one-time reasons\" creates precedent for favoritism and erodes the rule's authority. A uniform policy should apply uniformly unless the worker..."
+          },
+          {
+            "slot": "C",
+            "agent": "Grok",
+            "role": "Utilitarian",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 9,
+            "reasoning": "Enforcing uniform rules maintains professionalism, cohesion, and precedent across all workers and customers, outweighing minor benefit to one person from a single exception.",
+            "reasoningPreview": "Enforcing uniform rules maintains professionalism, cohesion, and precedent across all workers and customers, outweighing minor benefit to one person from a single exception."
+          },
+          {
+            "slot": "D",
+            "agent": "ChatGPT",
+            "role": "Optimist",
+            "decision": "Yes",
+            "rawDecision": "Yes",
+            "confidence": 8,
+            "reasoning": "Yes, maintaining uniform rules ensures consistency and professionalism, but allowing a one-time exception can show flexibility and respect for individual circumstances without undermining the overall policy.",
+            "reasoningPreview": "Yes, maintaining uniform rules ensures consistency and professionalism, but allowing a one-time exception can show flexibility and respect for individual circumstances without undermining the overall policy."
+          }
+        ]
+      }
+    }
+  ]
+}

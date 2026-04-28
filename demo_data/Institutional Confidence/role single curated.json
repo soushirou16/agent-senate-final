@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-27T22:12:59.582108",
+  "timestamp": "2026-04-28T10:44:55.705462",
   "agents": [
     {
       "name": "ChatGPT",
@@ -28,9 +28,284 @@
     "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
     "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
   },
-  "questions_count": 1,
+  "questions_count": 8,
   "total_permutations": 24,
   "results": [
+    {
+      "question_number": 71,
+      "question": "Should you usually trust a landlord's written rules as a fair way to manage a property unless they seem clearly abusive?",
+      "rotation_index": 23,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Utilitarian",
+        "Gemini": "Optimist",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:44:26.623342",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nFrom an Absolutist perspective, written rules set by a landlord are generally authoritative and should be trusted as the standard for property management unless they are evidently abusive, as this maintains order and clarity in agreements.",
+          "time_s": 1.16
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nFrom a utilitarian perspective, written rules should be evaluated based on their actual consequences for tenant welfare and aggregate wellbeing, not their source. Landlords have financial incentives misaligned with tenant interests, so their rules often maximize their profit rather than fair outcomes—rules about maintenance standards, repair timelines, or deposit practices frequently harm tenants overall. A presumption of fairness based on being written would likely reduce scrutiny of rules that decrease aggregate welfare compared to more balanced alternatives.",
+          "time_s": 2.0
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\n\nLandlords have a clear incentive to craft rules that maximize their control, minimize costs, and shift burdens onto tenants, so assuming fairness without scrutiny plays into their power imbalance. Even non-abusive-seeming rules often hide petty restrictions or profit motives that erode tenant rights over time.",
+          "time_s": 2.39
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 74,
+      "question": "Should people generally trust a university to judge what counts as academic misconduct in its own classes?",
+      "rotation_index": 2,
+      "role_assignment": {
+        "ChatGPT": "Contrarian",
+        "Claude": "Utilitarian",
+        "Gemini": "Optimist",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:44:30.209158",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nUniversities have inherent conflicts of interest and may prioritize their reputation over fairness, so relying solely on them to judge academic misconduct can lead to biased or inconsistent outcomes. External oversight is often necessary to ensure impartiality.",
+          "time_s": 1.43
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, universities have strong incentives and expertise to maintain academic integrity standards that benefit the broad student body and society through reliable knowledge production and credential value. While conflicts of interest exist, enabling external oversight of every misconduct case would create inefficiencies that harm educational outcomes overall; internal processes with appeals mechanisms better maximize aggregate welfare than constant external intervention would.",
+          "time_s": 2.18
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No  \nCONFIDENCE: 10  \n\nUniversities have inherent conflicts of interest, as they profit from high enrollment, graduation rates, and reputation, incentivizing lenient self-judgment on misconduct. Strict rules demand external, impartial oversight with established precedent showing frequent institutional bias and cover-ups.",
+          "time_s": 3.58
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 132,
+      "question": "Should students trust their professors' judgment about what counts as good work?",
+      "rotation_index": 12,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Contrarian",
+        "Gemini": "Optimist",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:44:33.685772",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8  \n\nTrusting professors' judgment generally maximizes overall educational outcomes by guiding students toward recognized standards of quality, which benefits both students and society through improved knowledge and skills. While occasional errors may occur, the aggregate benefit of relying on expert evaluation outweighs potential harms.",
+          "time_s": 1.72
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nProfessors operate within institutional incentives, disciplinary orthodoxies, and personal biases that may not align with students' actual learning or independent thinking. Students should develop their own evaluative frameworks and view professorial judgment as one perspective among many rather than an authoritative standard for what constitutes good work.",
+          "time_s": 1.74
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No  \nCONFIDENCE: 10  \n\nGood work is defined by absolute, objective standards of excellence that transcend any individual's judgment, including a professor's potentially biased or erroneous opinions. Students must adhere to these unchanging truths rather than blindly deferring to authority figures.",
+          "time_s": 3.48
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 161,
+      "question": "Should citizens trust that institutional checks and balances usually work well enough?",
+      "rotation_index": 17,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Absolutist",
+        "Gemini": "Optimist",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:44:36.656332",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nTrusting institutional checks and balances generally promotes social stability and accountability, benefiting the majority by preventing abuses of power, though occasional failures may occur. Overall, the positive impact on governance and societal welfare outweighs the risks.",
+          "time_s": 1.22
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nFrom an absolutist perspective, institutional checks and balances are only as reliable as their strict adherence to established rules and precedent. History demonstrates numerous instances where these mechanisms failed precisely because they were applied inconsistently or their provisions were ambiguous—therefore one cannot trust they \"usually work well enough\" without absolute guarantees of their consistent enforcement, which existing institutions do not provide.",
+          "time_s": 1.52
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\n\nInstitutional checks and balances frequently fail under pressure from entrenched interests, corruption, and power grabs, as evidenced by historical collapses like Weimar Germany or modern examples of executive overreach and judicial capture. Blind trust in them assumes flawless execution by fallible humans, ignoring how they often protect the powerful rather than the public.",
+          "time_s": 2.97
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 62,
+      "question": "Should people generally accept official statistics from a public agency as reliable until proven otherwise?",
+      "rotation_index": 14,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Optimist",
+        "Gemini": "Contrarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:44:39.815149",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nAccepting official statistics as reliable until proven otherwise generally promotes trust and efficient decision-making, benefiting society by enabling informed policies and actions; skepticism without cause could lead to unnecessary confusion and harm.",
+          "time_s": 1.45
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nPublic agencies typically have institutional incentives, professional standards, and accountability mechanisms that support data reliability, and accepting them as a starting point enables productive decision-making rather than grinding forward in constant skepticism. This foundational trust creates space for constructive dialogue and targeted verification where specific concerns arise, rather than assuming bad faith from the outset.",
+          "time_s": 1.53
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No\nCONFIDENCE: 10\n\nAbsolutists demand absolute verification of all claims, rejecting any presumption of reliability for official statistics from public agencies, as truth requires ironclad proof without deference to authority. Defaulting to acceptance until disproven introduces unacceptable uncertainty and violates strict evidentiary precedent.",
+          "time_s": 3.16
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
     {
       "question_number": 66,
       "question": "Should people generally trust a city government to spend tax money responsibly unless there is clear misuse?",
@@ -41,16 +316,16 @@
         "Gemini": "Optimist",
         "Grok": "Utilitarian"
       },
-      "timestamp": "2026-04-27T22:12:59.582117",
+      "timestamp": "2026-04-28T10:44:44.600491",
       "responses": {
         "Gemini": {
           "provider": "gemini",
           "model": "gemini-2.5-flash-lite",
           "role": "Optimist",
-          "decision": "Yes",
-          "confidence": 7,
-          "response": "ANSWER: Yes\nCONFIDENCE: 7\nMost city governments are established with the intention of serving the public good, and many operate with robust oversight mechanisms to ensure responsible spending. While vigilance is always important, a general presumption of responsible stewardship is a reasonable starting point.",
-          "time_s": 0.97
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.02
         },
         "ChatGPT": {
           "provider": "openai",
@@ -58,32 +333,142 @@
           "role": "Absolutist",
           "decision": "Yes",
           "confidence": 8,
-          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nFrom an Absolutist perspective, authority and institutions like city governments should be trusted to fulfill their roles unless there is explicit evidence of wrongdoing, as this maintains order and respect for established systems.",
-          "time_s": 1.05
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nFrom an Absolutist perspective, authority and institutions like city governments should be trusted to fulfill their duties unless there is explicit evidence of wrongdoing, as this maintains order and respect for established systems.",
+          "time_s": 1.35
         },
         "Claude": {
           "provider": "anthropic",
           "model": "claude-haiku-4-5-20251001",
           "role": "Contrarian",
           "decision": "No",
-          "confidence": 7,
-          "response": "ANSWER: No\nCONFIDENCE: 7\n\nThe default assumption that institutions deserve trust until proven otherwise is precisely the position a contrarian should challenge. Governments have systematic incentives to expand budgets, create inefficiencies, and prioritize political gains over fiscal responsibility, making skepticism the more rational starting position than trust.",
-          "time_s": 2.17
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nThe default assumption that government deserves trust until proven otherwise inverts the proper burden of proof—taxpayers surrendering their money should demand demonstrated competence and transparent accountability beforehand, not grant trust as a starting position. History abundantly shows that bureaucratic inefficiency, mission creep, and misaligned incentives are structural features, not aberrations requiring \"clear evidence\" to become concerns.",
+          "time_s": 2.0
         },
         "Grok": {
           "provider": "xai",
           "model": "grok-4-1-fast-reasoning",
           "role": "Utilitarian",
-          "decision": "No",
+          "decision": "Yes",
           "confidence": 8,
-          "response": "ANSWER: No\nCONFIDENCE: 8\n\nDefault trust in city governments enables undetected waste, corruption, and inefficiency, harming large numbers of taxpayers by diverting funds from high-utility public goods. Skepticism and proactive oversight maximize aggregate welfare by ensuring resources are allocated to projects with the greatest net benefits for the population.",
-          "time_s": 11.51
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\nDefault trust in city governments enables efficient provision of public goods like infrastructure and services, benefiting the aggregate population far more than the inefficiencies and oversight costs of widespread skepticism, with misuse addressed reactively via elections and audits to minimize harm.",
+          "time_s": 4.78
         }
       },
       "summary": {
         "yes_count": 2,
-        "no_count": 2,
-        "majority": "Stalemate"
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 92,
+      "question": "Should society generally rely on official channels rather than informal groups when deciding what is true?",
+      "rotation_index": 20,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Optimist",
+        "Gemini": "Contrarian",
+        "Grok": "Utilitarian"
+      },
+      "timestamp": "2026-04-28T10:44:52.007569",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.02
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nFrom an Absolutist perspective, official channels are more reliable because they are based on established authority, verified information, and standardized procedures, whereas informal groups may lack accountability and consistency.",
+          "time_s": 1.32
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nOfficial channels like peer-reviewed science, credentialed institutions, and transparent processes have structural accountability mechanisms, expert vetting, and error-correction systems that informal groups typically lack. While no system is perfect, building reliable shared truth requires institutions designed for accuracy over mere consensus or convenience, and this constructive foundation enables better collective decisions and progress.",
+          "time_s": 1.68
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\nOfficial channels, with their expertise, resources, and accountability mechanisms, generally produce more accurate information that prevents widespread harm from misinformation (e.g., reducing deaths from anti-vax movements or climate denial), maximizing aggregate well-being. While informal groups can occasionally correct errors, their prevalence of echo chambers and biases causes greater net harm on average.",
+          "time_s": 7.41
+        }
+      },
+      "summary": {
+        "yes_count": 3,
+        "no_count": 0,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 216,
+      "question": "Should people generally trust institutional rules even when they seem unfair in one case?",
+      "rotation_index": 0,
+      "role_assignment": {
+        "ChatGPT": "Contrarian",
+        "Claude": "Optimist",
+        "Gemini": "Utilitarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:44:55.705287",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Utilitarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No  \nCONFIDENCE: 9  \n\nInstitutional rules often reflect systemic biases and power imbalances, so blindly trusting them, especially when they seem unfair in a specific case, perpetuates injustice rather than challenging it.",
+          "time_s": 1.34
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nInstitutions with established rule systems create predictability, fairness at scale, and prevent worse outcomes from arbitrary decision-making—and most can be improved from within through legitimate channels. While individual unfairness deserves attention and reform efforts, wholesale distrust undermines the cooperative systems that protect everyone.",
+          "time_s": 1.9
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 10,
+          "response": "ANSWER: Yes\nCONFIDENCE: 10\n\nInstitutional rules represent absolute standards of order and justice that must be upheld without exception to prevent chaos and subjective relativism. Allowing distrust in isolated cases undermines the entire system, as fairness is determined by the rule's intent, not transient perceptions.",
+          "time_s": 3.7
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
       }
     }
   ]

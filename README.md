@@ -21,7 +21,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
 ```bash
 npm install
-npm run generate:data
+npm run generate:curated-data
 npm run dev
 ```
 
@@ -37,14 +37,14 @@ npm run dev
 
 ## Data packaging strategy
 
-Data is loaded from `public/data` using a manifest:
+The app uses a curated 8-question-per-topic bank. Raw curated files live in `demo_data/` (one JSON per topic per condition), and `npm run generate:curated-data` packages them into `public/data-curated/` using a manifest.
 
-- `public/data/manifest.json`
-- `public/data/questions/<topic>.json`
-- `public/data/conversations/<topic>.json`
-- `public/data/metrics/overview.json`
+- `public/data-curated/manifest.json`
+- `public/data-curated/questions/<topic>.json`
+- `public/data-curated/conversations/<topic>.json`
+- `public/data-curated/metrics/overview.json`
 
-The UI uses `src/lib/data-client.ts` and `src/hooks/use-study-data.ts`, so moving to API routes later is isolated to the data layer.
+The active dataset is controlled by `NEXT_PUBLIC_DATA_DIR` in `.env.local` (`/data-curated` for the curated bank, `/data` for the full 216-question dataset). The UI uses `src/lib/data-client.ts` and `src/hooks/use-study-data.ts`, so switching datasets only requires changing that env var.
 
 ## User response storage
 

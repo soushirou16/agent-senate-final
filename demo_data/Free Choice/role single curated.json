@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-27T22:12:41.508049",
+  "timestamp": "2026-04-28T10:43:15.555940",
   "agents": [
     {
       "name": "ChatGPT",
@@ -28,9 +28,339 @@
     "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
     "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
   },
-  "questions_count": 1,
+  "questions_count": 8,
   "total_permutations": 24,
   "results": [
+    {
+      "question_number": 63,
+      "question": "Should people be allowed to live in a home they know is unsafe, even if the government thinks the danger is serious enough to step in?",
+      "rotation_index": 15,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Optimist",
+        "Gemini": "Absolutist",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:42:43.809661",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Absolutist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nAllowing people to live in unsafe homes risks significant harm to their health and safety, which likely outweighs the autonomy benefit; government intervention can prevent greater aggregate harm and protect overall well-being.",
+          "time_s": 1.53
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nFrom an optimist's perspective, this question presents a constructive opportunity: government safety standards exist to protect people from serious harm they may underestimate or rationalize away. We can build a positive pathway by supporting reasonable safety regulations while also empowering people through transparency, education, and access to affordable repairs—treating safety oversight not as oppression but as collective care that enables people to thrive safely.",
+          "time_s": 1.63
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nThe default assumption that government paternalism trumps individual autonomy ignores people's right to self-determination, even in risky choices like living in an unsafe home they own or rent knowingly. Forcing evacuation assumes bureaucrats know better than the residents about their own tolerance for danger, which is arrogant overreach.",
+          "time_s": 3.57
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 39,
+      "question": "Should adults be allowed to refuse all forms of health insurance if they prefer to handle risks themselves?",
+      "rotation_index": 15,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Optimist",
+        "Gemini": "Absolutist",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:42:48.828741",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Absolutist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nAllowing adults to refuse health insurance respects individual autonomy and can reduce costs for those who prefer self-risk management, potentially increasing overall satisfaction without significantly harming others if appropriate safety nets remain.",
+          "time_s": 1.12
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom an optimist's perspective, allowing adults this choice recognizes personal autonomy and can incentivize responsible self-management of health risks. While acknowledging legitimate concerns about externalized costs, a constructive pathway exists through clear informed consent, potential risk-sharing mechanisms, and the reality that many self-insured individuals successfully manage their health outcomes through careful planning and lifestyle choices.",
+          "time_s": 1.43
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nThe common assumption prioritizes individual liberty over collective responsibility, but this ignores the massive externalities of uninsurance, like overburdened emergency rooms and higher premiums for everyone else when the uninsured shift costs onto society. True freedom doesn't exist in a interconnected system where one person's risk becomes everyone else's bill.",
+          "time_s": 5.02
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 171,
+      "question": "Should people be free to reject rules that they think are too cautious, even if the rules are meant to keep them safe?",
+      "rotation_index": 3,
+      "role_assignment": {
+        "ChatGPT": "Contrarian",
+        "Claude": "Utilitarian",
+        "Gemini": "Absolutist",
+        "Grok": "Optimist"
+      },
+      "timestamp": "2026-04-28T10:42:52.299589",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Absolutist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8  \n\nPeople should challenge overly cautious rules because such rules often limit personal freedom and innovation, and blindly following them can lead to unnecessary restrictions rather than genuine safety.",
+          "time_s": 1.08
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, allowing individuals to reject safety rules typically causes net harm—the aggregate suffering from preventable injuries, deaths, and their ripple effects across families and communities generally outweighs any utility gained from individual autonomy in this context. However, some confidence is lost because rules can be poorly designed, and modest freedoms to override them in specific circumstances might optimize outcomes better than blanket enforcement.",
+          "time_s": 2.05
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nEmpowering individuals to reject overly cautious rules fosters personal responsibility, innovation, and growth, trusting that most people will make wise choices when given freedom. This optimistic approach leads to a more dynamic and resilient society where safety evolves through voluntary adoption rather than top-down mandates.",
+          "time_s": 3.47
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 174,
+      "question": "Should there be clear limits on how much risk people are allowed to accept for themselves?",
+      "rotation_index": 6,
+      "role_assignment": {
+        "ChatGPT": "Optimist",
+        "Claude": "Contrarian",
+        "Gemini": "Utilitarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:42:56.201800",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Utilitarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nThe assumption that society should paternalistically constrain individual risk-taking misses how personal autonomy itself is fundamental to human flourishing. Risk acceptance is often conflated with irresponsibility, but reasonable adults routinely accept substantial risks—mountain climbing, entrepreneurship, medical experimentation—and the ability to make these choices without state-imposed limits is what distinguishes freedom from control.",
+          "time_s": 1.65
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nClear limits on risk can protect individuals and society from severe harm while still allowing personal freedom, ensuring a balance between safety and autonomy. Establishing these boundaries helps prevent reckless decisions that could have widespread negative consequences.",
+          "time_s": 1.65
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No  \nCONFIDENCE: 10  \n\nAs an Absolutist, individuals possess absolute self-ownership and sovereignty over their own bodies and choices, including unrestricted freedom to accept any level of personal risk. Imposing clear limits by external authorities fundamentally violates this inviolable principle of liberty.",
+          "time_s": 3.9
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 209,
+      "question": "Should governments ban certain choices if those choices usually affect more than just the person making them?",
+      "rotation_index": 17,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Absolutist",
+        "Gemini": "Optimist",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:42:59.896269",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 9  \n\nBanning choices that affect others can prevent harm to the greater population, thereby maximizing overall well-being and reducing negative externalities.",
+          "time_s": 1.1
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nStrict rules require clear, narrow definitions of what constitutes sufficient externality to justify bans, and \"usually affect more than just the person\" is too vague and expansive. Established precedent in liberal governance favors individual liberty absent demonstrable, direct harm—not mere effects or influences on others.",
+          "time_s": 2.66
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nThe common assumption that governments should ban choices with externalities presumes flawless state competence and ignores how \"affecting others\" broadly justifies overreach into every personal decision, from diet to speech. Prioritizing individual liberty over vague collective harms prevents the slippery slope to authoritarian control, as most \"effects\" are indirect and manageable through markets or norms rather than bans.",
+          "time_s": 3.69
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 32,
+      "question": "Should adults be free to choose relationships that are clearly harmful to them if no one is being directly forced?",
+      "rotation_index": 8,
+      "role_assignment": {
+        "ChatGPT": "Optimist",
+        "Claude": "Utilitarian",
+        "Gemini": "Contrarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:43:03.474605",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.02
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 7  \n\nAdults have the capacity to make their own choices and learn from their experiences, even if those choices are harmful, as long as no one else is being directly harmed or coerced. Encouraging personal freedom respects individual autonomy and can lead to growth and self-awareness.",
+          "time_s": 1.25
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, allowing adults to freely enter clearly harmful relationships produces net negative aggregate outcomes—the substantial suffering caused to the person in the harmful relationship outweighs any utility gained from unrestricted choice autonomy. While respecting some degree of choice freedom has instrumental value for overall wellbeing, permitting choices known to cause serious harm violates the core utilitarian principle of maximizing aggregate welfare, justifying paternalistic intervention through incentives, information provision, or constraints on the most destructive relationships.",
+          "time_s": 2.23
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 10,
+          "response": "ANSWER: Yes\nCONFIDENCE: 10\n\n<As an Absolutist committed to unwavering principles of individual liberty, competent adults possess absolute sovereignty over their choices, including harmful relationships, provided no force or coercion is involved. Paternalistic intervention violates this core precept, regardless of perceived harm.>",
+          "time_s": 3.58
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
     {
       "question_number": 96,
       "question": "Should adults be allowed to buy weapons or tools that are easy to misuse, even if they insist they only want them for harmless reasons?",
@@ -41,16 +371,16 @@
         "Gemini": "Utilitarian",
         "Grok": "Absolutist"
       },
-      "timestamp": "2026-04-27T22:12:41.508058",
+      "timestamp": "2026-04-28T10:43:08.592567",
       "responses": {
         "Gemini": {
           "provider": "gemini",
           "model": "gemini-2.5-flash-lite",
           "role": "Utilitarian",
-          "decision": "No",
-          "confidence": 8,
-          "response": "ANSWER: No\nCONFIDENCE: 8\nAllowing access to easily misused weapons or tools, even with stated harmless intentions, creates a higher probability of harm to a greater number of people, outweighing the potential benefits of individual liberty in this context. The aggregate outcome of increased risk of misuse and potential harm necessitates restriction.",
-          "time_s": 1.14
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
         },
         "Claude": {
           "provider": "anthropic",
@@ -58,17 +388,8 @@
           "role": "Optimist",
           "decision": "Yes",
           "confidence": 7,
-          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nAdults have demonstrated capacity for responsible choice, and most tools (knives, chemicals, vehicles) carry misuse potential yet serve legitimate purposes when properly handled. Restricting access based on hypothetical misuse prevents beneficial uses and infantilizes capable individuals; better solutions exist through training, licensing, and accountability mechanisms that preserve freedom while managing genuine risks.",
-          "time_s": 1.66
-        },
-        "ChatGPT": {
-          "provider": "openai",
-          "model": "gpt-4.1-mini",
-          "role": "Contrarian",
-          "decision": "No",
-          "confidence": 9,
-          "response": "ANSWER: No  \nCONFIDENCE: 9  \n\nAllowing adults to buy easily misused weapons or tools based solely on their insistence of harmless intent ignores the high potential for misuse and the difficulty in verifying true intentions, making such permissions inherently risky and irresponsible.",
-          "time_s": 1.97
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nAdults can responsibly use many tools with misuse potential (knives, vehicles, chemicals) through established safety frameworks like training, licensing, and accountability measures. A constructive pathway exists: implement robust safeguards, background checks, and user education rather than blanket prohibition, allowing legitimate use while managing genuine risks.",
+          "time_s": 1.94
         },
         "Grok": {
           "provider": "xai",
@@ -76,14 +397,78 @@
           "role": "Absolutist",
           "decision": "Yes",
           "confidence": 10,
-          "response": "ANSWER: Yes\nCONFIDENCE: 10\nAs an Absolutist, I affirm the absolute sovereignty of adults over their choices and possessions; no authority may preemptively restrict access to weapons or tools based on potential misuse, as responsibility lies solely with the individual. Harmless intent is irrelevant—freedom demands no such justifications.",
-          "time_s": 6.67
+          "response": "ANSWER: Yes\nCONFIDENCE: 10\nAs an Absolutist, individual liberty is absolute: competent adults have an unqualified right to acquire any tools or weapons as private property, regardless of potential misuse or professed intentions, with no room for paternalistic restrictions. Precedent in natural rights philosophy demands unrestricted access, defaulting to freedom over vague \"safety\" concerns.",
+          "time_s": 4.6
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No  \nCONFIDENCE: 9  \n\nAllowing adults to buy easily misused weapons or tools based solely on their insistence of harmless intent ignores the high risk of misuse and potential harm, making strict regulation necessary despite personal claims.",
+          "time_s": 5.12
         }
       },
       "summary": {
         "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 195,
+      "question": "Should the law limit choices that are made freely but tend to create long-term dependence?",
+      "rotation_index": 3,
+      "role_assignment": {
+        "ChatGPT": "Contrarian",
+        "Claude": "Utilitarian",
+        "Gemini": "Absolutist",
+        "Grok": "Optimist"
+      },
+      "timestamp": "2026-04-28T10:43:15.555721",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Absolutist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, limiting choices that create long-term dependence (like addictive drugs) maximizes aggregate welfare by preventing the substantial suffering and reduced life outcomes that dependence causes. The temporary autonomy cost is outweighed by the prevented harms to individuals and communities that result from addiction and dependence cycles.",
+          "time_s": 1.3
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No  \nCONFIDENCE: 8  \n\nLimiting choices that are freely made undermines personal autonomy and responsibility, and dependence often results from complex social factors rather than individual decisions alone. Laws should focus on empowerment and education rather than restriction.",
+          "time_s": 2.18
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Optimist",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nAs an optimist, I trust in human resilience and the power of education, support systems, and personal growth to mitigate risks of dependence without curtailing free choices, paving constructive pathways to fulfillment and self-determination. Limiting freedoms assumes the worst rather than enabling the best outcomes through empowerment.",
+          "time_s": 6.96
+        }
+      },
+      "summary": {
+        "yes_count": 1,
         "no_count": 2,
-        "majority": "Stalemate"
+        "majority": "No"
       }
     }
   ]

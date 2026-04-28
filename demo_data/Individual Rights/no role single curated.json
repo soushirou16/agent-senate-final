@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-27T22:12:03.109768",
+  "timestamp": "2026-04-28T10:38:28.173335",
   "agents": [
     {
       "name": "ChatGPT",
@@ -22,50 +22,358 @@
       "model": "grok-4-1-fast-reasoning"
     }
   ],
-  "questions_count": 1,
+  "questions_count": 8,
   "results": [
     {
-      "question_number": 63,
-      "question": "Should a government be allowed to track people's location without consent if it would likely prevent a large-scale disaster?",
-      "timestamp": "2026-04-27T22:12:03.109784",
+      "question_number": 2,
+      "question": "Should someone be allowed to refuse a highly recommended medical treatment even if that choice increases the risk to others?",
+      "timestamp": "2026-04-28T10:37:55.846257",
       "responses": {
         "Gemini": {
           "provider": "gemini",
           "model": "gemini-2.5-flash-lite",
-          "decision": "No",
-          "confidence": 7,
-          "response": "ANSWER: No\nCONFIDENCE: 7\nWhile preventing a large-scale disaster is a compelling goal, the right to privacy and protection against unwarranted government surveillance are fundamental. Allowing such tracking without consent sets a dangerous precedent that could be abused.",
-          "time_s": 0.67
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
         },
         "ChatGPT": {
           "provider": "openai",
           "model": "gpt-4.1-mini",
           "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No  \nCONFIDENCE: 8  \n\nWhile personal autonomy is important, refusing a highly recommended medical treatment that significantly increases risk to others can harm public health and safety, justifying limitations on such refusals to protect the community.",
+          "time_s": 1.94
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "Yes",
           "confidence": 7,
-          "response": "ANSWER: No  \nCONFIDENCE: 7\n\nWhile preventing large-scale disasters is crucial, allowing governments to track people's location without consent raises significant privacy and civil liberty concerns, and such measures should be carefully regulated and justified rather than broadly permitted.",
-          "time_s": 1.36
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nMedical autonomy is a foundational ethical principle in healthcare—individuals have the right to refuse treatment even against medical advice. While public health concerns matter, this principle reflects respect for bodily autonomy and informed consent. The threshold for overriding this (as with mandatory quarantine for active contagion) is high and requires compelling evidence of direct, serious harm to others, which varies by specific medical context.",
+          "time_s": 1.95
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 9  \n\nCompetent adults have a fundamental right to bodily autonomy and informed consent, allowing them to refuse medical treatment even if it indirectly increases risks to others, as forced treatment undermines personal liberty except in rare cases of imminent direct harm or incompetence. Legal precedents in many jurisdictions, like vaccine mandates with exemptions, support this balance favoring individual choice over collective risk mitigation.",
+          "time_s": 3.98
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 11,
+      "question": "Should students be allowed to skip a required class if their absence does not hurt them personally but helps the school manage resources better?",
+      "timestamp": "2026-04-28T10:37:59.500175",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.02
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nRequired classes exist to ensure all students receive foundational education and meet institutional standards, not merely to optimize resource allocation. Allowing individual exceptions based on personal impact would undermine educational equity and create inconsistent standards across the student body.",
+          "time_s": 1.23
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nAllowing students to skip required classes undermines the educational structure and learning objectives, even if it helps resource management; the primary goal should be ensuring students receive the necessary instruction for their development.",
+          "time_s": 1.62
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No  \nCONFIDENCE: 9  \nRequired classes exist to ensure all students acquire essential knowledge and skills, and allowing skips based on resource management undermines educational standards, fairness, and discipline. Even if an absence doesn't personally harm one student, it erodes the system's integrity and could lead to unequal opportunities or abuse of the policy.",
+          "time_s": 3.65
+        }
+      },
+      "summary": {
+        "yes_count": 0,
+        "no_count": 3,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 87,
+      "question": "Should a government be allowed to restrict a peaceful religious practice if the restriction would prevent serious social conflict?",
+      "timestamp": "2026-04-28T10:38:05.460812",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.02
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 7  \n\nWhile peaceful religious practices are important for individual freedoms, a government may need to impose restrictions if such practices pose a significant risk of serious social conflict, in order to maintain public order and protect the rights and safety of the broader community.",
+          "time_s": 1.64
         },
         "Claude": {
           "provider": "anthropic",
           "model": "claude-haiku-4-5-20251001",
           "decision": "No",
           "confidence": 6,
-          "response": "ANSWER: No\nCONFIDENCE: 6\n\nWarrantless mass surveillance creates dangerous precedents for authoritarian abuse and erodes fundamental freedoms, even with good intentions. Effective disaster prevention typically requires specific targeting (based on probable cause) rather than blanket tracking of entire populations, and consent-based systems with judicial oversight provide better safeguards without sacrificing security.",
-          "time_s": 1.42
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nRestricting peaceful religious practice sets a dangerous precedent where any belief could be suppressed if opponents threaten conflict, effectively allowing veto power through intimidation. While preventing serious social harm is legitimate, less restrictive alternatives (enforcement against actual violence, dialogue, integration support) should be exhausted first, and the burden of proof should be extremely high before fundamental freedoms are curtailed.",
+          "time_s": 1.65
         },
         "Grok": {
           "provider": "xai",
           "model": "grok-4-1-fast-reasoning",
           "decision": "Yes",
           "confidence": 8,
-          "response": "ANSWER: Yes  \nCONFIDENCE: 8  \n\nIn extreme cases where location tracking without consent is likely to prevent a large-scale disaster, such as a terrorist attack or pandemic outbreak, the utilitarian benefit of saving numerous lives outweighs individual privacy rights. This should be balanced with strict oversight, time limits, and judicial review to prevent abuse.",
-          "time_s": 2.94
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8  \n\nGovernments have a legitimate interest in maintaining social order and preventing serious conflict, which can justify restrictions on even peaceful religious practices under principles like Mill's harm principle, where individual freedoms yield to collective harm prevention. While this risks slippery slopes toward abuse, targeted restrictions in extreme cases prioritize broader societal stability over absolute religious liberty.",
+          "time_s": 5.96
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 128,
+      "question": "Should a person’s right to spend their own money freely outweigh efforts to encourage choices that would benefit society more?",
+      "timestamp": "2026-04-28T10:38:09.802555",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No  \nCONFIDENCE: 7  \n\nWhile individual freedom to spend money is important, society often benefits when choices are guided or encouraged toward outcomes that promote public health, environmental sustainability, or social welfare, suggesting a balance is necessary rather than absolute freedom.",
+          "time_s": 1.43
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 4,
+          "response": "ANSWER: No\nCONFIDENCE: 4\n\nThis is a fundamentally contested normative question where reasonable people disagree based on different value systems. While personal liberty is important, most functional societies accept some constraints on spending (taxes, regulations on harmful goods) to address collective problems like public health and environmental sustainability. The balance point depends on empirical questions (how much benefit?) and value questions (how much liberty to trade?) that don't have objectively correct answers.",
+          "time_s": 1.68
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 9  \nIndividual liberty to spend one's own money freely is a cornerstone of personal autonomy and economic freedom, enabling innovation and responsibility. Societal benefits are best achieved through voluntary incentives rather than coercive measures, which often distort markets and infringe on rights.",
+          "time_s": 4.34
         }
       },
       "summary": {
         "yes_count": 1,
-        "no_count": 3,
+        "no_count": 2,
         "majority": "No"
+      }
+    },
+    {
+      "question_number": 15,
+      "question": "Should an employer be allowed to ignore a worker’s preferred schedule if a different schedule would improve productivity for everyone else?",
+      "timestamp": "2026-04-28T10:38:14.396951",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nEmployers generally have the authority to set work schedules to optimize overall productivity and business needs, even if it means overriding individual preferences, as long as they comply with labor laws and consider reasonable accommodations. Balancing individual preferences with collective efficiency is often necessary in workplace management.",
+          "time_s": 1.74
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nWhile productivity matters, employers shouldn't unilaterally ignore worker preferences without negotiation. Workers have legitimate interests in schedule stability for personal obligations, health, and quality of life. The ethical approach involves weighing productivity gains against worker welfare and seeking compromises rather than simply overriding preferences, particularly since forced schedule changes can increase turnover, reduce morale, and ultimately harm long-term productivity.",
+          "time_s": 1.89
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 9  \nEmployers have the primary responsibility to optimize business operations and team productivity, which includes setting schedules that benefit the organization and the majority of workers over an individual's preferences. Individual schedule preferences are not typically a protected right unless tied to legal accommodations, allowing employers flexibility in such decisions.",
+          "time_s": 4.59
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 63,
+      "question": "Should a government be allowed to track people’s location without consent if it would likely prevent a large-scale disaster?",
+      "timestamp": "2026-04-28T10:38:16.853196",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nUnconstitutional mass surveillance without consent sets a dangerous precedent for authoritarian overreach and violates fundamental privacy rights, even with disaster prevention rationales. Proportionate alternatives like targeted warrants, voluntary programs, or emergency measures with judicial oversight can address security needs while preserving democratic protections.",
+          "time_s": 1.25
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No  \nCONFIDENCE: 7  \n\nWhile preventing large-scale disasters is crucial, allowing governments to track people’s location without consent raises significant privacy and civil liberty concerns that can lead to abuse and erosion of trust. Alternative measures with oversight and transparency should be prioritized.",
+          "time_s": 1.25
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8  \n\nIn cases where location tracking without consent is likely to avert a large-scale disaster, the utilitarian benefit of saving numerous lives outweighs individual privacy concerns in the short term. Governments already exercise similar emergency powers, such as during pandemics, demonstrating practical precedent for this approach.",
+          "time_s": 2.46
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 171,
+      "question": "Should a driver be allowed to take a scenic but slower route if using the faster route would reduce traffic for thousands of others?",
+      "timestamp": "2026-04-28T10:38:21.025416",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "Yes",
+          "confidence": 6,
+          "response": "ANSWER: Yes\nCONFIDENCE: 6\n\nIndividual autonomy generally includes the right to choose one's route, even if suboptimal for aggregate traffic flow. While there are reasonable arguments that drivers could be incentivized toward faster routes (tolls, traffic management), compelling someone toward a specific route raises concerns about personal freedom and where we draw lines on collective optimization of behavior.",
+          "time_s": 1.43
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nIndividuals should be allowed to choose their routes freely on public roads as long as they obey traffic laws, since personal liberty outweighs the negligible impact of one driver's choice on thousands. Mandating the faster route for collective benefit would infringe on autonomy without significant justification.",
+          "time_s": 3.14
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nWhile taking the scenic route may be slower for the driver, allowing personal choice respects individual freedom and can prevent potential negative consequences of forcing all drivers onto the faster route, such as congestion or reduced enjoyment. However, in extreme cases of traffic management, restrictions might be justified.",
+          "time_s": 4.17
+        }
+      },
+      "summary": {
+        "yes_count": 3,
+        "no_count": 0,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 183,
+      "question": "Should a city be allowed to leave a quiet park open late even if closing it earlier would reduce crime and improve public safety?",
+      "timestamp": "2026-04-28T10:38:28.173200",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No  \nCONFIDENCE: 7\n\nWhile keeping a park open late may benefit some community members, prioritizing public safety and crime reduction generally outweighs the benefits of extended hours, as safer environments contribute to overall community well-being.",
+          "time_s": 1.27
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "Yes",
+          "confidence": 6,
+          "response": "ANSWER: Yes\nCONFIDENCE: 6\n\nThis involves weighing competing values without a clear empirical threshold. While safety is important, cities should consider alternatives (improved lighting, patrols, community programs) before restricting public access to shared spaces. However, reasonable closing times that still allow evening use represent a legitimate balance, so the answer depends partly on what \"late\" and \"earlier\" mean in context.",
+          "time_s": 1.49
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 9  \n\nCities should retain discretion to balance public access, recreation, and quality of life against safety risks, as mandating closures solely for crime reduction prioritizes fear over freedom and ignores context-specific factors like park usage patterns. Absolute safety isn't achievable or desirable, and local governments are best positioned to make such trade-offs.",
+          "time_s": 7.15
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
       }
     }
   ]

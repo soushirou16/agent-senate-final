@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-27T22:13:40.690408",
+  "timestamp": "2026-04-28T10:47:13.701066",
   "agents": [
     {
       "name": "ChatGPT",
@@ -28,9 +28,64 @@
     "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
     "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
   },
-  "questions_count": 1,
+  "questions_count": 8,
   "total_permutations": 24,
   "results": [
+    {
+      "question_number": 116,
+      "question": "Should you keep a personal belief private if sharing it would make you less accepted in a role you are expected to fill?",
+      "rotation_index": 20,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Optimist",
+        "Gemini": "Contrarian",
+        "Grok": "Utilitarian"
+      },
+      "timestamp": "2026-04-28T10:46:36.571257",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nFrom an Absolutist perspective, maintaining the integrity and effectiveness of the role is paramount, so if sharing a personal belief undermines acceptance and performance, it should be kept private to uphold the role's responsibilities.",
+          "time_s": 1.31
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nAuthentic self-expression and integrity in relationships—even professional ones—create stronger foundations than hidden beliefs that risk discovery later. Most roles benefit from people who can bring their genuine perspective while maintaining professionalism, and selectively sharing personal beliefs (with appropriate judgment) often builds deeper trust and respect rather than diminishing it.",
+          "time_s": 1.74
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\nSharing the belief would reduce acceptance and effectiveness in the role, harming dependents (e.g., colleagues, organization, or public served) more than the minor personal cost of privacy, thus lowering aggregate utility. Keeping it private preserves functionality and harmony, maximizing net positive outcomes in most scenarios.",
+          "time_s": 6.76
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
     {
       "question_number": 73,
       "question": "Should an employee be allowed to refuse a customer with a smile if they want to be more direct and honest instead?",
@@ -41,34 +96,34 @@
         "Gemini": "Absolutist",
         "Grok": "Utilitarian"
       },
-      "timestamp": "2026-04-27T22:13:40.690421",
+      "timestamp": "2026-04-28T10:46:44.455895",
       "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Absolutist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
         "ChatGPT": {
           "provider": "openai",
           "model": "gpt-4.1-mini",
           "role": "Contrarian",
           "decision": "No",
           "confidence": 8,
-          "response": "ANSWER: No  \nCONFIDENCE: 8  \n\nBeing direct and honest is often valued, but refusing a customer without a smile can damage the company's image and customer relationships, so employees should maintain politeness even when being direct.",
-          "time_s": 0.92
+          "response": "ANSWER: No  \nCONFIDENCE: 8  \n\nBeing direct and honest is often valued, but refusing a customer without a smile can damage the company's image and customer relationships, so employees should not be allowed to do so.",
+          "time_s": 1.23
         },
         "Claude": {
           "provider": "anthropic",
           "model": "claude-haiku-4-5-20251001",
           "role": "Optimist",
           "decision": "Yes",
-          "confidence": 8,
-          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nAn employee can build trust and respect through genuine directness, and many customers appreciate honest communication over forced pleasantness. Companies can channel this authenticity productively by training employees in direct-but-professional communication styles, creating pathways where honesty and service excellence reinforce rather than contradict each other.",
-          "time_s": 1.56
-        },
-        "Gemini": {
-          "provider": "gemini",
-          "model": "gemini-2.5-flash-lite",
-          "role": "Absolutist",
-          "decision": "No",
-          "confidence": 10,
-          "response": "ANSWER: No\nCONFIDENCE: 10\nThe established precedent for customer service dictates a polite and welcoming demeanor. Deviating from this standard, even with the intention of honesty, is not permissible.",
-          "time_s": 5.48
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nAn employee can authentically serve customers through direct honesty rather than performative friendliness—this builds genuine trust and often leads to better outcomes than forced pleasantness. Many customers actually prefer straightforward, respectful communication, and allowing this flexibility can improve employee wellbeing while maintaining professional standards around courtesy and respect.",
+          "time_s": 1.64
         },
         "Grok": {
           "provider": "xai",
@@ -76,14 +131,344 @@
           "role": "Utilitarian",
           "decision": "No",
           "confidence": 8,
-          "response": "ANSWER: No\nCONFIDENCE: 8\n\nAllowing employees to refuse smiles for direct honesty harms aggregate utility by reducing customer satisfaction, repeat business, and revenue, negatively impacting many customers and the employer's viability more than it benefits the one employee's authenticity and reduced emotional labor. Polite norms maximize overall well-being through smoother interactions and sustained economic activity supporting jobs and services for society.",
-          "time_s": 17.43
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nEnforced smiling in customer service maximizes customer satisfaction, repeat business, and revenue, benefiting many stakeholders including business owners, other employees via job security, and customers through positive experiences, far outweighing the minor utility gain for one employee's authenticity preference. Direct honesty without smiles risks offense and lost sales, harming aggregate outcomes more.",
+          "time_s": 7.88
         }
       },
       "summary": {
         "yes_count": 1,
-        "no_count": 3,
+        "no_count": 2,
         "majority": "No"
+      }
+    },
+    {
+      "question_number": 67,
+      "question": "Should an actor refuse a role that reinforces a stereotype, even if the role would help their career?",
+      "rotation_index": 19,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Contrarian",
+        "Gemini": "Utilitarian",
+        "Grok": "Optimist"
+      },
+      "timestamp": "2026-04-28T10:46:51.401405",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Utilitarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nFrom an absolutist perspective, moral principles and integrity should not be compromised for personal gain, so an actor should refuse roles that reinforce harmful stereotypes regardless of career benefits.",
+          "time_s": 1.24
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nThe contrarian view is that refusing roles based on stereotype concerns often reflects privileged gatekeeping—actors without established careers need income and exposure more than they need ideological purity, and the assumption that depicting a stereotype inherently \"reinforces\" it (rather than complicating, subverting, or simply reflecting reality) is frequently overstated by those already secure enough to be selective.",
+          "time_s": 2.05
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Optimist",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nTaking the role advances the actor's career, opening doors to future opportunities where they can choose parts that challenge and break stereotypes. Optimism favors this constructive path, as one role rarely defines a career and positions the actor for greater positive influence long-term.",
+          "time_s": 6.94
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 128,
+      "question": "Should you keep your personal style muted in a shared living space if your roommates think your self-expression is too disruptive?",
+      "rotation_index": 8,
+      "role_assignment": {
+        "ChatGPT": "Optimist",
+        "Claude": "Utilitarian",
+        "Gemini": "Contrarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:46:57.972648",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8\n\nRespecting your roommates' comfort while finding subtle ways to express yourself can create a harmonious living environment and still allow your personality to shine in less disruptive ways.",
+          "time_s": 1.45
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "Maybe",
+          "confidence": 3,
+          "response": "ANSWER: It depends\nCONFIDENCE: 3\n\nFrom a utilitarian perspective, this requires weighing the aggregate wellbeing: your utility from self-expression against your roommates' utility from reduced disruption. The calculation depends on how much each party benefits/suffers—if moderate muting causes you minor distress but prevents significant roommate distress, suppression maximizes aggregate welfare; if your self-expression is crucial to wellbeing while their discomfort is mild, expressing yourself does. The answer requires empirical knowledge of the actual intensity of preferences involved.",
+          "time_s": 2.27
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No\nCONFIDENCE: 10\n\nAs an Absolutist, individual self-expression is an absolute right that supersedes subjective roommate discomfort unless violated by a strict, binding rule or lease agreement. Defaulting to no compromise when rules are unclear upholds personal sovereignty in shared spaces.",
+          "time_s": 6.57
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 1,
+        "majority": "Stalemate"
+      }
+    },
+    {
+      "question_number": 146,
+      "question": "Should you avoid changing your appearance to impress employers or classmates if that change would make you feel like a copy of everyone else?",
+      "rotation_index": 2,
+      "role_assignment": {
+        "ChatGPT": "Contrarian",
+        "Claude": "Utilitarian",
+        "Gemini": "Optimist",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:47:04.150394",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nFrom a utilitarian perspective, the aggregate welfare effects depend on consequences: if the appearance change significantly increases employment/educational opportunities and their associated benefits (income, stability, connections) while causing only moderate identity discomfort, the net positive utility for you and those you support likely outweighs the negative. However, if the identity cost is severe (depression, alienation) or the practical gains minimal, avoiding the change produces better outcomes.",
+          "time_s": 1.95
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 10,
+          "response": "ANSWER: Yes\nCONFIDENCE: 10\n\nAs an Absolutist, personal authenticity and individuality are non-negotiable absolute principles that supersede external pressures like impressing employers or classmates. Conforming at the cost of feeling like a mere copy violates this core rule of self-integrity.",
+          "time_s": 3.28
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nConforming to others' expectations by changing your appearance can help you fit in and be accepted, which is often crucial in professional and social settings; standing out might alienate you or reduce your chances of success.",
+          "time_s": 6.18
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 117,
+      "question": "Should an employee be able to decorate their workspace in a way that reflects their personality, even if it breaks the usual professional look?",
+      "rotation_index": 21,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Optimist",
+        "Gemini": "Utilitarian",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:47:06.803415",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Utilitarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\n\nFrom an Absolutist perspective, maintaining a consistent professional environment is paramount, and allowing personal decorations that break the usual professional look undermines uniformity and workplace standards.",
+          "time_s": 1.1
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nAllowing personalized workspace decoration builds employee morale, increases sense of belonging, and boosts productivity—all outcomes with concrete positive research backing. As long as the decoration remains appropriate and doesn't interfere with work quality or professional client interactions, the benefits of personal expression meaningfully outweigh the minor aesthetic trade-offs to uniformity.",
+          "time_s": 1.49
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\nThe common assumption prioritizes feel-good personalization for morale and creativity, but workspaces demand professionalism to maintain focus, client impressions, and team cohesion—personal flair often distracts or offends others. Allowing \"personality\" decorations invites subjectivity, chaos, and HR nightmares over a consistent, efficient environment.",
+          "time_s": 2.65
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 38,
+      "question": "Should you keep using your preferred name in every setting even if some institutions make it inconvenient?",
+      "rotation_index": 14,
+      "role_assignment": {
+        "ChatGPT": "Utilitarian",
+        "Claude": "Optimist",
+        "Gemini": "Contrarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-28T10:47:09.899154",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nUsing your preferred name affirms your identity and dignity, and most institutions can adapt their systems with reasonable effort—the inconvenience is often surmountable through persistence, policy changes, or finding accommodating alternatives. The constructive path forward involves advocating for systemic inclusion rather than compromising your core identity.",
+          "time_s": 1.51
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nUsing your preferred name consistently maximizes personal well-being and respect, benefiting your mental health and identity affirmation, while the inconvenience to institutions is relatively minor and less impactful overall.",
+          "time_s": 3.02
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "No",
+          "confidence": 10,
+          "response": "ANSWER: No\nCONFIDENCE: 10\nInstitutions have strict rules, established precedents, and naming protocols that must be followed without exception, regardless of personal preferences. Insisting on a preferred name over institutional requirements violates hierarchy and order.",
+          "time_s": 3.1
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 95,
+      "question": "Should you refuse to pretend to like a social activity just because your role in the group is to be agreeable?",
+      "rotation_index": 23,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Utilitarian",
+        "Gemini": "Optimist",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-28T10:47:13.700913",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Optimist",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nFrom an absolutist perspective, one should adhere strictly to honesty and integrity, so refusing to pretend aligns with maintaining truthfulness regardless of social roles. Pretending to like something contradicts the principle of being genuine.",
+          "time_s": 1.3
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, pretending to like a social activity you dislike likely produces net negative outcomes: it enables group dynamics based on false information, prevents authentic connection, risks burnout or resentment that could harm relationships later, and denies the group honest feedback that might lead to better activity choices for everyone. The aggregate well-being is better served by genuine preferences, even if occasionally disappointing one person's expectations.",
+          "time_s": 1.9
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nThe common assumption is that agreeableness trumps authenticity to keep the peace, but pretending to like something undermines genuine connections and breeds resentment. Refusing to fake it challenges group dynamics for healthier, more honest interactions.",
+          "time_s": 3.8
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
       }
     }
   ]

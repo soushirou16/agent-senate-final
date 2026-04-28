@@ -19,8 +19,8 @@ import {
   useOverviewMetrics,
   useTopicConversations,
   useTopicQuestions,
-  useDemoSamples,
 } from "@/hooks/use-study-data";
+import { findCuratedQuestion } from "@/lib/curated-questions";
 import { CONDITION_LABELS } from "@/lib/constants";
 import {
   type AgentName,
@@ -158,79 +158,6 @@ function getQuestionContrast(question: QuestionItem) {
   }
 
   return `The plain single-agent run said ${plain}, but the role-based debate ended ${debateRole}.`;
-}
-
-function countAnswerShifts(question: QuestionItem) {
-  const uniqueOutcomes = new Set(
-    CONDITION_ORDER.map((condition) => question.conditionSummary[condition].outcome)
-  );
-  return uniqueOutcomes.size;
-}
-
-function getReasoningCount(question: QuestionItem) {
-  return (question.blindMatch?.cards ?? []).filter((card) => card.reasoningPreview).length;
-}
-
-function pickStoryQuestions(questions: QuestionItem[]) {
-  if (questions.length === 0) return [];
-
-  const used = new Set<string>();
-  const picked: QuestionItem[] = [];
-
-  const stableCase =
-    questions.find(
-      (question) =>
-        countAnswerShifts(question) === 1 &&
-        !CONDITION_ORDER.some(
-          (condition) => question.conditionSummary[condition].rawOutcome === "Stalemate"
-        ) &&
-        getReasoningCount(question) >= 3
-    ) ?? questions[0];
-
-  picked.push(stableCase);
-  used.add(stableCase.id);
-
-  const swingCase =
-    questions.find(
-      (question) =>
-        !used.has(question.id) &&
-        question.conditionSummary.single_no_role.outcome !==
-          question.conditionSummary.debate_role.outcome &&
-        getReasoningCount(question) >= 3
-    ) ??
-    questions.find(
-      (question) => !used.has(question.id) && countAnswerShifts(question) > 1
-    ) ??
-    questions.find((question) => !used.has(question.id));
-
-  if (swingCase) {
-    picked.push(swingCase);
-    used.add(swingCase.id);
-  }
-
-  const splitCase =
-    questions.find(
-      (question) =>
-        !used.has(question.id) &&
-        CONDITION_ORDER.some(
-          (condition) => question.conditionSummary[condition].rawOutcome === "Stalemate"
-        ) &&
-        getReasoningCount(question) >= 3
-    ) ?? questions.find((question) => !used.has(question.id));
-
-  if (splitCase) {
-    picked.push(splitCase);
-    used.add(splitCase.id);
-  }
-
-  while (picked.length < 3) {
-    const fallback = questions.find((question) => !used.has(question.id));
-    if (!fallback) break;
-    picked.push(fallback);
-    used.add(fallback.id);
-  }
-
-  return picked;
 }
 
 function countConversationSwitches(conversation: ConversationItem) {
@@ -557,6 +484,8 @@ export default function TopicDetailPage({
   const { slug } = use(params);
   const { initSession } = useFeedback();
   const [deckState, setDeckState] = useState({ slug, activeStep: 0 });
+  // Stable random seed per page load — gives each condition a different question from the bank
+  const [sampleSeed] = useState(() => Math.random());
   const activeStep = deckState.slug === slug ? deckState.activeStep : 0;
   const { data: manifest, isLoading: isManifestLoading, error: manifestError } = useManifest();
   const { data: questions, isLoading: isQuestionsLoading, error: questionsError } =
@@ -564,8 +493,6 @@ export default function TopicDetailPage({
   const { data: conversations, isLoading: isConversationsLoading, error: conversationsError } =
     useTopicConversations(slug);
   const { data: metrics, isLoading: isMetricsLoading, error: metricsError } = useOverviewMetrics();
-  const { data: demoSamplesData, isLoading: isDemoSamplesLoading, error: demoSamplesError } = useDemoSamples(slug);
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [activeStep]);
@@ -577,7 +504,7 @@ export default function TopicDetailPage({
     void initSession(found.slug, found.title);
   }, [slug, manifest, initSession]);
 
-  if (isManifestLoading || isQuestionsLoading || isConversationsLoading || isMetricsLoading || isDemoSamplesLoading) {
+  if (isManifestLoading || isQuestionsLoading || isConversationsLoading || isMetricsLoading) {
     return (
       <StateBox
         title="Loading topic..."
@@ -609,68 +536,13 @@ export default function TopicDetailPage({
   const topicMetric = metrics.find((metric) => metric.topicSlug === slug);
   const topicMetrics = topicMetric ? [topicMetric] : [];
   const metricHighlights = getMetricHighlights(topicMetric);
-  const storyQuestions = pickStoryQuestions(questions);
-  
-  // Create our 4 samples from demo data if available, fallback to storyQuestions
-  const demoSamples = (demoSamplesData || []).map((sampleList, idx) => {
-    if (!sampleList || !sampleList.results || sampleList.results.length === 0) return null;
-    const item = sampleList.results[0];
-    const conditionKeys = [
-      "single_no_role",
-      "single_role",
-      "debate_no_role",
-      "debate_role"
-    ];
-    
-    const agents = ["ChatGPT", "Claude", "Gemini", "Grok"];
-    const cards = agents.map((agent, agentIdx) => {
-      const resp = item.responses[agent] || {};
-      const reasoning = resp.response || null;
-      const previewText = reasoning ? reasoning.replace(/^ANSWER:.*?\nCONFIDENCE:.*?\n\n?/, '') : null;
-      
-      return {
-        slot: ["A", "B", "C", "D"][agentIdx],
-        agent,
-        role: null,
-        decision: resp.decision || "Maybe",
-        rawDecision: resp.decision || "Maybe",
-        confidence: resp.confidence || null,
-        reasoning: reasoning,
-        reasoningPreview: previewText,
-      };
-    });
-
-    const defaultSummary = { outcome: "Maybe", rawOutcome: "Maybe", yesVotes: 0, noVotes: 0, maybeVotes: 0 };
-    const conditionSummary = {
-       "single_no_role": defaultSummary,
-       "single_role": defaultSummary,
-       "debate_no_role": defaultSummary,
-       "debate_role": defaultSummary,
-    };
-
-    return {
-      id: `demo-${idx}`,
-      topicSlug: slug,
-      questionNumber: item.question_number,
-      prompt: item.question,
-      tags: [],
-      conditionSummary: conditionSummary as any,
-      blindMatch: {
-        sourceCondition: conditionKeys[idx],
-        cards,
-      },
-    } as any;
-  });
-
-  const sampleOne = demoSamples[0] || storyQuestions[0];
-  const sampleTwo = demoSamples[1] || storyQuestions[1] || storyQuestions[0];
-  const sampleThree = demoSamples[2] || storyQuestions[2] || storyQuestions[0];
-  const sampleFour = demoSamples[3] || storyQuestions[1] || storyQuestions[0];
-
-  const featuredConversation = getFeaturedConversation(
-    conversations,
-    storyQuestions.map((question) => question.id)
-  );
+  const sampleOne   = findCuratedQuestion(questions, slug, "single_no_role",  sampleSeed);
+  const sampleTwo   = findCuratedQuestion(questions, slug, "single_role",     sampleSeed);
+  const sampleThree = findCuratedQuestion(questions, slug, "debate_no_role",  sampleSeed);
+  const sampleFour  = findCuratedQuestion(questions, slug, "debate_role",     sampleSeed);
+  const curatedIds  = [sampleOne, sampleTwo, sampleThree, sampleFour]
+    .filter(Boolean).map((q) => q!.id);
+  const featuredConversation = getFeaturedConversation(conversations, curatedIds);
   const narrativeQuestion = getNarrativeQuestion(topic.title);
   const { yesSide, counterSide } = getTopicSides(topic.title);
   const isFirstStep = activeStep === 0;

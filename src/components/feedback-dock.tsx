@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageSquareText, Download, Trash2 } from "lucide-react";
+import { MessageSquareText, Download, Trash2, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useFeedback } from "@/components/providers/feedback-provider";
 import { Button } from "@/components/ui/button";
@@ -33,7 +33,17 @@ export function FeedbackDock() {
       {open ? (
         <Card className="feedback-panel stage-card fixed z-50 w-[min(92vw,380px)] border-[var(--line)] bg-[var(--surface)]">
           <CardHeader className="pb-3">
-            <CardTitle className="text-base">Study Notes</CardTitle>
+            <div className="flex items-center justify-between">
+              <CardTitle className="text-base">Study Notes</CardTitle>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="rounded-md p-1 text-[var(--muted-foreground)] hover:bg-[var(--card-muted)] hover:text-[var(--foreground)]"
+                aria-label="Close"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
           </CardHeader>
           <CardContent className="grid gap-3 text-sm">
             <Label className="grid gap-1.5">

@@ -20,6 +20,7 @@ import {
   type TopicQuestionsChunk,
 } from "@/lib/types";
 
+const DATA_DIR = process.env.NEXT_PUBLIC_DATA_DIR ?? "/data";
 const responseCache = new Map<string, Promise<unknown>>();
 const AGENT_ORDER: AgentName[] = ["ChatGPT", "Claude", "Gemini", "Grok"];
 const CONDITION_ORDER: ConditionKey[] = [
@@ -355,7 +356,7 @@ async function fetchJson<T>(path: string): Promise<T> {
 }
 
 export async function getManifest(): Promise<DataManifest> {
-  return fetchJson<DataManifest>("/data/manifest.json");
+  return fetchJson<DataManifest>(`${DATA_DIR}/manifest.json`);
 }
 
 export async function getTopicQuestions(topicSlug: string) {

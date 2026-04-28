@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-27T22:11:55.912411",
+  "timestamp": "2026-04-28T10:36:16.801883",
   "agents": [
     {
       "name": "ChatGPT",
@@ -22,50 +22,358 @@
       "model": "grok-4-1-fast-reasoning"
     }
   ],
-  "questions_count": 1,
+  "questions_count": 8,
   "results": [
     {
       "question_number": 63,
       "question": "Should people be allowed to live in a home they know is unsafe, even if the government thinks the danger is serious enough to step in?",
-      "timestamp": "2026-04-27T22:11:55.912418",
+      "timestamp": "2026-04-28T10:35:49.482322",
       "responses": {
-        "Claude": {
-          "provider": "anthropic",
-          "model": "claude-haiku-4-5-20251001",
-          "decision": "Yes",
-          "confidence": 7,
-          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nPeople should generally have the autonomy to make decisions about their own living situations, even risky ones, as a matter of personal freedom and self-determination. However, this conflicts with legitimate government interests in preventing serious harm, which is why reasonable exceptions exist (e.g., imminent threats to life, situations involving dependent children) where intervention may be justified despite the presumption favoring individual choice.",
-          "time_s": 1.4
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
         },
         "ChatGPT": {
           "provider": "openai",
           "model": "gpt-4.1-mini",
           "decision": "No",
           "confidence": 8,
-          "response": "ANSWER: No\nCONFIDENCE: 8\n\nWhile individuals have autonomy, the government has a responsibility to protect public safety, and if a home poses serious danger, intervention is justified to prevent harm. Allowing people to live in unsafe conditions can lead to severe injury or death, which outweighs personal choice in this context.",
-          "time_s": 1.52
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nWhile personal freedom is important, the government has a responsibility to protect public safety, and allowing people to live in homes that pose serious dangers can lead to preventable harm or fatalities. Intervention is justified when risks are significant and well-documented.",
+          "time_s": 1.6
         },
-        "Gemini": {
-          "provider": "gemini",
-          "model": "gemini-2.5-flash-lite",
-          "decision": "No",
-          "confidence": 9,
-          "response": "ANSWER: No\nCONFIDENCE: 9\nThe government has a responsibility to protect its citizens from serious harm, and allowing individuals to remain in demonstrably unsafe conditions could endanger not only themselves but also potentially others. While personal autonomy is important, it generally does not extend to choices that pose a clear and present danger to life or well-being.",
-          "time_s": 2.2
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nPeople generally have the right to make decisions about their own lives, including accepting risks. However, this right has legitimate limits when: (1) the danger affects others (e.g., structural collapse affecting neighbors), (2) the person cannot meaningfully consent (e.g., children, severe cognitive impairment), or (3) the cost of rescue/emergency response falls on the public. The answer depends partly on whether we're discussing autonomous adults versus vulnerable populations.",
+          "time_s": 1.85
         },
         "Grok": {
           "provider": "xai",
           "model": "grok-4-1-fast-reasoning",
           "decision": "Yes",
           "confidence": 9,
-          "response": "ANSWER: Yes\nCONFIDENCE: 9\nIndividuals should have autonomy over their personal risks when they are informed and consenting adults, as long as it does not harm others or the public. Government paternalism undermines liberty and sets a precedent for excessive intervention in private decisions.",
-          "time_s": 4.43
+          "response": "ANSWER: Yes  \nCONFIDENCE: 9  \nIndividuals should have autonomy over their own lives and property, allowing them to accept known personal risks without government coercion, provided it does not endanger others. Paternalistic intervention undermines personal freedom unless public safety is directly threatened.",
+          "time_s": 3.77
         }
       },
       "summary": {
         "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 39,
+      "question": "Should adults be allowed to refuse all forms of health insurance if they prefer to handle risks themselves?",
+      "timestamp": "2026-04-28T10:35:52.673818",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nWhile individual autonomy is important, allowing adults to completely refuse health insurance creates negative externalities (unpaid medical bills, emergency care costs absorbed by systems/others) and undermines the risk-pooling mechanisms necessary for functional healthcare systems. A more balanced approach permits some opt-out flexibility while maintaining baseline protections.",
+          "time_s": 1.45
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8\n\nAdults generally have the right to make personal financial decisions, including whether to purchase health insurance, as long as they understand the risks involved and are not violating any laws or regulations. Allowing refusal respects individual autonomy and personal responsibility.",
+          "time_s": 2.25
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\nAdults possess autonomy over their own bodies, finances, and risk tolerance, so they should be free to refuse health insurance and accept the consequences without state coercion. Mandating insurance undermines personal liberty, even if it raises societal costs from uncompensated care.",
+          "time_s": 3.19
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 171,
+      "question": "Should people be free to reject rules that they think are too cautious, even if the rules are meant to keep them safe?",
+      "timestamp": "2026-04-28T10:35:57.062772",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.02
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nWhile personal freedom is important, rules designed to keep people safe are generally based on evidence and collective well-being; rejecting them because they seem too cautious can lead to harm or increased risk for individuals and society.",
+          "time_s": 1.53
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nPeople should have autonomy to make informed decisions about risks to themselves, including rejecting safety rules they find excessive, though this freedom is reasonably limited when their choices significantly harm others or lack adequate information. The capacity for self-determination is foundational to human dignity, and overly paternalistic systems that remove choice undermine personal agency and responsibility.",
+          "time_s": 2.76
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 9  \n\nPeople should have the freedom to assess and reject rules they deem overly cautious, as this upholds individual autonomy and personal responsibility, provided it does not harm others. Paternalistic safety rules can stifle progress and self-determination if enforced without consent.",
+          "time_s": 4.39
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 174,
+      "question": "Should there be clear limits on how much risk people are allowed to accept for themselves?",
+      "timestamp": "2026-04-28T10:36:01.062822",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nClear limits on risk are important to protect individuals and society from harm, especially when personal decisions can have broader consequences or when individuals may not fully understand the risks involved. However, these limits should balance personal freedom with safety considerations.",
+          "time_s": 1.14
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nIndividual autonomy over personal risk decisions is a core principle of liberal democracies, and adults generally should retain the right to make their own risk assessments. However, this isn't absolute—practical limits exist around informed consent, protection of dependents, and preventing harm to others, which is why the answer isn't stronger.",
+          "time_s": 1.55
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\nIndividuals have the right to autonomy over their own bodies and lives, accepting personal risks without external imposition, as long as they do not harm others. Clear limits enforced by authorities inevitably lead to paternalism, overreach, and erosion of freedoms, as evidenced by historical examples like prohibition or mandatory vaccinations.",
+          "time_s": 4.0
+        }
+      },
+      "summary": {
+        "yes_count": 1,
         "no_count": 2,
-        "majority": "Stalemate"
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 209,
+      "question": "Should governments ban certain choices if those choices usually affect more than just the person making them?",
+      "timestamp": "2026-04-28T10:36:04.746799",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.01
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8\n\nGovernments often have a responsibility to protect public welfare, and when individual choices significantly impact others, regulation or bans can be justified to prevent harm and maintain social order. However, the extent and nature of such bans should be carefully balanced with personal freedoms.",
+          "time_s": 2.06
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nThis is fundamentally a question about the proper scope of government authority rather than an empirical matter. While choices with external effects (like pollution) warrant regulation, a blanket ban based solely on affecting others would justify extreme governmental control over nearly all human activity—including speech, work, and reproduction—raising serious concerns about liberty and paternalism. Context matters: some externalities justify targeted regulations (smoking in public spaces), while others don't justify bans (having children). The question's framing presumes government should ban choices with external effects, but reasonable people disagree about where to draw this line.",
+          "time_s": 2.78
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nGovernments exist to protect citizens from harm, so choices with significant negative externalities (e.g., drunk driving or pollution) justify bans to safeguard public welfare and prevent collective damage. While not every externality requires a full ban—regulations may suffice—banning certain severe ones is a legitimate exercise of authority when individual liberty conflicts with broader societal interests.",
+          "time_s": 3.68
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 32,
+      "question": "Should adults be free to choose relationships that are clearly harmful to them if no one is being directly forced?",
+      "timestamp": "2026-04-28T10:36:08.241652",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nWhile autonomy is important, completely unrestricted choice to pursue demonstrably harmful relationships conflicts with other valid principles: we recognize limits on autonomy in other contexts (e.g., preventing suicide, informed consent requirements), relationships of dependency create power imbalances that undermine genuine freedom, and society reasonably supports intervention mechanisms like counseling or legal protections in abuse cases. However, the confidence is moderate because defining \"clearly harmful\" objectively is contested, and excessive paternalism itself poses serious risks.",
+          "time_s": 2.06
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 9  \n\nAdults have the right to autonomy and self-determination, allowing them to make personal choices, including entering harmful relationships, as long as no one else is coerced or directly harmed. Interfering via paternalism risks eroding individual liberty without clear justification.",
+          "time_s": 3.14
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\n\nWhile adults have autonomy, relationships that are clearly harmful can lead to significant emotional, psychological, or physical damage, and protecting individuals from harm is important even if no direct force is involved. Encouraging healthy relationships supports overall well-being and safety.",
+          "time_s": 3.49
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
+      }
+    },
+    {
+      "question_number": 96,
+      "question": "Should adults be allowed to buy weapons or tools that are easy to misuse, even if they insist they only want them for harmless reasons?",
+      "timestamp": "2026-04-28T10:36:11.542917",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.03
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nMost adult activities involve access to items easily misused (cars, chemicals, knives, etc.). Restricting access based on potential misuse rather than actual harm or demonstrated danger would require prohibiting ordinary tools and severely limit personal autonomy. Reasonable regulations on certain high-risk items (firearms) exist in many jurisdictions, but blanket prohibition of all easily-misusable tools is impractical and incompatible with functioning societies.",
+          "time_s": 1.93
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No  \nCONFIDENCE: 8  \n\nWhile adults may have harmless intentions, the potential for misuse and harm to others is significant, so regulations and restrictions are necessary to ensure public safety.",
+          "time_s": 3.12
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nAdults should be presumed responsible and free to purchase weapons or tools for stated harmless purposes, as restrictions based on potential misuse infringe on individual liberty and personal responsibility. Banning or limiting access preemptively treats everyone as a potential criminal, which erodes freedoms without guaranteed safety benefits.",
+          "time_s": 3.3
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 1,
+        "majority": "Yes"
+      }
+    },
+    {
+      "question_number": 195,
+      "question": "Should the law limit choices that are made freely but tend to create long-term dependence?",
+      "timestamp": "2026-04-28T10:36:16.799974",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: Cannot send a request, as the client has been closed.",
+          "time_s": 0.04
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 7  \n\nLimiting choices that lead to long-term dependence can protect individuals and society from negative consequences, such as reduced autonomy and increased social costs, while still respecting freedom by targeting only harmful patterns. However, the balance between freedom and protection is complex and context-dependent.",
+          "time_s": 1.33
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 4,
+          "response": "ANSWER: No\nCONFIDENCE: 4\n\nThis question involves a fundamental tension between respecting individual autonomy and paternalistic protection. While laws reasonably restrict some choices (like addictive drugs), broadly limiting all freely-made choices that create dependence raises serious concerns about government overreach and individual liberty, and reasonable people disagree significantly on where to draw these lines.",
+          "time_s": 1.38
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No  \nCONFIDENCE: 8  \n\nIndividuals have the right to autonomy in their free choices, even those risking long-term dependence, as paternalistic laws undermine personal liberty and often fail to account for individual risk assessment. Such limits should only apply when choices cause clear harm to others, not self-imposed dependence.",
+          "time_s": 5.25
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 2,
+        "majority": "No"
       }
     }
   ]
