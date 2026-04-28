@@ -24,9 +24,11 @@ const STAGE_ROUTES: Record<
   "Sample 1 blind pick": { table: "choose_argument_responses", dbStage: "sample_1" },
   "Sample 2 blind pick": { table: "choose_argument_responses", dbStage: "sample_2" },
   "Sample 3 blind pick": { table: "choose_argument_responses", dbStage: "sample_3" },
+  "Sample 4 blind pick": { table: "choose_argument_responses", dbStage: "sample_4" },
   "Sample 1 revealed":   { table: "judgment_check_responses",  dbStage: "sample_1" },
   "Sample 2 revealed":   { table: "judgment_check_responses",  dbStage: "sample_2" },
   "Sample 3 revealed":   { table: "judgment_check_responses",  dbStage: "sample_3" },
+  "Sample 4 revealed":   { table: "judgment_check_responses",  dbStage: "sample_4" },
   "Whole topic":         { table: "judgment_check_responses",  dbStage: "data" },
   "Final answer":        { table: "judgment_check_responses",  dbStage: "final" },
 };
@@ -74,8 +76,11 @@ export function FeedbackProvider({ children }: { children: React.ReactNode }) {
     }
   });
 
-  // Initialized once on mount — stable for the entire browser session across all topics
-  const [participantId] = useState<string>(() => getOrCreateParticipantId());
+  // Initialized once on client mount — useEffect avoids SSR/hydration mismatch
+  const [participantId, setParticipantId] = useState<string | null>(null);
+  useEffect(() => {
+    setParticipantId(getOrCreateParticipantId());
+  }, []);
 
   const [sessionId, setSessionId] = useState<string | null>(null);
   // Ref so the submit callback always reads the latest session ID without stale closure issues
@@ -86,13 +91,15 @@ export function FeedbackProvider({ children }: { children: React.ReactNode }) {
   }, [entries]);
 
   const initSession = useCallback(async (topicSlug: string, topicTitle: string) => {
+    // participantId is set by useEffect — read fresh from localStorage as fallback
+    const pid = participantId ?? getOrCreateParticipantId();
     const newId = crypto.randomUUID();
-    console.log("[initSession] participant_id:", participantId, "| new session_id:", newId, "| topic:", topicSlug);
+    console.log("[initSession] participant_id:", pid, "| new session_id:", newId, "| topic:", topicSlug);
     const { error } = await supabase.from("study_sessions").insert({
       id: newId,
       topic_slug: topicSlug,
       topic_title: topicTitle,
-      participant_id: participantId,
+      participant_id: pid,
     });
     if (error) {
       console.error("[study_sessions] insert failed:", error.message);
