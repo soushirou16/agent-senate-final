@@ -443,7 +443,7 @@ function DebateEffectModule({ topics }: { topics: TopicLeanEntry[] }) {
                     key={item.topic}
                     fill={item.plottedShift < 0 ? "#c65b4b" : "#2d6a73"}
                     radius={
-                      item.plottedShift < 0 ? [0, 4, 4, 0] : item.plottedShift > 0 ? [0, 4, 4, 0] : [4, 4, 4, 4]
+                      (item.plottedShift < 0 ? [0, 4, 4, 0] : item.plottedShift > 0 ? [0, 4, 4, 0] : 0) as unknown as number
                     }
                   />
                 ))}
