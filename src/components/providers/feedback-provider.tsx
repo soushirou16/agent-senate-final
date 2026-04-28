@@ -5,6 +5,16 @@ import { supabase } from "@/lib/supabase";
 import { type AgentName, type AnswerValue, type FeedbackEntry } from "@/lib/types";
 
 const STORAGE_KEY = "senate-insight-feedback-v1";
+const PARTICIPANT_KEY = "senate-insight-participant-id";
+
+function getOrCreateParticipantId(): string {
+  if (typeof window === "undefined") return crypto.randomUUID();
+  const existing = window.localStorage.getItem(PARTICIPANT_KEY);
+  if (existing) return existing;
+  const newId = crypto.randomUUID();
+  window.localStorage.setItem(PARTICIPANT_KEY, newId);
+  return newId;
+}
 
 // Maps app stage strings → which Supabase table and which db stage value to use
 const STAGE_ROUTES: Record<
@@ -73,11 +83,14 @@ export function FeedbackProvider({ children }: { children: React.ReactNode }) {
   }, [entries]);
 
   const initSession = useCallback(async (topicSlug: string, topicTitle: string) => {
+    const participantId = getOrCreateParticipantId();
     const newId = crypto.randomUUID();
+    console.log("[initSession] participant_id:", participantId, "| new session_id:", newId, "| topic:", topicSlug);
     const { error } = await supabase.from("study_sessions").insert({
       id: newId,
       topic_slug: topicSlug,
       topic_title: topicTitle,
+      participant_id: participantId,
     });
     if (error) {
       console.error("[study_sessions] insert failed:", error.message);

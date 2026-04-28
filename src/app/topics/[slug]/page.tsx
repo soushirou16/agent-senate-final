@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { use, useEffect, useState, type ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
@@ -486,6 +487,7 @@ export default function TopicDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = use(params);
+  const router = useRouter();
   const { initSession } = useFeedback();
   const [deckState, setDeckState] = useState({ slug, activeStep: 0 });
   // Stable random seed per page load — gives each condition a different question from the bank
@@ -848,16 +850,22 @@ export default function TopicDetailPage({
             <div className="text-sm text-[var(--muted-foreground)]">
               Session {getRomanStep(activeStep)} of {getRomanStep(STORY_STEPS.length - 1)}
             </div>
-            <Button
-              type="button"
-              disabled={isLastStep}
-              onClick={() =>
-                setActiveStep((current) => Math.min(STORY_STEPS.length - 1, current + 1))
-              }
-            >
-              Next
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            {isLastStep ? (
+              <Button type="button" onClick={() => router.push("/")}>
+                Back to Home
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            ) : (
+              <Button
+                type="button"
+                onClick={() =>
+                  setActiveStep((current) => Math.min(STORY_STEPS.length - 1, current + 1))
+                }
+              >
+                Next
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            )}
           </div>
         </section>
       </div>
