@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-04-27T22:11:51.486165",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "questions_count": 1,
+  "results": [
+    {
+      "question_number": 20,
+      "question": "Should a sports league use a new rule this season if it could make games more exciting, even if its fairness is still debated?",
+      "timestamp": "2026-04-27T22:11:51.486173",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "No",
+          "confidence": 7,
+          "response": "ANSWER: No\nCONFIDENCE: 7\nIntroducing a rule with debated fairness could undermine the integrity of the competition and lead to widespread dissatisfaction among players and fans. The potential for increased excitement should not come at the expense of a level playing field.",
+          "time_s": 1.23
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "No",
+          "confidence": 6,
+          "response": "ANSWER: No\nCONFIDENCE: 6\n\nA sports league's primary obligation is to maintain competitive integrity and establish rules that are widely accepted as fair before implementation. While excitement matters for engagement, introducing rules with unresolved fairness concerns creates legitimacy problems and could harm the sport's credibility long-term. Testing such rules in exhibition games or lower leagues first would be more prudent than full-season deployment.",
+          "time_s": 1.83
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 7\n\nIntroducing a new rule that could make games more exciting can enhance fan engagement and viewership, which is often a priority for sports leagues. However, the debate over fairness suggests the rule should be carefully monitored and possibly adjusted to maintain competitive integrity.",
+          "time_s": 2.25
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No\nCONFIDENCE: 9\n\nFairness is a foundational principle of sports that ensures competitive integrity and fan trust, so implementing a rule with unresolved fairness debates risks long-term damage to the league's credibility outweighing short-term excitement gains. Leagues should pilot and refine such rules before full-season adoption to avoid backlash or inequity.",
+          "time_s": 3.02
+        }
+      },
+      "summary": {
+        "yes_count": 1,
+        "no_count": 3,
+        "majority": "No"
+      }
+    }
+  ]
+}

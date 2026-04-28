@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-04-27T22:12:23.735900",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "questions_count": 1,
+  "results": [
+    {
+      "question_number": 117,
+      "question": "Should an employee be able to decorate their workspace in a way that reflects their personality, even if it breaks the usual professional look?",
+      "timestamp": "2026-04-27T22:12:23.735921",
+      "responses": {
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8  \n\nAllowing employees to personalize their workspace can boost morale, creativity, and a sense of ownership, which often leads to increased productivity. However, it's important to balance personal expression with maintaining a professional environment that respects company culture and client impressions.",
+          "time_s": 1.04
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nModerate personal workspace decoration supports employee well-being, morale, and productivity without materially compromising professional standards in most contexts. However, this reasonably depends on workplace norms, client-facing considerations, and whether decorations remain tasteful and non-disruptive to colleagues.",
+          "time_s": 1.31
+        },
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\nAllowing employees to personalize their workspaces can boost morale and productivity. However, there should be reasonable limits to ensure the decorations do not disrupt the work environment or violate company policy.",
+          "time_s": 1.72
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8  \n\nAllowing personal decoration fosters employee morale, creativity, and job satisfaction, which can boost productivity, as long as it doesn't disrupt business operations, offend others, or violate safety rules. Strict uniformity often stifles individuality without clear benefits in most modern workplaces.",
+          "time_s": 3.0
+        }
+      },
+      "summary": {
+        "yes_count": 4,
+        "no_count": 0,
+        "majority": "Yes"
+      }
+    }
+  ]
+}

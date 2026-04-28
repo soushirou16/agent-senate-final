@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-04-27T22:12:31.581181",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "roles": {
+    "Contrarian": "Challenge assumptions and default positions. Default to opposing the most commonly assumed answer.",
+    "Optimist": "Favor constructive, positive pathways when justified. Lean toward Yes when a concrete pathway exists.",
+    "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
+    "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
+  },
+  "questions_count": 1,
+  "total_permutations": 24,
+  "results": [
+    {
+      "question_number": 80,
+      "question": "Should event venues be allowed to require a personal profile to enter if it makes ticket lines shorter?",
+      "rotation_index": 8,
+      "role_assignment": {
+        "ChatGPT": "Optimist",
+        "Claude": "Utilitarian",
+        "Gemini": "Contrarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-27T22:12:31.581219",
+      "responses": {
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 8\n\nRequiring a personal profile can streamline entry processes and reduce wait times, enhancing the overall event experience for attendees while maintaining security and organization.",
+          "time_s": 1.06
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nFrom a utilitarian perspective, if requiring personal profiles meaningfully reduces waiting times for the majority of attendees, the aggregate welfare gain from shorter lines and improved event experience outweighs the minor privacy intrusion for most people, especially if the data collection is transparent and reasonably secured. However, this depends on the magnitude of line reduction and whether vulnerable populations face disproportionate burdens.",
+          "time_s": 1.98
+        },
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Contrarian",
+          "decision": "Maybe",
+          "confidence": null,
+          "response": "ERROR: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "time_s": 2.99
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 10,
+          "response": "ANSWER: Yes  \nCONFIDENCE: 10  \n\nAs an Absolutist, private property rights are absolute: event venues, as owners, may impose any entry conditions they deem fit, including personal profiles. No external authority should override this, regardless of efficiency gains like shorter lines.",
+          "time_s": 6.78
+        }
+      },
+      "summary": {
+        "yes_count": 3,
+        "no_count": 0,
+        "majority": "Yes"
+      }
+    }
+  ]
+}

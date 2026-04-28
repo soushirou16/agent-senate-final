@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-04-27T22:13:20.676332",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "roles": {
+    "Contrarian": "Challenge assumptions and default positions. Default to opposing the most commonly assumed answer.",
+    "Optimist": "Favor constructive, positive pathways when justified. Lean toward Yes when a concrete pathway exists.",
+    "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
+    "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
+  },
+  "questions_count": 1,
+  "total_permutations": 24,
+  "results": [
+    {
+      "question_number": 45,
+      "question": "Should the government be allowed to require people to wear seatbelts in all vehicles, including on private property?",
+      "rotation_index": 21,
+      "role_assignment": {
+        "ChatGPT": "Absolutist",
+        "Claude": "Optimist",
+        "Gemini": "Utilitarian",
+        "Grok": "Contrarian"
+      },
+      "timestamp": "2026-04-27T22:13:20.676453",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Utilitarian",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\nRequiring seatbelt use, even on private property, maximizes aggregate safety by preventing injuries and fatalities, thus reducing healthcare costs and lost productivity for society as a whole. The minor inconvenience to individuals is outweighed by the significant reduction in harm.",
+          "time_s": 0.71
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 9,
+          "response": "ANSWER: Yes\nCONFIDENCE: 9\n\nFrom an Absolutist perspective, the government has the authority to enforce laws that protect public safety, and requiring seatbelts in all vehicles, even on private property, is a clear measure to prevent harm and save lives.",
+          "time_s": 1.38
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nSeatbelt mandates have demonstrably saved hundreds of thousands of lives with minimal burden—they're a straightforward safety intervention with proven effectiveness. While private property concerns deserve consideration, the concrete pathway to reducing preventable deaths and injuries justifies this reasonable safety requirement, similar to other basic protective standards we accept.",
+          "time_s": 1.43
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Contrarian",
+          "decision": "Yes",
+          "confidence": 8,
+          "response": "ANSWER: Yes\nCONFIDENCE: 8\n\nThe common assumption prioritizes absolute private property rights over safety, but this ignores externalities like increased public costs for rescues and medical care from preventable injuries on private land. Government mandates ensure consistent protection regardless of location, challenging the flawed notion that property lines negate personal responsibility.",
+          "time_s": 18.73
+        }
+      },
+      "summary": {
+        "yes_count": 4,
+        "no_count": 0,
+        "majority": "Yes"
+      }
+    }
+  ]
+}

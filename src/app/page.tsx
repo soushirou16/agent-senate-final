@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { type CSSProperties } from "react";
-import { ArrowRight, Landmark } from "lucide-react";
+import { type CSSProperties, useCallback } from "react";
+import { useRouter } from "next/navigation";
+import { Landmark } from "lucide-react";
 import { useManifest } from "@/hooks/use-study-data";
 import { Badge } from "@/components/ui/badge";
 import { StateBox } from "@/components/state-box";
@@ -36,37 +36,48 @@ function getSeatStyle(index: number) {
 }
 
 function SenateTopicForum({ topics }: { topics: TopicDescriptor[] }) {
+  const router = useRouter();
+
+  const chooseRandomSeat = useCallback(() => {
+    if (topics.length === 0) return;
+    const topic = topics[Math.floor(Math.random() * topics.length)];
+    router.push(`/topics/${topic.slug}`);
+  }, [router, topics]);
+
   return (
     <section className="senate-topic-forum" aria-labelledby="topic-forum-title">
-      <div className="forum-dais">
+      <button
+        type="button"
+        className="forum-dais"
+        disabled={topics.length === 0}
+        onClick={chooseRandomSeat}
+      >
         <div className="forum-dais-mark" aria-hidden="true">
           <Landmark className="h-5 w-5" />
         </div>
-        <div>
+        <div className="min-w-0 text-left">
           <div className="text-xs font-semibold text-[var(--accent-strong)]">
             {topics.length} chambers
           </div>
-          <h2 id="topic-forum-title" className="text-2xl">
+          <span id="topic-forum-title" className="mt-1 block font-serif text-2xl leading-tight text-[var(--foreground)]">
             Choose a Seat
-          </h2>
+          </span>
         </div>
-      </div>
+      </button>
 
-      <div className="topic-seat-grid">
+      <div className="topic-seat-grid" role="list" aria-label="Topic chambers">
         {topics.map((topic, index) => (
-          <Link
+          <div
             key={topic.slug}
-            href={`/topics/${topic.slug}`}
-            className="senate-topic-seat"
+            role="listitem"
+            className="senate-topic-seat senate-topic-seat--display"
             style={getSeatStyle(index)}
           >
             <span className="seat-index">{ROMAN_NUMERALS[index] ?? index + 1}</span>
             <span className="seat-spectrum">{topic.spectrum}</span>
             <strong>{getShortTitle(topic.title)}</strong>
-            <span className="seat-meta">
-              {topic.questionCount} prompts <ArrowRight className="h-3.5 w-3.5" />
-            </span>
-          </Link>
+            <span className="seat-meta">{topic.questionCount} prompts</span>
+          </div>
         ))}
       </div>
     </section>

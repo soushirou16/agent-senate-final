@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-04-27T22:12:41.508049",
+  "agents": [
+    {
+      "name": "ChatGPT",
+      "provider": "openai",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "name": "Claude",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "name": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "name": "Grok",
+      "provider": "xai",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "roles": {
+    "Contrarian": "Challenge assumptions and default positions. Default to opposing the most commonly assumed answer.",
+    "Optimist": "Favor constructive, positive pathways when justified. Lean toward Yes when a concrete pathway exists.",
+    "Utilitarian": "Maximize aggregate outcomes. Answer based purely on who is helped vs harmed and by how much.",
+    "Absolutist": "Follow strict rules and established precedent. Default to No when rules are unclear or incomplete."
+  },
+  "questions_count": 1,
+  "total_permutations": 24,
+  "results": [
+    {
+      "question_number": 96,
+      "question": "Should adults be allowed to buy weapons or tools that are easy to misuse, even if they insist they only want them for harmless reasons?",
+      "rotation_index": 0,
+      "role_assignment": {
+        "ChatGPT": "Contrarian",
+        "Claude": "Optimist",
+        "Gemini": "Utilitarian",
+        "Grok": "Absolutist"
+      },
+      "timestamp": "2026-04-27T22:12:41.508058",
+      "responses": {
+        "Gemini": {
+          "provider": "gemini",
+          "model": "gemini-2.5-flash-lite",
+          "role": "Utilitarian",
+          "decision": "No",
+          "confidence": 8,
+          "response": "ANSWER: No\nCONFIDENCE: 8\nAllowing access to easily misused weapons or tools, even with stated harmless intentions, creates a higher probability of harm to a greater number of people, outweighing the potential benefits of individual liberty in this context. The aggregate outcome of increased risk of misuse and potential harm necessitates restriction.",
+          "time_s": 1.14
+        },
+        "Claude": {
+          "provider": "anthropic",
+          "model": "claude-haiku-4-5-20251001",
+          "role": "Optimist",
+          "decision": "Yes",
+          "confidence": 7,
+          "response": "ANSWER: Yes\nCONFIDENCE: 7\n\nAdults have demonstrated capacity for responsible choice, and most tools (knives, chemicals, vehicles) carry misuse potential yet serve legitimate purposes when properly handled. Restricting access based on hypothetical misuse prevents beneficial uses and infantilizes capable individuals; better solutions exist through training, licensing, and accountability mechanisms that preserve freedom while managing genuine risks.",
+          "time_s": 1.66
+        },
+        "ChatGPT": {
+          "provider": "openai",
+          "model": "gpt-4.1-mini",
+          "role": "Contrarian",
+          "decision": "No",
+          "confidence": 9,
+          "response": "ANSWER: No  \nCONFIDENCE: 9  \n\nAllowing adults to buy easily misused weapons or tools based solely on their insistence of harmless intent ignores the high potential for misuse and the difficulty in verifying true intentions, making such permissions inherently risky and irresponsible.",
+          "time_s": 1.97
+        },
+        "Grok": {
+          "provider": "xai",
+          "model": "grok-4-1-fast-reasoning",
+          "role": "Absolutist",
+          "decision": "Yes",
+          "confidence": 10,
+          "response": "ANSWER: Yes\nCONFIDENCE: 10\nAs an Absolutist, I affirm the absolute sovereignty of adults over their choices and possessions; no authority may preemptively restrict access to weapons or tools based on potential misuse, as responsibility lies solely with the individual. Harmless intent is irrelevant—freedom demands no such justifications.",
+          "time_s": 6.67
+        }
+      },
+      "summary": {
+        "yes_count": 2,
+        "no_count": 2,
+        "majority": "Stalemate"
+      }
+    }
+  ]
+}

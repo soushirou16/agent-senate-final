@@ -411,3 +411,58 @@ export async function getOverviewMetrics() {
 export async function getVisualizationDataset() {
   return fetchJson<VisualizationDataset>("/data/metrics/visualization.json");
 }
+
+export async function getTopicDemoSamples(topicSlug: string) {
+  // Map `data-privacy` to `Data Privacy`.
+  const folderName = topicSlug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+  const files = [
+    "no role single curated.json",
+    "role single curated.json",
+    "role group curated.json",
+    "no role group curated.json",
+  ];
+
+  const results = await Promise.all(
+    files.map(async (file) => {
+      try {
+        const res = await fetch(`/demo_data/${folderName}/${file}`);
+        if (!res.ok) return null;
+        return await res.json();
+      } catch {
+        return null;
+      }
+    })
+  );
+  return results;
+}
+
+export async function getTopicDemoSamples(topicSlug: string) {
+  // Map `data-privacy` to `Data Privacy`.
+  const folderName = topicSlug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+  const files = [
+    "no role single curated.json",
+    "role single curated.json",
+    "role group curated.json",
+    "no role group curated.json",
+  ];
+
+  const results = await Promise.all(
+    files.map(async (file) => {
+      try {
+        const res = await fetch(`/demo_data/${folderName}/${file}`);
+        if (!res.ok) return null;
+        return await res.json();
+      } catch {
+        return null;
+      }
+    })
+  );
+
+  return results;
+}

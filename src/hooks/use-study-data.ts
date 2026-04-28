@@ -6,6 +6,7 @@ import {
   getManifest,
   getOverviewMetrics,
   getQuestionConversations,
+  getTopicDemoSamples,
   getTopicConversations,
   getTopicQuestions,
   getVisualizationDataset,
@@ -118,4 +119,8 @@ export function useOverviewMetrics() {
 
 export function useVisualizationDataset() {
   return useQueryState<VisualizationDataset>(getVisualizationDataset, []);
+}
+
+export function useDemoSamples(topicSlug: string) {
+  return useQueryState<any[]>(() => getTopicDemoSamples(topicSlug), [topicSlug]);
 }
