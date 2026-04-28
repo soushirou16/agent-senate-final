@@ -38,7 +38,7 @@ export default function RootLayout({
         <AppProviders>
           <div className="marble-surface min-h-svh">
             <SiteHeader />
-            <main className="mx-auto w-full max-w-[1200px] px-4 py-5 md:px-6">{children}</main>
+            <main className="mx-auto w-full max-w-[1200px] px-4 pb-5 pt-24 md:px-6 md:pt-26">{children}</main>
             <SiteFooter />
             <FeedbackDock />
           </div>
