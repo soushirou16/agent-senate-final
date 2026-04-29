@@ -233,13 +233,15 @@ function EvidenceStrip({ question }: { question: QuestionItem }) {
 function SampleStep({
   topicSlug,
   label,
+  condition,
   question,
 }: {
   topicSlug: string;
   label: string;
+  condition: ConditionKey;
   question: QuestionItem | undefined;
 }) {
-  const [revealed, setRevealed] = useState(false);
+  const [sourcesRevealed, setSourcesRevealed] = useState(false);
 
   if (!question) return <MissingQuestionCard />;
 
@@ -248,15 +250,20 @@ function SampleStep({
 
   return (
     <div className="grid gap-4">
+      {/* Step 1 — Question is visible upfront */}
       <div className="story-scene stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-5">
-        <div className="scene-brow">{label}</div>
-        <h3 className="mt-2 font-serif text-2xl">One sealed case, four visible answers.</h3>
-        <p className="mt-2 text-sm leading-7 text-[var(--muted-foreground)]">
-          Treat these like floor speeches. Pick the answer that earns your vote before you know the
-          actual case.
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div className="scene-brow">{label}</div>
+          <Badge variant="subtle">{CONDITION_LABELS[condition]}</Badge>
+        </div>
+        <h3 className="mt-3 font-serif text-2xl font-semibold leading-snug">{question.prompt}</h3>
+        <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">
+          Four AI models each gave a response to this question. Read their reasoning below, pick the
+          one you most agree with, then reveal which model said what.
         </p>
       </div>
 
+      {/* Step 2 — Response cards (models hidden) + alignment pick */}
       <BlindAnswerMatch
         key={question.id}
         topicSlug={topicSlug}
@@ -267,51 +274,28 @@ function SampleStep({
         cards={blindCards}
       />
 
+      {/* Step 3 — Reveal sources */}
       <div className="reveal-gate stage-card rounded-md border border-[var(--line)] bg-[var(--card-muted)] p-4 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="mb-1 flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
               <Shuffle className="h-4 w-4" />
-              Break the seal
+              Reveal the sources
             </div>
-            {blindMatch ? (
-              <p className="text-sm text-[var(--muted-foreground)]">
-                These answers came from{" "}
-                <strong>{CONDITION_LABELS[blindMatch.sourceCondition]}</strong>.
-              </p>
-            ) : (
-              <p className="text-sm text-[var(--muted-foreground)]">
-                Source setup metadata was not captured for this sample.
-              </p>
-            )}
+            <p className="text-sm text-[var(--muted-foreground)]">
+              Once you have picked your preferred response, reveal which AI model gave each answer.
+            </p>
           </div>
-          <Button type="button" onClick={() => setRevealed((value) => !value)}>
+          <Button type="button" onClick={() => setSourcesRevealed((v) => !v)}>
             <Eye className="h-4 w-4" />
-            {revealed ? "Seal the case" : "Reveal the case"}
+            {sourcesRevealed ? "Hide sources" : "Reveal sources"}
           </Button>
         </div>
       </div>
 
-      {revealed ? (
+      {/* Step 4 — Sources + evaluation (shown after reveal) */}
+      {sourcesRevealed ? (
         <>
-          <div className="grid gap-4 xl:grid-cols-[1.1fr_.9fr]">
-            <div className="reveal-panel sample-oracle stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-5">
-              <div className="mb-2 flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
-                <BookOpenText className="h-4 w-4" />
-                Revealed case
-              </div>
-              <h3 className="font-serif text-2xl font-semibold leading-snug">{question.prompt}</h3>
-            </div>
-
-            <div className="reveal-panel insight-banner stage-card rounded-md border border-[var(--line)] bg-[var(--card-muted)] p-5">
-              <div className="scene-brow">What the reveal changes</div>
-              <p className="mt-2 text-xl leading-8">{getQuestionPatternSummary(question)}</p>
-              <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">
-                {getQuestionContrast(question)}
-              </p>
-            </div>
-          </div>
-
           <div className="evidence-wall stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
             <div className="mb-3 flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
               <BookOpenText className="h-4 w-4" />
@@ -333,22 +317,34 @@ function SampleStep({
                   <div className="text-xs text-[var(--muted-foreground)]">
                     {card.role ?? "No role assignment"}
                   </div>
+                  <p className="mt-2 text-xs leading-5 text-[var(--muted-foreground)]">
+                    {card.reasoningPreview ?? ""}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="evidence-wall stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
-            <div className="mb-3 text-sm font-semibold text-[var(--muted-foreground)]">
-              How the four setups voted
+          <div className="grid gap-4 xl:grid-cols-[1.1fr_.9fr]">
+            <div className="reveal-panel insight-banner stage-card rounded-md border border-[var(--line)] bg-[var(--card-muted)] p-5">
+              <div className="scene-brow">Pattern across all four setups</div>
+              <p className="mt-2 text-xl leading-8">{getQuestionPatternSummary(question)}</p>
+              <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">
+                {getQuestionContrast(question)}
+              </p>
             </div>
-            <EvidenceStrip question={question} />
+            <div className="evidence-wall stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
+              <div className="mb-3 text-sm font-semibold text-[var(--muted-foreground)]">
+                How all four setups voted
+              </div>
+              <EvidenceStrip question={question} />
+            </div>
           </div>
 
           <TopicFeedbackCheckpoint
             topicSlug={topicSlug}
             stage={`${label} revealed`}
-            prompt="Now that the case is visible, where do you land?"
+            prompt="Now that you know the sources, where do you land?"
             questionId={question.id}
             questionNumber={question.questionNumber}
             showEvidenceSlider
@@ -356,8 +352,7 @@ function SampleStep({
         </>
       ) : (
         <div className="reveal-panel stage-card rounded-md border border-dashed border-[var(--line)] bg-[var(--surface)] p-4 text-sm text-[var(--muted-foreground)]">
-          The real prompt is still sealed. Reveal it when you want to compare your vote against the
-          actual case and the four run setups.
+          Pick your preferred response above, then reveal the sources to see which AI model said what and evaluate further.
         </div>
       )}
     </div>
@@ -624,6 +619,7 @@ export default function TopicDetailPage({
             key={sampleOne?.id ?? "sample-1"}
             topicSlug={topic.slug}
             label="Sample 1"
+            condition="single_no_role"
             question={sampleOne}
           />
         );
@@ -633,6 +629,7 @@ export default function TopicDetailPage({
             key={sampleTwo?.id ?? "sample-2"}
             topicSlug={topic.slug}
             label="Sample 2"
+            condition="single_role"
             question={sampleTwo}
           />
         );
@@ -642,6 +639,7 @@ export default function TopicDetailPage({
             key={sampleThree?.id ?? "sample-3"}
             topicSlug={topic.slug}
             label="Sample 3"
+            condition="debate_no_role"
             question={sampleThree}
           />
         );
@@ -651,6 +649,7 @@ export default function TopicDetailPage({
             key={sampleFour?.id ?? "sample-4"}
             topicSlug={topic.slug}
             label="Sample 4"
+            condition="debate_role"
             question={sampleFour}
           />
         );
