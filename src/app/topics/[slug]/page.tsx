@@ -66,6 +66,24 @@ const STORY_STEPS = [
 ] as const;
 
 const ROMAN_STEPS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"] as const;
+const EXPERIMENT_CASES = [
+  {
+    title: "Single, No Role",
+    detail: "One model answers alone in its default voice. This is the baseline with no assigned perspective and no group pressure.",
+  },
+  {
+    title: "Single, Role",
+    detail: "One model answers alone after receiving a role. This isolates role framing without adding debate dynamics.",
+  },
+  {
+    title: "Debate, No Role",
+    detail: "Four models discuss the prompt together, but none are given roles. This adds social pressure without role framing.",
+  },
+  {
+    title: "Debate, Role",
+    detail: "Four models debate after each receives a role. This combines role framing with group deliberation.",
+  },
+] as const;
 
 function getRomanStep(index: number) {
   return ROMAN_STEPS[index] ?? String(index + 1);
@@ -226,6 +244,59 @@ function EvidenceStrip({ question }: { question: QuestionItem }) {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function ExperimentSetupCard() {
+  return (
+    <div className="stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-5">
+      <div className="scene-brow mb-3 flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
+        <Shuffle className="h-4 w-4" />
+        Experiment setup
+      </div>
+      <p className="max-w-3xl text-sm leading-7 text-[var(--muted-foreground)]">
+        Every topic is tested across four cases built from two switches: whether the model answers
+        alone or in a debate, and whether it receives a role before responding.
+      </p>
+      <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        {EXPERIMENT_CASES.map((setup) => (
+          <div
+            key={setup.title}
+            className="rounded-md border border-[var(--line-subtle)] bg-[var(--card-muted)] p-4"
+          >
+            <div className="font-serif text-lg font-semibold">{setup.title}</div>
+            <p className="mt-2 text-sm leading-6 text-[var(--muted-foreground)]">{setup.detail}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 grid gap-3 lg:grid-cols-[.8fr_1.2fr]">
+        <div className="rounded-md border border-[var(--line-subtle)] bg-[var(--card-muted)] p-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)]">
+            Terms
+          </div>
+          <p className="mt-2 text-sm leading-6 text-[var(--muted-foreground)]">
+            <span className="font-semibold text-[var(--foreground)]">Role</span> means the model is
+            assigned a perspective before answering.{" "}
+            <span className="font-semibold text-[var(--foreground)]">No role</span> means it answers
+            without that framing.{" "}
+            <span className="font-semibold text-[var(--foreground)]">Debate</span> means multiple
+            models argue before a final vote.{" "}
+            <span className="font-semibold text-[var(--foreground)]">No debate</span> means a single
+            independent answer.
+          </p>
+        </div>
+        <div className="rounded-md border border-[var(--line-subtle)] bg-[var(--card-muted)] p-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)]">
+            Randomization
+          </div>
+          <p className="mt-2 text-sm leading-6 text-[var(--muted-foreground)]">
+            The four sample slots draw from the same curated topic bank. On each page load, one
+            random seed is chosen, then each case uses a different offset into that bank so all four
+            samples come from the same topic while still showing different prompts.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -563,54 +634,57 @@ export default function TopicDetailPage({
     switch (activeStep) {
       case 0:
         return (
-          <div className="grid gap-4 lg:grid-cols-[1.1fr_.9fr]">
-            <div className="grid gap-4">
-              <div className="story-scene stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-5">
-                <div className="scene-brow mb-3 flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
-                  <Scale className="h-4 w-4" />
-                  Main question
-                </div>
-                <p className="text-3xl leading-snug">{narrativeQuestion}</p>
-                <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">{topic.definition}</p>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                <div className="stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
-                  <div className="text-xs text-[var(--muted-foreground)]">A Yes answer favors</div>
-                  <div className="mt-1 font-serif text-xl font-semibold">{yesSide}</div>
-                  <p className="mt-2 text-sm text-[var(--muted-foreground)]">{topic.yesMeans}</p>
-                </div>
-                <div className="stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
-                  <div className="text-xs text-[var(--muted-foreground)]">A No answer favors</div>
-                  <div className="mt-1 font-serif text-xl font-semibold">{counterSide}</div>
-                  <p className="mt-2 text-sm text-[var(--muted-foreground)]">
-                    The samples test when this side starts to look stronger.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="insight-banner stage-card rounded-md border border-[var(--line)] bg-[var(--card-muted)] p-5">
-              <div className="scene-brow">How this session works</div>
-              <p className="mt-2 text-xl leading-8">
-                Start with instinct, then pressure-test it against real model reasoning.
-              </p>
-              <div className="grid gap-2">
-                {[
-                  "Choose the answer you align with before the prompt is visible.",
-                  "Reveal the prompt and check whether your pick still holds.",
-                  "Use one debate and the full data to decide where you land.",
-                ].map((line, index) => (
-                  <div
-                    key={line}
-                    className="evidence-tile flex items-center gap-3 rounded-md border border-[var(--line-subtle)] bg-[var(--surface)] px-3 py-2 text-sm"
-                  >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-md border border-[var(--line)] font-semibold">
-                      {getRomanStep(index)}
-                    </span>
-                    {line}
+          <div className="grid gap-4">
+            <div className="grid gap-4 lg:grid-cols-[1.1fr_.9fr]">
+              <div className="grid gap-4">
+                <div className="story-scene stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-5">
+                  <div className="scene-brow mb-3 flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
+                    <Scale className="h-4 w-4" />
+                    Main question
                   </div>
-                ))}
+                  <p className="text-3xl leading-snug">{narrativeQuestion}</p>
+                  <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">{topic.definition}</p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
+                    <div className="text-xs text-[var(--muted-foreground)]">A Yes answer favors</div>
+                    <div className="mt-1 font-serif text-xl font-semibold">{yesSide}</div>
+                    <p className="mt-2 text-sm text-[var(--muted-foreground)]">{topic.yesMeans}</p>
+                  </div>
+                  <div className="stage-card rounded-md border border-[var(--line)] bg-[var(--surface)] p-4">
+                    <div className="text-xs text-[var(--muted-foreground)]">A No answer favors</div>
+                    <div className="mt-1 font-serif text-xl font-semibold">{counterSide}</div>
+                    <p className="mt-2 text-sm text-[var(--muted-foreground)]">
+                      The samples test when this side starts to look stronger.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="insight-banner stage-card rounded-md border border-[var(--line)] bg-[var(--card-muted)] p-5">
+                <div className="scene-brow">How this session works</div>
+                <p className="mt-2 text-xl leading-8">
+                  Start with instinct, then pressure-test it against real model reasoning.
+                </p>
+                <div className="grid gap-2">
+                  {[
+                    "Choose the answer you align with before the prompt is visible.",
+                    "Reveal the prompt and check whether your pick still holds.",
+                    "Use one debate and the full data to decide where you land.",
+                  ].map((line, index) => (
+                    <div
+                      key={line}
+                      className="evidence-tile flex items-center gap-3 rounded-md border border-[var(--line-subtle)] bg-[var(--surface)] px-3 py-2 text-sm"
+                    >
+                      <span className="flex h-6 w-6 items-center justify-center rounded-md border border-[var(--line)] font-semibold">
+                        {getRomanStep(index)}
+                      </span>
+                      {line}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+            <ExperimentSetupCard />
           </div>
         );
       case 1:
